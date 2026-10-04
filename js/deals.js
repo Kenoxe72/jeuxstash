@@ -555,25 +555,10 @@
   }
 
   grid.addEventListener("click", function (e) {
-    const share = e.target.closest(".js-share-deal");
-    if (share) {
-      e.preventDefault();
-      const name = share.getAttribute("data-name") || "";
-      const url =
-        window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url
-          ? location.origin + window.JEUXSTASH_FICHE.url(name)
-          : location.origin + "/deals?q=" + encodeURIComponent(name);
-      function ok() {
-        if (window.JEUXSTASH_toast) window.JEUXSTASH_toast("Lien copié");
-        saveRecent(name);
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(ok).catch(function () {
-          window.prompt("Copie ce lien :", url);
-        });
-      } else {
-        window.prompt("Copie ce lien :", url);
-      }
+    if (e.target.closest(".js-share-deal")) {
+      const share = e.target.closest(".js-share-deal");
+      const name = share && share.getAttribute("data-name");
+      if (name) saveRecent(name);
       return;
     }
     const cover = e.target.closest(".game-cover-link");
