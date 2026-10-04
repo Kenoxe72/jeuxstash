@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.cloudflare.steamstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css?v=20261003coming" />
+  <link rel="stylesheet" href="/css/style.css?v=20261004ui" />
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -77,60 +77,41 @@
         </label>
       </div>
 
-      <div class="deals-filters">
-        <div class="filter-group">
-          <span class="filter-label">Plateforme</span>
-          <div id="deals-platforms" class="filter-row" role="group" aria-label="Plateforme">
-            <button type="button" class="chip is-active" data-platform="all">Tous</button>
-            <button type="button" class="chip" data-platform="pc">PC</button>
-            <button type="button" class="chip" data-platform="ps5">PS5</button>
-            <button type="button" class="chip" data-platform="switch">Switch</button>
-            <button type="button" class="chip" data-platform="xbox">Xbox</button>
-          </div>
+      <div class="deals-filters" role="toolbar" aria-label="Filtres du catalogue">
+        <div id="deals-platforms" class="filter-row" role="group" aria-label="Plateforme">
+          <button type="button" class="chip is-active" data-platform="all">Toutes</button>
+          <button type="button" class="chip" data-platform="pc">PC</button>
+          <button type="button" class="chip" data-platform="ps5">PS5</button>
+          <button type="button" class="chip" data-platform="switch">Switch</button>
+          <button type="button" class="chip" data-platform="xbox">Xbox</button>
         </div>
-        <div class="filter-group">
-          <span class="filter-label">Style</span>
-          <div id="deals-filters" class="filter-row" role="group" aria-label="Style de jeu">
-            <button type="button" class="chip is-active" data-filter="all">Tous</button>
-            <button type="button" class="chip" data-filter="coming">À venir</button>
-            <button type="button" class="chip" data-filter="hot">Hot</button>
-            <button type="button" class="chip" data-filter="coop">Coop</button>
-            <button type="button" class="chip" data-filter="chill">Chill</button>
-            <button type="button" class="chip" data-filter="action">Action</button>
-            <button type="button" class="chip" data-filter="sport">Sport</button>
-          </div>
+        <span class="filter-sep" aria-hidden="true"></span>
+        <div id="deals-filters" class="filter-row" role="group" aria-label="Style de jeu">
+          <button type="button" class="chip is-active" data-filter="all">Tous</button>
+          <button type="button" class="chip" data-filter="coming">À venir</button>
+          <button type="button" class="chip" data-filter="hot">Hot</button>
+          <button type="button" class="chip" data-filter="coop">Coop</button>
+          <button type="button" class="chip" data-filter="chill">Chill</button>
+          <button type="button" class="chip" data-filter="action">Action</button>
+          <button type="button" class="chip" data-filter="sport">Sport</button>
         </div>
-        <div class="filter-group">
-          <span class="filter-label">Verdict</span>
-          <div id="deals-verdicts" class="filter-row" role="group" aria-label="Verdict">
-            <button type="button" class="chip is-active" data-verdict="all">Tous</button>
-            <button type="button" class="chip" data-verdict="buy">Acheter</button>
-            <button type="button" class="chip" data-verdict="wait">Attendre</button>
-            <button type="button" class="chip" data-verdict="abo">Game Pass</button>
-          </div>
+        <span class="filter-sep" aria-hidden="true"></span>
+        <div id="deals-verdicts" class="filter-row" role="group" aria-label="Verdict">
+          <button type="button" class="chip" data-verdict="buy">Acheter</button>
+          <button type="button" class="chip" data-verdict="wait">Attendre</button>
+          <button type="button" class="chip" data-verdict="abo">Game Pass</button>
         </div>
-        <div class="filter-group">
-          <span class="filter-label">Options</span>
-          <div class="filter-row deals-options">
-            <label class="chip check-chip">
-              <input type="checkbox" id="deals-stock" />
-              <span>En stock</span>
-            </label>
-            <label class="chip check-chip">
-              <input type="checkbox" id="deals-under20" />
-              <span>&lt; 20&nbsp;€</span>
-            </label>
-          </div>
+        <span class="filter-sep" aria-hidden="true"></span>
+        <div class="filter-row deals-options" role="group" aria-label="Options">
+          <label class="chip check-chip">
+            <input type="checkbox" id="deals-stock" />
+            <span>En stock</span>
+          </label>
+          <label class="chip check-chip">
+            <input type="checkbox" id="deals-under20" />
+            <span>&lt; 20&nbsp;€</span>
+          </label>
         </div>
-      </div>
-    </div>
-
-    <div class="aff-strip">
-      <p><strong>Pas trouvé ton jeu&nbsp;?</strong> Cherche-le direct sur Instant Gaming — même lien affilié, même prix pour toi.</p>
-      <div class="row">
-        <a class="btn buy small" href="https://www.instant-gaming.com/fr/?igr=gamer-47bd4c" rel="sponsored noopener" target="_blank">Chercher sur Instant Gaming</a>
-        <a class="btn ghost small" href="https://www.instant-gaming.com/fr/tendances/?igr=gamer-47bd4c" rel="sponsored noopener" target="_blank">Tendances</a>
-        <a class="btn ghost small" href="https://gg.deals/" rel="noopener" target="_blank">Comparer partout</a>
       </div>
     </div>
 
@@ -143,6 +124,15 @@
 
     <div id="deals-grid" class="game-grid"></div>
     <p id="deals-empty" class="deals-empty" hidden>Aucun jeu pour ce filtre. Essaie « Tous » ou une autre recherche.</p>
+
+    <div class="aff-strip">
+      <p><strong>Pas trouvé ton jeu&nbsp;?</strong> Cherche-le direct sur Instant Gaming — même lien affilié, même prix pour toi.</p>
+      <div class="row">
+        <a class="btn buy small" href="https://www.instant-gaming.com/fr/?igr=gamer-47bd4c" rel="sponsored noopener" target="_blank">Chercher sur Instant Gaming</a>
+        <a class="btn ghost small" href="https://www.instant-gaming.com/fr/tendances/?igr=gamer-47bd4c" rel="sponsored noopener" target="_blank">Tendances</a>
+        <a class="btn ghost small" href="https://gg.deals/" rel="noopener" target="_blank">Comparer partout</a>
+      </div>
+    </div>
 
     <div class="aff-box">
       <h3>Clé ou boîte&nbsp;?</h3>
@@ -185,12 +175,12 @@
   </footer>
 
   <script src="/js/config.js"></script>
-  <script src="/js/catalog.js?v=20261003coming"></script>
-  <script src="/js/verdict.js?v=20261003coming"></script>
-  <script src="/js/fiche.js?v=20261003coming"></script>
-  <script src="/js/watchlist.js?v=20261003coming"></script>
-  <script src="/js/deals.js?v=20261003coming"></script>
-  <script src="/js/ui.js?v=20261003coming"></script>
+  <script src="/js/catalog.js?v=20261004ui"></script>
+  <script src="/js/verdict.js?v=20261004ui"></script>
+  <script src="/js/fiche.js?v=20261004ui"></script>
+  <script src="/js/watchlist.js?v=20261004ui"></script>
+  <script src="/js/deals.js?v=20261004ui"></script>
+  <script src="/js/ui.js?v=20261004ui"></script>
   <script src="/js/seo.js?v=20260929"></script>
   <script src="/js/track.js"></script>
 </body>

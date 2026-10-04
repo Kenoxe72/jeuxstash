@@ -129,19 +129,33 @@
   function mountNav() {
     var nav = document.querySelector(".site-header nav");
     if (!nav || document.getElementById("nav-watch")) return;
-    var a = document.createElement("a");
+
+    // Réutilise un lien déjà présent dans le HTML (évite le double « Mes jeux »)
+    var existing = null;
+    nav.querySelectorAll("a[href]").forEach(function (link) {
+      if (existing) return;
+      var href = (link.getAttribute("href") || "").replace(/\/$/, "");
+      if (href === "/mes-jeux") existing = link;
+    });
+
+    var a = existing || document.createElement("a");
     a.id = "nav-watch";
     a.href = "/mes-jeux";
-    a.innerHTML =
-      'Mes jeux <span id="watch-nav-count" class="watch-nav-count" hidden></span>';
+    if (!a.querySelector("#watch-nav-count")) {
+      a.innerHTML =
+        'Mes jeux <span id="watch-nav-count" class="watch-nav-count" hidden></span>';
+    }
     if (location.pathname.replace(/\/$/, "") === "/mes-jeux") {
       a.setAttribute("aria-current", "page");
-      a.className = "nav-current";
+      a.classList.add("nav-current");
     }
-    var before =
-      document.getElementById("theme-toggle") || nav.querySelector(".nav-cta");
-    if (before) nav.insertBefore(a, before);
-    else nav.appendChild(a);
+
+    if (!existing) {
+      var before =
+        document.getElementById("theme-toggle") || nav.querySelector(".nav-cta");
+      if (before) nav.insertBefore(a, before);
+      else nav.appendChild(a);
+    }
     syncUI();
   }
 

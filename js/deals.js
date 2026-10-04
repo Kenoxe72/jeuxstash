@@ -37,7 +37,7 @@
       activePlat = p0;
     }
     const c0 = (params.get("style") || "").toLowerCase();
-    if (c0 && ["hot", "coop", "chill", "action", "sport"].indexOf(c0) !== -1) {
+    if (c0 && ["coming", "hot", "coop", "chill", "action", "sport"].indexOf(c0) !== -1) {
       activeCat = c0;
     }
     const s0 = params.get("sort");
@@ -594,7 +594,8 @@
     verdictFilters.addEventListener("click", function (e) {
       const btn = e.target.closest("[data-verdict]");
       if (!btn) return;
-      activeVerdict = btn.getAttribute("data-verdict");
+      const next = btn.getAttribute("data-verdict");
+      activeVerdict = activeVerdict === next ? "all" : next;
       apply();
     });
   }
