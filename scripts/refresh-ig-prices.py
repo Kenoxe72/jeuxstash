@@ -74,11 +74,34 @@ def main():
             g["stock"] = stock
             print(f"{g['name']}: {price} [{stock}]")
         except Exception as e:
-            print(f"FAIL {g['name']}: {e}")
-            g.setdefault("price", None)
-            g["stock"] = "unknown"
+            # Garde l’ancien prix/stock si IG est indisponible
+            print(f"FAIL {g['name']}: {e} (keep previous)")
         time.sleep(0.55)
 
+    coming_helper = """
+/** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
+window.JEUXSTASH_COMING = {
+  isComing: function (game) {
+    return !!game && (game.cats || []).indexOf("coming") !== -1;
+  },
+  label: function (game) {
+    if (!game || !game.release) return "À venir";
+    var r = String(game.release);
+    if (/^\\d{4}$/.test(r)) return r;
+    try {
+      var d = new Date(r + "T12:00:00");
+      if (Number.isNaN(d.getTime())) return "À venir";
+      return d.toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+    } catch (e) {
+      return "À venir";
+    }
+  },
+};
+"""
     out = (
         "/* Catalogue JeuxStash — liens Instant Gaming affiliés (igr=gamer-47bd4c) */\n"
         "window.JEUXSTASH_CATALOG = "
@@ -87,6 +110,7 @@ def main():
         "window.JEUXSTASH_PRICES_UPDATED = "
         + json.dumps(__import__("datetime").date.today().isoformat())
         + ";\n"
+        + coming_helper
     )
     CATALOG.write_text(out, encoding="utf-8")
     print(f"updated {len(games)} games → {CATALOG}")

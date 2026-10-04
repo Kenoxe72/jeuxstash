@@ -1,11 +1,10 @@
-# Rafraîchit prix/stock Instant Gaming + redéploie Cloudflare Pages
-# Sans intervention (2× / semaine) + bouton manuel "Run workflow"
+# Rafraîchit prix/stock Instant Gaming tous les jours + redéploie Cloudflare Pages
 name: Refresh prices
 
 on:
   schedule:
-    # Lundi & jeudi 06:30 UTC ≈ 08:30 Paris (hiver)
-    - cron: "30 6 * * 1,4"
+    # Tous les jours 06:15 UTC ≈ 08:15 Paris (hiver) / 07:15 (été)
+    - cron: "15 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +17,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,11 +37,14 @@ jobs:
       - name: Refresh IG prices & stock
         run: python3 scripts/refresh-ig-prices.py
 
-      - name: Commit catalog if changed
+      - name: Regenerate fiches
+        run: node scripts/generate-fiches.js
+
+      - name: Commit if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh Instant Gaming prices/stock"
-          file_pattern: js/catalog.js
+          file_pattern: js/catalog.js jeu sitemap-jeux.xml
           commit_user_name: jeuxstash-bot
           commit_user_email: bot@jeuxstash.fr
 
