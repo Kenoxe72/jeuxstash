@@ -183,10 +183,7 @@
       blurb +
       "</p>" +
       (window.JEUXSTASH_VERDICT ? window.JEUXSTASH_VERDICT.compareHTML(game) : "") +
-      '<div class="row">' +
-      '<a class="btn ghost small" href="' +
-      fiche +
-      '">Fiche</a>' +
+      '<div class="row row--actions">' +
       buy +
       '<a class="btn ghost small" href="' +
       gg +
