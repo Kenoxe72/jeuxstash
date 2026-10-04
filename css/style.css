@@ -818,23 +818,35 @@ html:not([data-theme="dark"]) .hero--immersive .hero-search input::placeholder {
 }
 
 .game-badge--out {
-  right: 0.55rem;
-  top: 0.55rem;
+  /* Laisse la place à l’étoile favoris (top-right) */
+  right: 2.9rem;
+  top: 0.5rem;
+  z-index: 3;
+  max-width: calc(100% - 3.6rem);
   color: #fff;
   background: rgba(180, 40, 40, 0.92);
   text-transform: uppercase;
   font-size: 0.68rem;
   letter-spacing: 0.06em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .game-badge--coming {
-  right: 0.55rem;
-  top: 0.55rem;
+  /* Laisse la place à l’étoile favoris (top-right) */
+  right: 2.9rem;
+  top: 0.5rem;
+  z-index: 3;
+  max-width: calc(100% - 3.6rem);
   color: #0a1210;
   background: rgba(120, 220, 190, 0.95);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
   text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .game-card.is-coming .tag {

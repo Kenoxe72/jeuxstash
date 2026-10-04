@@ -61,6 +61,29 @@
   }
   window.JEUXSTASH_toast = toast;
 
+  /* Icône partager — copie le lien fiche (accueil, catalogue, mes jeux) */
+  document.addEventListener("click", function (e) {
+    var share = e.target.closest(".js-share-deal");
+    if (!share) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var name = share.getAttribute("data-name") || "";
+    var url =
+      window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url
+        ? location.origin + window.JEUXSTASH_FICHE.url(name)
+        : location.origin + "/deals?q=" + encodeURIComponent(name);
+    function ok() {
+      toast("Lien copié");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(ok).catch(function () {
+        window.prompt("Copie ce lien :", url);
+      });
+    } else {
+      window.prompt("Copie ce lien :", url);
+    }
+  });
+
   var btn = document.createElement("button");
   btn.type = "button";
   btn.className = "back-top";
