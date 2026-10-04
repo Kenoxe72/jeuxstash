@@ -37,7 +37,7 @@
       activePlat = p0;
     }
     const c0 = (params.get("style") || "").toLowerCase();
-    if (c0 && ["coming", "hot", "coop", "chill", "action", "sport"].indexOf(c0) !== -1) {
+    if (c0 && ["pass", "coming", "hot", "coop", "chill", "action", "sport"].indexOf(c0) !== -1) {
       activeCat = c0;
     }
     const s0 = params.get("sort");
@@ -208,6 +208,7 @@
     const amzQ = game.amazon;
     const oos = game.stock === "out";
     const coming = window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(game);
+    const isPass = (game.cats || []).indexOf("pass") !== -1;
     const price = formatPrice(game.price);
     const parts = [];
 
@@ -218,10 +219,11 @@
         parts.push(
           '<a class="btn buy small" href="' +
             esc(ig) +
-            '" rel="sponsored noopener" target="_blank" title="Clé digitale Instant Gaming' +
+            '" rel="sponsored noopener" target="_blank" title="' +
+            (isPass ? "Abonnement Instant Gaming" : "Clé digitale Instant Gaming") +
             (price ? " — " + price : "") +
             '">' +
-            (coming ? "Précommander" : "Clé digitale") +
+            (coming ? "Précommander" : isPass ? "Voir l’abo" : "Clé digitale") +
             "</a>"
         );
       }

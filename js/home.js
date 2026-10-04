@@ -141,13 +141,14 @@
         : "/deals?q=" + encodeURIComponent(game.name);
     const oos = game.stock === "out";
     const coming = window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(game);
+    const isPass = (game.cats || []).indexOf("pass") !== -1;
     const buy =
       oos && !coming
         ? '<span class="btn buy small is-oos" aria-disabled="true">Rupture</span>'
         : '<a class="btn buy small" href="' +
           ig +
           '" rel="sponsored noopener" target="_blank">' +
-          (coming ? "Précommander" : "Voir le prix") +
+          (coming ? "Précommander" : isPass ? "Voir l’abo" : "Voir le prix") +
           "</a>";
     return (
       '<article class="game-card' +
@@ -201,8 +202,8 @@
       "<h3>Game Pass ou achat&nbsp;?</h3>" +
       "<p>Si vous testez beaucoup de jeux, l’abonnement peut revenir moins cher.</p>" +
       '<div class="row">' +
-      '<a class="btn buy small" href="/guides/game-pass-vs-acheter">Lire le guide</a>' +
-      '<a class="btn ghost small" href="https://gg.deals/" rel="noopener" target="_blank">Comparer</a>' +
+      '<a class="btn buy small" href="/deals?style=pass">Voir les abos</a>' +
+      '<a class="btn ghost small" href="/guides/game-pass-vs-acheter">Guide</a>' +
       "</div></div></article>"
     );
   }
@@ -324,6 +325,27 @@
   })();
 
   fillGrid("coop", pick("coop", 6, used));
+
+  // Game Pass abos Instant Gaming
+  (function fillPass() {
+    var prefer = [
+      "Xbox Game Pass Ultimate — 1 mois",
+      "Xbox Game Pass Ultimate — 3 mois",
+      "Xbox Game Pass Premium — 3 mois",
+      "Xbox Game Pass Essential — 12 mois",
+    ];
+    var list = [];
+    prefer.forEach(function (name) {
+      var g = byName(name);
+      if (g) list.push(g);
+    });
+    if (list.length < 4) {
+      pick("pass", 4 - list.length, {}).forEach(function (g) {
+        if (!list.some(function (x) { return x.name === g.name; })) list.push(g);
+      });
+    }
+    fillGrid("pass", list.slice(0, 4), tipCard());
+  })();
 
   // À venir : précommandes / sorties (tri date croissante)
   (function fillComing() {
