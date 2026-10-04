@@ -392,7 +392,7 @@
     try {
       localStorage.setItem(RECENT_KEY, JSON.stringify(list));
     } catch (e) {}
-    renderRecent();
+    renderRecent(grid.children.length > 0);
   }
 
   function byName(name) {
@@ -402,13 +402,25 @@
     return null;
   }
 
-  function renderRecent() {
+  function filtersActive() {
+    return (
+      activeCat !== "all" ||
+      activePlat !== "all" ||
+      activeVerdict !== "all" ||
+      (stockOnly && stockOnly.checked) ||
+      (under20 && under20.checked) ||
+      !!(search && search.value.trim())
+    );
+  }
+
+  function renderRecent(hasResults) {
     var wrap = document.getElementById("deals-recent");
     var track = document.getElementById("deals-recent-track");
     if (!wrap || !track) return;
     var names = loadRecent();
     var games = names.map(byName).filter(Boolean);
-    if (!games.length) {
+    // Masquer si vide, ou si un filtre actif ne donne aucun résultat
+    if (!games.length || (filtersActive() && hasResults === false)) {
       wrap.hidden = true;
       return;
     }
@@ -440,7 +452,19 @@
       .join("");
     if (countEl) countEl.textContent = list.length + (list.length > 1 ? " jeux" : " jeu");
     if (empty) empty.hidden = list.length > 0;
+    renderRecent(list.length > 0);
     if (window.JEUXSTASH_WATCH) window.JEUXSTASH_WATCH.syncUI();
+  }
+
+  function resetFilters() {
+    activeCat = "all";
+    activePlat = "all";
+    activeVerdict = "all";
+    if (search) search.value = "";
+    if (stockOnly) stockOnly.checked = false;
+    if (under20) under20.checked = false;
+    if (sortEl) sortEl.value = "featured";
+    apply();
   }
 
   function syncPlatChips() {
@@ -571,6 +595,9 @@
   const luckyBtn = document.getElementById("deals-lucky");
   if (luckyBtn) luckyBtn.addEventListener("click", luckyPick);
 
+  const resetBtn = document.getElementById("deals-reset");
+  if (resetBtn) resetBtn.addEventListener("click", resetFilters);
+
   if (filters) {
     filters.addEventListener("click", function (e) {
       const btn = e.target.closest("[data-filter]");
@@ -607,6 +634,5 @@
 
   syncPlatChips();
   syncStyleChips();
-  renderRecent();
   apply();
 })();
