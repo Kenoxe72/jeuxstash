@@ -424,113 +424,180 @@ window.JEUXSTASH_CATALOG = [
     "name": "Xbox Game Pass Ultimate — 1 mois",
     "blurb": "PC + console + cloud. Le plus complet pour tester beaucoup.",
     "tag": "Abo",
-    "cats": ["pass", "hot"],
+    "cats": [
+      "pass",
+      "hot"
+    ],
     "cover": "https://gaming-cdn.com/images/products/4993/616x353/xbox-game-pass-ultimate-1-mois-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/4993-acheter-xbox-game-pass-ultimate-1-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Ultimate",
     "price": 16.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 20.99,
-    "aliases": ["game pass ultimate", "gpu 1 mois", "xbox ultimate"]
+    "aliases": [
+      "game pass ultimate",
+      "gpu 1 mois",
+      "xbox ultimate"
+    ]
   },
   {
     "name": "Xbox Game Pass Ultimate — 3 mois",
     "blurb": "3 mois Ultimate : souvent le meilleur rapport durée / prix.",
     "tag": "Abo",
-    "cats": ["pass", "hot"],
+    "cats": [
+      "pass",
+      "hot"
+    ],
     "cover": "https://gaming-cdn.com/images/products/4994/616x353/xbox-game-pass-ultimate-3-mois-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/4994-acheter-xbox-game-pass-ultimate-3-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Ultimate+3",
     "price": 44.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 62.99,
-    "aliases": ["game pass ultimate 3 mois", "gpu 3 mois"]
+    "aliases": [
+      "game pass ultimate 3 mois",
+      "gpu 3 mois"
+    ]
   },
   {
     "name": "Xbox Game Pass Premium — 1 mois",
     "blurb": "Console + catalogue jour J Microsoft, sans tout l’Ultimate.",
     "tag": "Abo",
-    "cats": ["pass"],
+    "cats": [
+      "pass"
+    ],
     "cover": "https://gaming-cdn.com/images/products/21565/616x353/xbox-game-pass-premium-1-mois-pc-xbox-series-x-s-xbox-one-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/21565-acheter-xbox-game-pass-premium-1-mois-pc-xbox-series-x-s-xbox-one-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Premium",
     "price": 9.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 12.99,
-    "aliases": ["game pass premium", "premium 1 mois"]
+    "aliases": [
+      "game pass premium",
+      "premium 1 mois"
+    ]
   },
   {
     "name": "Xbox Game Pass Premium — 3 mois",
     "blurb": "3 mois Premium — bon milieu entre Essential et Ultimate.",
     "tag": "Abo",
-    "cats": ["pass", "hot"],
+    "cats": [
+      "pass",
+      "hot"
+    ],
     "cover": "https://gaming-cdn.com/images/products/21566/616x353/xbox-game-pass-premium-3-mois-pc-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/21566-acheter-xbox-game-pass-premium-3-mois-pc-xbox-one-xbox-series-x-s-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Premium+3",
     "price": 27.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 38.99,
-    "aliases": ["game pass premium 3 mois"]
+    "aliases": [
+      "game pass premium 3 mois"
+    ]
   },
   {
     "name": "Xbox Game Pass Essential — 1 mois",
     "blurb": "Multi console + petits jeux. Le moins cher pour jouer en ligne.",
     "tag": "Abo",
-    "cats": ["pass"],
+    "cats": [
+      "pass"
+    ],
     "cover": "https://gaming-cdn.com/images/products/3/616x353/xbox-game-pass-essential-1-mois-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/3-acheter-xbox-game-pass-essential-1-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Essential",
     "price": 6.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 8.99,
-    "aliases": ["game pass essential", "essential 1 mois", "xbox live gold"]
+    "aliases": [
+      "game pass essential",
+      "essential 1 mois",
+      "xbox live gold"
+    ]
   },
   {
     "name": "Xbox Game Pass Essential — 3 mois",
     "blurb": "3 mois Essential — multi + catalogue de base.",
     "tag": "Abo",
-    "cats": ["pass"],
+    "cats": [
+      "pass"
+    ],
     "cover": "https://gaming-cdn.com/images/products/2/616x353/xbox-game-pass-essential-3-mois-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/2-acheter-xbox-game-pass-essential-3-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Essential+3",
     "price": 17.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 24.99,
-    "aliases": ["essential 3 mois"]
+    "aliases": [
+      "essential 3 mois"
+    ]
   },
   {
     "name": "Xbox Game Pass Essential — 12 mois",
     "blurb": "1 an Essential — souvent rentable si tu joues online toute l’année.",
     "tag": "Abo",
-    "cats": ["pass", "hot"],
+    "cats": [
+      "pass",
+      "hot"
+    ],
     "cover": "https://gaming-cdn.com/images/products/1/616x353/xbox-game-pass-essential-12-mois-xbox-one-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/1-acheter-xbox-game-pass-essential-12-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Essential+12",
     "price": 52.99,
     "stock": "ok",
-    "platforms": ["pc", "xbox"],
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
     "store": 71.99,
-    "aliases": ["essential 12 mois", "game pass 1 an"]
+    "aliases": [
+      "essential 12 mois",
+      "game pass 1 an"
+    ]
   },
   {
     "name": "PC Game Pass — 3 mois",
     "blurb": "Catalogue PC uniquement (EA Play inclus). Pas besoin de console.",
     "tag": "Abo",
-    "cats": ["pass"],
+    "cats": [
+      "pass"
+    ],
     "cover": "https://gaming-cdn.com/images/products/7613/616x353/xbox-game-pass-3-mois-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/7613-acheter-xbox-game-pass-3-mois-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=PC+Game+Pass",
     "price": 33.99,
     "stock": "out",
-    "platforms": ["pc"],
+    "platforms": [
+      "pc"
+    ],
     "store": 38.97,
-    "aliases": ["pc game pass", "game pass pc 3 mois"]
+    "aliases": [
+      "pc game pass",
+      "game pass pc 3 mois"
+    ]
   },
   {
     "name": "Minecraft",
@@ -2025,9 +2092,1938 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 7.99
+  },
+  {
+    "name": "Ace Combat 8: Wings of Theve",
+    "blurb": "Combat aérien Project Aces — sortie imminente.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9408-acheter-steam-ace-combat-8-wings-of-theve-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Ace%20Combat%208%3A%20Wings%20of%20Theve",
+    "price": 52.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2288340,
+    "cover": "https://gaming-cdn.com/images/products/9408/616x353/ace-combat-8-wings-of-theve-pc-steam-cover.jpg",
+    "aliases": [
+      "ace combat 8",
+      "ace combat",
+      "ac8"
+    ],
+    "release": "2026-10-17"
+  },
+  {
+    "name": "NieR: Automata Game of the YoRHa Edition",
+    "blurb": "Action Yoko Taro — édition complète YoRHa.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/4082-acheter-steam-nierautomata-game-of-the-yorha-edition-game-of-the-yorha-edition-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=NieR%3A%20Automata%20Game%20of%20the%20YoRHa%20Edition",
+    "price": 14.39,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/4082/616x353/nierautomata-game-of-the-yorha-edition-game-of-the-yorha-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "nier automata",
+      "nier"
+    ]
+  },
+  {
+    "name": "ARMORED CORE VI FIRES OF RUBICON",
+    "blurb": "Mechas FromSoftware — combats intenses.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13289-acheter-steam-armored-core-vi-fires-of-rubicon-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=ARMORED%20CORE%20VI%20FIRES%20OF%20RUBICON",
+    "price": 19.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1888160,
+    "cover": "https://gaming-cdn.com/images/products/13289/616x353/armored-core-vi-fires-of-rubicon-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "armored core 6",
+      "ac6"
+    ]
+  },
+  {
+    "name": "Devil May Cry 5",
+    "blurb": "Combo stylish Capcom — Vergil inclus.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2670-acheter-steam-devil-may-cry-5-vergil-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Devil%20May%20Cry%205",
+    "price": 4.89,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 601150,
+    "cover": "https://gaming-cdn.com/images/products/2670/616x353/devil-may-cry-5-vergil-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "dmc5",
+      "devil may cry 5"
+    ]
+  },
+  {
+    "name": "DOOM Eternal",
+    "blurb": "FPS ultra-violent id Software.",
+    "tag": "FPS",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7664-acheter-steam-doom-eternal-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=DOOM%20Eternal",
+    "price": 8.89,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 782330,
+    "cover": "https://gaming-cdn.com/images/products/7664/616x353/doom-eternal-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "doom eternal"
+    ]
+  },
+  {
+    "name": "Fallout 4 GOTY Edition",
+    "blurb": "Post-apo Bethesda — GOTY avec DLC.",
+    "tag": "RPG",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2207-acheter-steam-fallout-4-goty-edition-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Fallout%204%20GOTY%20Edition",
+    "price": 11.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/2207/616x353/fallout-4-goty-edition-pc-steam-cover.jpg",
+    "aliases": [
+      "fallout 4"
+    ]
+  },
+  {
+    "name": "Terraria",
+    "blurb": "Sandbox 2D — craft, boss, multi.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "coop",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/932-acheter-steam-terraria-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Terraria",
+    "price": 7.39,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 105600,
+    "cover": "https://gaming-cdn.com/images/products/932/616x353/terraria-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "terraria"
+    ]
+  },
+  {
+    "name": "Satisfactory",
+    "blurb": "Usine en 1re personne — solo ou potes.",
+    "tag": "Factory",
+    "cats": [
+      "chill",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/4229-acheter-steam-satisfactory-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Satisfactory",
+    "price": 24.09,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 526870,
+    "cover": "https://gaming-cdn.com/images/products/4229/616x353/satisfactory-pc-steam-cover.jpg",
+    "aliases": [
+      "satisfactory"
+    ]
+  },
+  {
+    "name": "Factorio",
+    "blurb": "Automatisation addictive — un classique.",
+    "tag": "Factory",
+    "cats": [
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2157-acheter-steam-jeu-steam-factorio?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Factorio",
+    "price": 28.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 427520,
+    "cover": "https://gaming-cdn.com/images/products/2157/616x353/jeu-steam-factorio-cover.jpg",
+    "aliases": [
+      "factorio"
+    ]
+  },
+  {
+    "name": "Sid Meier's Civilization VI",
+    "blurb": "4X — encore un tour.",
+    "tag": "Strat",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1437-acheter-steam-sid-meier-s-civilization-vi-pc-mac-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Sid%20Meier%27s%20Civilization%20VI",
+    "price": 42.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 289070,
+    "cover": "https://gaming-cdn.com/images/products/1437/616x353/sid-meier-s-civilization-vi-pc-mac-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "civ 6",
+      "civilization 6"
+    ]
+  },
+  {
+    "name": "Persona 5 Royal",
+    "blurb": "Le JRPG Atlus de référence — version complète.",
+    "tag": "RPG",
+    "cats": [
+      "hot",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/12919-acheter-steam-persona-5-royal-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Persona%205%20Royal",
+    "price": 12.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1687950,
+    "cover": "https://gaming-cdn.com/images/products/12919/616x353/persona-5-royal-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "p5r",
+      "persona 5"
+    ]
+  },
+  {
+    "name": "Starfield",
+    "blurb": "RPG spatial Bethesda.",
+    "tag": "RPG",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2675-acheter-steam-starfield-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Starfield",
+    "price": 22.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1716740,
+    "cover": "https://gaming-cdn.com/images/products/2675/616x353/starfield-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "starfield"
+    ]
+  },
+  {
+    "name": "Ready or Not",
+    "blurb": "SWAT tactique réaliste.",
+    "tag": "FPS",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2075-acheter-steam-ready-or-not-pc-jeu-steam-europe-us-canada?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Ready%20or%20Not",
+    "price": 19.59,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1144200,
+    "cover": "https://gaming-cdn.com/images/products/2075/616x353/ready-or-not-pc-jeu-steam-europe-us-canada-cover.jpg",
+    "aliases": [
+      "ready or not",
+      "ron"
+    ]
+  },
+  {
+    "name": "DARK SOULS III",
+    "blurb": "Le souls FromSoftware le plus accessible.",
+    "tag": "Souls",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/857-acheter-steam-dark-souls-3-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=DARK%20SOULS%20III",
+    "price": 23.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 374320,
+    "cover": "https://gaming-cdn.com/images/products/857/616x353/dark-souls-3-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "dark souls 3",
+      "ds3"
+    ]
+  },
+  {
+    "name": "DARK SOULS REMASTERED",
+    "blurb": "Le premier Dark Souls remasterisé.",
+    "tag": "Souls",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2364-acheter-steam-dark-souls-remastered-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=DARK%20SOULS%20REMASTERED",
+    "price": 23.29,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 570940,
+    "cover": "https://gaming-cdn.com/images/products/2364/616x353/dark-souls-remastered-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "dark souls",
+      "ds1"
+    ]
+  },
+  {
+    "name": "Core Keeper",
+    "blurb": "Survie 2D sous terre — mining & boss.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/10564-acheter-steam-core-keeper-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Core%20Keeper",
+    "price": 6.39,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1621690,
+    "cover": "https://gaming-cdn.com/images/products/10564/616x353/core-keeper-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "core keeper"
+    ]
+  },
+  {
+    "name": "Dave the Diver",
+    "blurb": "Plongée + resto — hit détente.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14242-acheter-steam-dave-the-diver-pc-mac-jeu-steam-europe-us-canada?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dave%20the%20Diver",
+    "price": 6.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1868140,
+    "cover": "https://gaming-cdn.com/images/products/14242/616x353/dave-the-diver-pc-mac-jeu-steam-europe-us-canada-cover.jpg",
+    "aliases": [
+      "dave the diver"
+    ]
+  },
+  {
+    "name": "Cult of the Lamb",
+    "blurb": "Roguelike + gestion de culte.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9423-acheter-steam-cult-of-the-lamb-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Cult%20of%20the%20Lamb",
+    "price": 8.49,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1313140,
+    "cover": "https://gaming-cdn.com/images/products/9423/616x353/cult-of-the-lamb-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "cult of the lamb"
+    ]
+  },
+  {
+    "name": "Enshrouded",
+    "blurb": "Survie voxel — craft et exploration.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "action",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14129-acheter-steam-enshrouded-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Enshrouded",
+    "price": 30.59,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1203620,
+    "cover": "https://gaming-cdn.com/images/products/14129/616x353/enshrouded-pc-steam-cover.jpg",
+    "aliases": [
+      "enshrouded"
+    ]
+  },
+  {
+    "name": "Avowed",
+    "blurb": "RPG Obsidian — monde d’Eora.",
+    "tag": "RPG",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7367-acheter-steam-avowed-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Avowed",
+    "price": 55.2,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2457220,
+    "cover": "https://gaming-cdn.com/images/products/7367/616x353/avowed-pc-steam-cover.jpg",
+    "aliases": [
+      "avowed"
+    ]
+  },
+  {
+    "name": "Euro Truck Simulator 2",
+    "blurb": "Camionnage chill — Europe.",
+    "tag": "Sim",
+    "cats": [
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/309-acheter-steam-euro-truck-simulator-2-pc-mac-jeu-steam-europe-us-canada?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Euro%20Truck%20Simulator%202",
+    "price": 10.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 227300,
+    "cover": "https://gaming-cdn.com/images/products/309/616x353/euro-truck-simulator-2-pc-mac-jeu-steam-europe-us-canada-cover.jpg",
+    "aliases": [
+      "ets2",
+      "euro truck"
+    ]
+  },
+  {
+    "name": "Farming Simulator 25",
+    "blurb": "Ferme et engins — solo ou coop.",
+    "tag": "Sim",
+    "cats": [
+      "chill",
+      "sport"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/16993-acheter-steam-farming-simulator-25-pc-mac-jeu-steam-europe-us-canada?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Farming%20Simulator%2025",
+    "price": 15.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2300320,
+    "cover": "https://gaming-cdn.com/images/products/16993/616x353/farming-simulator-25-pc-mac-jeu-steam-europe-us-canada-cover.jpg",
+    "aliases": [
+      "fs25"
+    ]
+  },
+  {
+    "name": "Raft",
+    "blurb": "Survie sur un radeau — multi chill.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2627-acheter-steam-jeu-steam-raft?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Raft",
+    "price": null,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 648800,
+    "cover": "https://gaming-cdn.com/images/products/2627/616x353/jeu-steam-raft-cover.jpg",
+    "aliases": [
+      "raft"
+    ]
+  },
+  {
+    "name": "Project Zomboid",
+    "blurb": "Zombies isométriques — hardcore & multi.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/953-acheter-steam-project-zomboid-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Project%20Zomboid",
+    "price": 22.89,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 108600,
+    "cover": "https://gaming-cdn.com/images/products/953/616x353/project-zomboid-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "zomboid"
+    ]
+  },
+  {
+    "name": "RimWorld",
+    "blurb": "Colonie sci-fi — histoires improbables.",
+    "tag": "Colonie",
+    "cats": [
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/3237-acheter-steam-rimworld-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=RimWorld",
+    "price": 19.69,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 294100,
+    "cover": "https://gaming-cdn.com/images/products/3237/616x353/rimworld-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "rimworld"
+    ]
+  },
+  {
+    "name": "Sons of the Forest",
+    "blurb": "Survie horreur — suite de The Forest.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5953-acheter-steam-sons-of-the-forest-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Sons%20of%20the%20Forest",
+    "price": 19.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1326470,
+    "cover": "https://gaming-cdn.com/images/products/5953/616x353/sons-of-the-forest-pc-steam-cover.jpg",
+    "aliases": [
+      "sotf"
+    ]
+  },
+  {
+    "name": "Portal 2",
+    "blurb": "Puzzle Valve — solo ou coop.",
+    "tag": "Puzzle",
+    "cats": [
+      "chill",
+      "coop",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/220-acheter-steam-portal-2-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Portal%202",
+    "price": 6.94,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 620,
+    "cover": "https://gaming-cdn.com/images/products/220/616x353/portal-2-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "portal 2"
+    ]
+  },
+  {
+    "name": "Left 4 Dead 2",
+    "blurb": "Zombies Valve — 4 joueurs.",
+    "tag": "Coop",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/733-acheter-steam-left-4-dead-2-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Left%204%20Dead%202",
+    "price": 3.61,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 550,
+    "cover": "https://gaming-cdn.com/images/products/733/616x353/left-4-dead-2-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "l4d2"
+    ]
+  },
+  {
+    "name": "Cuphead",
+    "blurb": "Run & gun cartoon — boss fights.",
+    "tag": "Indie",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2310-acheter-steam-cuphead-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Cuphead",
+    "price": 10.09,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 268910,
+    "cover": "https://gaming-cdn.com/images/products/2310/616x353/cuphead-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "cuphead"
+    ]
+  },
+  {
+    "name": "ULTRAKILL",
+    "blurb": "FPS rétro ultra-rapide.",
+    "tag": "FPS",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/15729-acheter-steam-ultrakill-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=ULTRAKILL",
+    "price": 7.59,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1229490,
+    "cover": "https://gaming-cdn.com/images/products/15729/616x353/ultrakill-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "ultrakill"
+    ]
+  },
+  {
+    "name": "Inscryption",
+    "blurb": "Deckbuilder horreur — twists.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9879-acheter-steam-inscryption-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Inscryption",
+    "price": 6.29,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1092790,
+    "cover": "https://gaming-cdn.com/images/products/9879/616x353/inscryption-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "inscryption"
+    ]
+  },
+  {
+    "name": "Animal Well",
+    "blurb": "Metroidvania mystère — hit indie.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/16313-acheter-steam-animal-well-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Animal%20Well",
+    "price": 18.0,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 813230,
+    "cover": "https://gaming-cdn.com/images/products/16313/616x353/animal-well-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "animal well"
+    ]
+  },
+  {
+    "name": "Nine Sols",
+    "blurb": "Souls-like taïwanais — Sekiro vibes.",
+    "tag": "Indie",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13794-acheter-steam-nine-sols-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Nine%20Sols",
+    "price": 17.29,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1809540,
+    "cover": "https://gaming-cdn.com/images/products/13794/616x353/nine-sols-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "nine sols"
+    ]
+  },
+  {
+    "name": "Resident Evil Village",
+    "blurb": "RE8 — village, Lady D.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6329-acheter-steam-resident-evil-village-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Resident%20Evil%20Village",
+    "price": 4.59,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1196590,
+    "cover": "https://gaming-cdn.com/images/products/6329/616x353/resident-evil-village-pc-steam-cover.jpg",
+    "aliases": [
+      "re8",
+      "re village"
+    ]
+  },
+  {
+    "name": "Sifu",
+    "blurb": "Kung-fu revenge — âge & maîtrise.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13881-acheter-steam-sifu-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Sifu",
+    "price": 5.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2138710,
+    "cover": "https://gaming-cdn.com/images/products/13881/616x353/sifu-pc-steam-cover.jpg",
+    "aliases": [
+      "sifu"
+    ]
+  },
+  {
+    "name": "Dying Light 2 Stay Human",
+    "blurb": "Parkour zombies Techland.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/15968-acheter-steam-dying-light-2-stay-human-reloaded-edition-reloaded-edition-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dying%20Light%202%20Stay%20Human",
+    "price": 12.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 534380,
+    "cover": "https://gaming-cdn.com/images/products/15968/616x353/dying-light-2-stay-human-reloaded-edition-reloaded-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "dying light 2",
+      "dl2"
+    ]
+  },
+  {
+    "name": "Control Ultimate Edition",
+    "blurb": "Remedy — pouvoir & Bureau.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7467-acheter-steam-control-ultimate-edition-ultimate-edition-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Control%20Ultimate%20Edition",
+    "price": 5.09,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 870780,
+    "cover": "https://gaming-cdn.com/images/products/7467/616x353/control-ultimate-edition-ultimate-edition-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "control"
+    ]
+  },
+  {
+    "name": "Yakuza 0",
+    "blurb": "Préquelle Yakuza — 80s Tokyo/Osaka.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/3104-acheter-steam-yakuza-0-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Yakuza%200",
+    "price": 9.0,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2988580,
+    "cover": "https://gaming-cdn.com/images/products/3104/616x353/yakuza-0-pc-steam-cover.jpg",
+    "aliases": [
+      "yakuza 0"
+    ]
+  },
+  {
+    "name": "Like a Dragon: Infinite Wealth",
+    "blurb": "Yakuza turn-based — Hawaii & Yokohama.",
+    "tag": "RPG",
+    "cats": [
+      "hot",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/12541-acheter-steam-like-a-dragon-infinite-wealth-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Like%20a%20Dragon%3A%20Infinite%20Wealth",
+    "price": 23.59,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2072450,
+    "cover": "https://gaming-cdn.com/images/products/12541/616x353/like-a-dragon-infinite-wealth-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "infinite wealth",
+      "yakuza 8"
+    ]
+  },
+  {
+    "name": "FINAL FANTASY XVI",
+    "blurb": "Action FF — Clive et Eikons.",
+    "tag": "JRPG",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/17418-acheter-steam-final-fantasy-xvi-complete-edition-complete-edition-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=FINAL%20FANTASY%20XVI",
+    "price": 25.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2515020,
+    "cover": "https://gaming-cdn.com/images/products/17418/616x353/final-fantasy-xvi-complete-edition-complete-edition-pc-steam-cover.jpg",
+    "aliases": [
+      "ff16"
+    ]
+  },
+  {
+    "name": "FINAL FANTASY VII REMAKE INTERGRADE",
+    "blurb": "FF7 Remake sur PC — Midgar.",
+    "tag": "JRPG",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5913-acheter-steam-final-fantasy-vii-remake-intergrade-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=FINAL%20FANTASY%20VII%20REMAKE%20INTERGRADE",
+    "price": 15.29,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1462040,
+    "cover": "https://gaming-cdn.com/images/products/5913/616x353/final-fantasy-vii-remake-intergrade-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "ff7 remake"
+    ]
+  },
+  {
+    "name": "STAR WARS Jedi: Survivor",
+    "blurb": "Suite Jedi Fallen Order.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14063-acheter-steam-star-wars-jedi-survivor-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=STAR%20WARS%20Jedi%3A%20Survivor",
+    "price": 34.19,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1774580,
+    "cover": "https://gaming-cdn.com/images/products/14063/616x353/star-wars-jedi-survivor-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "jedi survivor"
+    ]
+  },
+  {
+    "name": "Star Wars Outlaws",
+    "blurb": "Open world Star Wars Ubisoft.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14344-acheter-ubisoft-connect-star-wars-outlaws-pc-jeu-ubisoft-connect?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Star%20Wars%20Outlaws",
+    "price": 16.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2842040,
+    "cover": "https://gaming-cdn.com/images/products/14344/616x353/star-wars-outlaws-pc-jeu-ubisoft-connect-cover.jpg",
+    "aliases": [
+      "outlaws"
+    ]
+  },
+  {
+    "name": "Wuchang: Fallen Feathers",
+    "blurb": "Souls-like chinois — peste & combats.",
+    "tag": "Souls",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/17007-acheter-steam-wuchang-fallen-feathers-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Wuchang%3A%20Fallen%20Feathers",
+    "price": 26.19,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2277560,
+    "cover": "https://gaming-cdn.com/images/products/17007/616x353/wuchang-fallen-feathers-pc-steam-cover.jpg",
+    "aliases": [
+      "wuchang"
+    ]
+  },
+  {
+    "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+    "blurb": "Remake MGS3 — Snake Eater.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9827-acheter-steam-metal-gear-solid-delta-snake-eater-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=METAL%20GEAR%20SOLID%20%CE%94%3A%20SNAKE%20EATER",
+    "price": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2417610,
+    "cover": "https://gaming-cdn.com/images/products/9827/616x353/metal-gear-solid-delta-snake-eater-pc-steam-cover.jpg",
+    "aliases": [
+      "mgs delta",
+      "snake eater"
+    ]
+  },
+  {
+    "name": "Dying Light: The Beast",
+    "blurb": "Standalone Dying Light — Crane.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/17430-acheter-steam-dying-light-the-beast-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dying%20Light%3A%20The%20Beast",
+    "price": 23.29,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 3008130,
+    "cover": "https://gaming-cdn.com/images/products/17430/616x353/dying-light-the-beast-pc-steam-cover.jpg",
+    "aliases": [
+      "the beast"
+    ]
+  },
+  {
+    "name": "F1 25",
+    "blurb": "Formule 1 EA — career & multi.",
+    "tag": "Sport",
+    "cats": [
+      "sport",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/18916-acheter-ea-app-f1-25-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=F1%2025",
+    "price": 42.39,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 3059520,
+    "cover": "https://gaming-cdn.com/images/products/18916/616x353/f1-25-pc-steam-cover.jpg",
+    "aliases": [
+      "f1 25"
+    ]
+  },
+  {
+    "name": "EA Sports FC 26",
+    "blurb": "Foot EA — saison 25/26.",
+    "tag": "Sport",
+    "cats": [
+      "sport",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/22947-acheter-ea-app-ea-sports-fc-26-the-world-s-game-edition-pc-ea-app?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=EA%20Sports%20FC%2026",
+    "price": 39.89,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 3405690,
+    "cover": "https://gaming-cdn.com/images/products/22947/616x353/ea-sports-fc-26-the-world-s-game-edition-pc-ea-app-cover.jpg",
+    "aliases": [
+      "fc 26",
+      "ea fc 26"
+    ]
+  },
+  {
+    "name": "PAYDAY 3",
+    "blurb": "Braquages coop.",
+    "tag": "Coop",
+    "cats": [
+      "coop",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6442-acheter-steam-payday-3-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=PAYDAY%203",
+    "price": 12.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1272080,
+    "cover": "https://gaming-cdn.com/images/products/6442/616x353/payday-3-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "payday 3"
+    ]
+  },
+  {
+    "name": "Hunt: Showdown 1896",
+    "blurb": "Extraction PvPvE — bayou 1896.",
+    "tag": "FPS",
+    "cats": [
+      "action",
+      "hot",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2464-acheter-steam-hunt-showdown-1896-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Hunt%3A%20Showdown%201896",
+    "price": 9.89,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 594650,
+    "cover": "https://gaming-cdn.com/images/products/2464/616x353/hunt-showdown-1896-pc-steam-cover.jpg",
+    "aliases": [
+      "hunt showdown"
+    ]
+  },
+  {
+    "name": "The Elder Scrolls IV: Oblivion Remastered",
+    "blurb": "Remaster du classique Bethesda.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/18367-acheter-steam-the-elder-scrolls-iv-oblivion-remastered-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=The%20Elder%20Scrolls%20IV%3A%20Oblivion%20Remastered",
+    "price": 28.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2623190,
+    "cover": "https://gaming-cdn.com/images/products/18367/616x353/the-elder-scrolls-iv-oblivion-remastered-pc-steam-cover.jpg",
+    "aliases": [
+      "oblivion remastered",
+      "oblivion"
+    ]
+  },
+  {
+    "name": "Diablo IV",
+    "blurb": "ARPG Blizzard — saisons et campagnes.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5680-acheter-battle-net-diablo-iv-pc-battle-net?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Diablo%20IV",
+    "price": 43.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2344520,
+    "cover": "https://gaming-cdn.com/images/products/5680/616x353/diablo-iv-pc-battle-net-cover.jpg",
+    "aliases": [
+      "diablo 4",
+      "d4"
+    ]
+  },
+  {
+    "name": "A Plague Tale: Requiem",
+    "blurb": "Suite Plague Tale — rats & fraternité.",
+    "tag": "Aventure",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9034-acheter-steam-a-plague-tale-requiem-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=A%20Plague%20Tale%3A%20Requiem",
+    "price": 13.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1182900,
+    "cover": "https://gaming-cdn.com/images/products/9034/616x353/a-plague-tale-requiem-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "plague tale requiem"
+    ]
+  },
+  {
+    "name": "The Last of Us Part II",
+    "blurb": "Suite TLOU — Ellie & Abby (PC).",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6215-acheter-steam-the-last-of-us-part-ii-remastered-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=The%20Last%20of%20Us%20Part%20II",
+    "price": 25.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2531310,
+    "cover": "https://gaming-cdn.com/images/products/6215/616x353/the-last-of-us-part-ii-remastered-pc-steam-cover.jpg",
+    "aliases": [
+      "tlou2",
+      "last of us 2"
+    ]
+  },
+  {
+    "name": "Uncharted: Legacy of Thieves Collection",
+    "blurb": "Uncharted 4 + Lost Legacy sur PC.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/8907-acheter-steam-uncharted-legacy-of-thieves-collection-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Uncharted%3A%20Legacy%20of%20Thieves%20Collection",
+    "price": 13.21,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1659420,
+    "cover": "https://gaming-cdn.com/images/products/8907/616x353/uncharted-legacy-of-thieves-collection-pc-steam-cover.jpg",
+    "aliases": [
+      "uncharted"
+    ]
+  },
+  {
+    "name": "Titanfall 2",
+    "blurb": "Campagne + multi mechs.",
+    "tag": "FPS",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7149-acheter-steam-titanfall-2-ultimate-edition-ultimate-edition-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Titanfall%202",
+    "price": 22.61,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1237970,
+    "cover": "https://gaming-cdn.com/images/products/7149/616x353/titanfall-2-ultimate-edition-ultimate-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "titanfall 2"
+    ]
+  },
+  {
+    "name": "PowerWash Simulator",
+    "blurb": "Nettoyage zen.",
+    "tag": "Chill",
+    "cats": [
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/8977-acheter-steam-powerwash-simulator-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=PowerWash%20Simulator",
+    "price": 13.59,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1290000,
+    "cover": "https://gaming-cdn.com/images/products/8977/616x353/powerwash-simulator-pc-steam-cover.jpg",
+    "aliases": [
+      "powerwash"
+    ]
+  },
+  {
+    "name": "Grounded",
+    "blurb": "Survie insectes — solo ou potes.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6268-acheter-steam-grounded-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Grounded",
+    "price": 19.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 962130,
+    "cover": "https://gaming-cdn.com/images/products/6268/616x353/grounded-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "grounded"
+    ]
+  },
+  {
+    "name": "Don't Starve Together",
+    "blurb": "Survie Wilson & potes.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5415-acheter-steam-don-t-starve-together-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Don%27t%20Starve%20Together",
+    "price": 4.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 322330,
+    "cover": "https://gaming-cdn.com/images/products/5415/616x353/don-t-starve-together-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "dst"
+    ]
+  },
+  {
+    "name": "Ori and the Will of the Wisps",
+    "blurb": "Metroidvania Moon Studios.",
+    "tag": "Indie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/19582-acheter-steam-ori-and-the-will-of-the-wisps-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Ori%20and%20the%20Will%20of%20the%20Wisps",
+    "price": 7.29,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1057090,
+    "cover": "https://gaming-cdn.com/images/products/19582/616x353/ori-and-the-will-of-the-wisps-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "ori 2"
+    ]
+  },
+  {
+    "name": "Cronos: The New Dawn",
+    "blurb": "Survival horror Bloober.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/17854-acheter-steam-cronos-the-new-dawn-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Cronos%3A%20The%20New%20Dawn",
+    "price": 20.19,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2101960,
+    "cover": "https://gaming-cdn.com/images/products/17854/616x353/cronos-the-new-dawn-pc-steam-cover.jpg",
+    "aliases": [
+      "cronos"
+    ]
+  },
+  {
+    "name": "NINJA GAIDEN 4",
+    "blurb": "Retour Ninja Gaiden — Team Ninja × Platinum.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/18599-acheter-steam-ninja-gaiden-4-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=NINJA%20GAIDEN%204",
+    "price": 33.0,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2627260,
+    "cover": "https://gaming-cdn.com/images/products/18599/616x353/ninja-gaiden-4-pc-steam-cover.jpg",
+    "aliases": [
+      "ninja gaiden 4",
+      "ng4"
+    ]
+  },
+  {
+    "name": "Mass Effect Legendary Edition",
+    "blurb": "La trilogie ME remasterisée.",
+    "tag": "RPG",
+    "cats": [
+      "hot",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/15228-acheter-steam-mass-effect-legendary-edition-legendary-edition-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Mass%20Effect%20Legendary%20Edition",
+    "price": 23.0,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1328670,
+    "cover": "https://gaming-cdn.com/images/products/15228/616x353/mass-effect-legendary-edition-legendary-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "mass effect",
+      "mele"
+    ]
+  },
+  {
+    "name": "Dragon Age: The Veilguard",
+    "blurb": "RPG BioWare — compagnons & combats.",
+    "tag": "RPG",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6367-acheter-steam-dragon-age-the-veilguard-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dragon%20Age%3A%20The%20Veilguard",
+    "price": 28.34,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1845910,
+    "cover": "https://gaming-cdn.com/images/products/6367/616x353/dragon-age-the-veilguard-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "veilguard"
+    ]
+  },
+  {
+    "name": "Returnal",
+    "blurb": "Roguelike 3e personne Housemarque.",
+    "tag": "Roguelike",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9666-acheter-steam-returnal-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Returnal",
+    "price": 14.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1649240,
+    "cover": "https://gaming-cdn.com/images/products/9666/616x353/returnal-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "returnal"
+    ]
+  },
+  {
+    "name": "Ratchet & Clank: Rift Apart",
+    "blurb": "Plateformer Insomniac — dimensions.",
+    "tag": "Action",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9665-acheter-steam-ratchet-clank-rift-apart-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Ratchet%20%26%20Clank%3A%20Rift%20Apart",
+    "price": 19.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1895880,
+    "cover": "https://gaming-cdn.com/images/products/9665/616x353/ratchet-clank-rift-apart-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "ratchet",
+      "rift apart"
+    ]
+  },
+  {
+    "name": "Dead Space",
+    "blurb": "Remake survival horror EA Motive.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/16850-acheter-steam-dead-space-2023-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dead%20Space",
+    "price": 20.45,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1693980,
+    "cover": "https://gaming-cdn.com/images/products/16850/616x353/dead-space-2023-pc-steam-cover.jpg",
+    "aliases": [
+      "dead space remake"
+    ]
+  },
+  {
+    "name": "Alan Wake Remastered",
+    "blurb": "Remaster du thriller Remedy.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9490-acheter-epic-games-alan-wake-remastered-remastered-pc-jeu-epic-games?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Alan%20Wake%20Remastered",
+    "price": 9.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/9490/616x353/alan-wake-remastered-remastered-pc-jeu-epic-games-cover.jpg",
+    "aliases": [
+      "alan wake remastered"
+    ]
+  },
+  {
+    "name": "Half-Life: Alyx",
+    "blurb": "VR Valve — le best-of Half-Life.",
+    "tag": "VR",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5816-acheter-steam-half-life-alyx-vr-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Half-Life%3A%20Alyx",
+    "price": 42.31,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 546560,
+    "cover": "https://gaming-cdn.com/images/products/5816/616x353/half-life-alyx-vr-pc-steam-cover.jpg",
+    "aliases": [
+      "alyx"
+    ]
+  },
+  {
+    "name": "V Rising",
+    "blurb": "Vampire survival — château et boss.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/11030-acheter-steam-v-rising-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=V%20Rising",
+    "price": 4.59,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/11030/616x353/v-rising-pc-steam-cover.jpg",
+    "aliases": [
+      "v rising"
+    ],
+    "steam": 1604030
+  },
+  {
+    "name": "Monster Hunter: World",
+    "blurb": "Chasse Capcom — le hit PC.",
+    "tag": "Coop",
+    "cats": [
+      "coop",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2155-acheter-steam-monster-hunter-world-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Monster%20Hunter%3A%20World",
+    "price": 5.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/2155/616x353/monster-hunter-world-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "mhw"
+    ],
+    "steam": 582010
+  },
+  {
+    "name": "Resident Evil 2",
+    "blurb": "Remake RE2 — Leon & Claire.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2709-acheter-steam-resident-evil-2-biohazard-re-2-pc-jeu-steam-europe?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Resident%20Evil%202",
+    "price": 5.79,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/2709/616x353/resident-evil-2-biohazard-re-2-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "re2"
+    ],
+    "steam": 883710
+  },
+  {
+    "name": "Resident Evil 3",
+    "blurb": "Remake RE3 — Nemesis.",
+    "tag": "Horror",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5873-acheter-steam-resident-evil-3-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Resident%20Evil%203",
+    "price": 6.69,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/5873/616x353/resident-evil-3-pc-steam-cover.jpg",
+    "aliases": [
+      "re3"
+    ],
+    "steam": 952060
+  },
+  {
+    "name": "Metro Exodus",
+    "blurb": "FPS post-apo — voyage en train.",
+    "tag": "FPS",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6460-acheter-steam-metro-exodus-steam-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Metro%20Exodus",
+    "price": 4.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/6460/616x353/metro-exodus-steam-pc-steam-cover.jpg",
+    "aliases": [
+      "metro exodus"
+    ],
+    "steam": 412020
+  },
+  {
+    "name": "Silent Hill f",
+    "blurb": "Nouveau Silent Hill — Japon années 60.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13087-acheter-steam-silent-hill-f-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Silent%20Hill%20f",
+    "price": 28.69,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/13087/616x353/silent-hill-f-pc-steam-cover.jpg",
+    "aliases": [
+      "silent hill f",
+      "shf"
+    ],
+    "steam": 2947440
+  },
+  {
+    "name": "Elden Ring Nightreign",
+    "blurb": "Spin-off Elden Ring coop.",
+    "tag": "Hot",
+    "cats": [
+      "hot",
+      "action",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/18294-acheter-steam-elden-ring-nightreign-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Elden%20Ring%20Nightreign",
+    "price": 29.9,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/18294/616x353/elden-ring-nightreign-pc-steam-cover.jpg",
+    "aliases": [
+      "nightreign"
+    ],
+    "steam": 2622380
+  },
+  {
+    "name": "Call of Duty: Black Ops 6",
+    "blurb": "COD 2024 — campagne & multi.",
+    "tag": "FPS",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13629-acheter-battle-net-call-of-duty-black-ops-6-pc-jeu-battle-net?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Call%20of%20Duty%3A%20Black%20Ops%206",
+    "price": 68.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/13629/616x353/call-of-duty-black-ops-6-pc-jeu-battle-net-cover.jpg",
+    "aliases": [
+      "bo6",
+      "black ops 6"
+    ],
+    "steam": 4384550
+  },
+  {
+    "name": "Tom Clancy's Rainbow Six Siege",
+    "blurb": "Tactique 5v5 — operators.",
+    "tag": "FPS",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1857-acheter-ubisoft-connect-tom-clancy-s-rainbow-six-siege-ultimate-edition-pc-ubisoft-connect?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Tom%20Clancy%27s%20Rainbow%20Six%20Siege",
+    "price": 33.05,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1857/616x353/tom-clancy-s-rainbow-six-siege-ultimate-edition-pc-ubisoft-connect-cover.jpg",
+    "aliases": [
+      "r6",
+      "siege"
+    ],
+    "steam": 359550
+  },
+  {
+    "name": "SnowRunner",
+    "blurb": "Off-road mud & neige — coop.",
+    "tag": "Sim",
+    "cats": [
+      "chill",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/8798-acheter-steam-snowrunner-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=SnowRunner",
+    "price": 11.89,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/8798/616x353/snowrunner-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "snowrunner"
+    ],
+    "steam": 1465360
+  },
+  {
+    "name": "Little Nightmares III",
+    "blurb": "Horreur puzzle coop.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14831-acheter-steam-little-nightmares-iii-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Little%20Nightmares%20III",
+    "price": 18.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/14831/616x353/little-nightmares-iii-pc-steam-cover.jpg",
+    "aliases": [
+      "ln3",
+      "little nightmares 3"
+    ],
+    "steam": 1392860
+  },
+  {
+    "name": "Microsoft Flight Simulator 2024",
+    "blurb": "Le simu de vol nouvelle gen.",
+    "tag": "Sim",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/14345-acheter-steam-microsoft-flight-simulator-2024-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Microsoft%20Flight%20Simulator%202024",
+    "price": 42.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/14345/616x353/microsoft-flight-simulator-2024-pc-steam-cover.jpg",
+    "aliases": [
+      "msfs 2024"
+    ],
+    "steam": 2537590
+  },
+  {
+    "name": "Forza Motorsport",
+    "blurb": "Course simcade Xbox.",
+    "tag": "Sport",
+    "cats": [
+      "sport",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6842-acheter-xbox-series-x-s-forza-motorsport-pc-xbox-series-x-s-microsoft-store?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Forza%20Motorsport",
+    "price": 31.79,
+    "stock": "ok",
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/6842/616x353/forza-motorsport-pc-xbox-series-x-s-microsoft-store-cover.jpg",
+    "aliases": [
+      "forza motorsport"
+    ],
+    "steam": 2440510
+  },
+  {
+    "name": "Assetto Corsa Competizione",
+    "blurb": "Simu GT3 — réalisme.",
+    "tag": "Sim",
+    "cats": [
+      "sport"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/3153-acheter-steam-assetto-corsa-competizione-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Assetto%20Corsa%20Competizione",
+    "price": 3.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/3153/616x353/assetto-corsa-competizione-pc-steam-cover.jpg",
+    "aliases": [
+      "acc"
+    ],
+    "steam": 805550
+  },
+  {
+    "name": "Battlefield 6",
+    "blurb": "Nouveau Battlefield — multi large échelle.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/17306-acheter-ea-app-battlefield-6-pc-ea-app?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Battlefield%206",
+    "price": 41.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/17306/616x353/battlefield-6-pc-ea-app-cover.jpg",
+    "aliases": [
+      "bf6",
+      "battlefield"
+    ],
+    "steam": 2807960
+  },
+  {
+    "name": "Cities: Skylines II",
+    "blurb": "Gestion de ville nouvelle gen.",
+    "tag": "Sim",
+    "cats": [
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/8863-acheter-steam-cities-skylines-ii-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Cities%3A%20Skylines%20II",
+    "price": 28.09,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/8863/616x353/cities-skylines-ii-pc-steam-cover.jpg",
+    "aliases": [
+      "cities skylines 2",
+      "csl2"
+    ],
+    "steam": 949230
+  },
+  {
+    "name": "Subnautica",
+    "blurb": "Survie sous-marine — exploration.",
+    "tag": "Survie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1003-acheter-steam-subnautica-pc-mac-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Subnautica",
+    "price": 8.79,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1003/616x353/subnautica-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "subnautica"
+    ],
+    "steam": 1962700
+  },
+  {
+    "name": "Rust",
+    "blurb": "Survie hardcore PvP — craft et bases.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1230-acheter-steam-rust-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Rust",
+    "price": 29.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1230/616x353/rust-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "rust"
+    ],
+    "steam": 252490
+  },
+  {
+    "name": "Garry's Mod",
+    "blurb": "Sandbox Steam — modes infinis.",
+    "tag": "Sandbox",
+    "cats": [
+      "coop",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6401-acheter-steam-garry-s-mod-pc-mac-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Garry%27s%20Mod",
+    "price": 6.49,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/6401/616x353/garry-s-mod-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "gmod"
+    ],
+    "steam": 4000
+  },
+  {
+    "name": "Need for Speed Unbound",
+    "blurb": "Course urbaine EA.",
+    "tag": "Course",
+    "cats": [
+      "sport",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13496-acheter-steam-need-for-speed-unbound-pc-jeu-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Need%20for%20Speed%20Unbound",
+    "price": 24.38,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/13496/616x353/need-for-speed-unbound-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "nfs unbound"
+    ],
+    "steam": 1846380
+  },
+  {
+    "name": "NBA 2K26",
+    "blurb": "Basket 2K de la saison.",
+    "tag": "Sport",
+    "cats": [
+      "sport",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/21128-acheter-steam-nba-2k26-slam-edition-pc-steam?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=NBA%202K26",
+    "price": 17.09,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/21128/616x353/nba-2k26-slam-edition-pc-steam-cover.jpg",
+    "aliases": [
+      "nba 2k26",
+      "2k26"
+    ],
+    "steam": 3472040
   }
 ];
-window.JEUXSTASH_PRICES_UPDATED = "2026-10-03";
+window.JEUXSTASH_PRICES_UPDATED = "2026-10-04";
 
 /** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
 window.JEUXSTASH_COMING = {
