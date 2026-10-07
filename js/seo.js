@@ -7,6 +7,17 @@
     document.head.appendChild(s);
   }
 
+  // Preview Cloudflare (*.pages.dev) : ne pas indexer — le canonique est www
+  if (/\.pages\.dev$/i.test(location.hostname)) {
+    var robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute("content", "noindex,nofollow");
+  }
+
   var origin = "https://www.jeuxstash.fr";
   var path = location.pathname || "/";
 

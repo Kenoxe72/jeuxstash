@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Pages perso / outils — pas à indexer
+Disallow: /mes-jeux
+Disallow: /suivi
+
 Sitemap: https://www.jeuxstash.fr/sitemap-jeux.xml
+Sitemap: https://www.jeuxstash.fr/sitemap.xml

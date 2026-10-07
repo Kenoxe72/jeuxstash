@@ -138,7 +138,7 @@ function writeSitemap(slugs, guidesXmlPath) {
     "/",
     "/deals",
     "/pc-builder",
-    "/mes-jeux",
+    // /mes-jeux est noindex (liste perso) — ne pas le mettre dans le sitemap
     "/a-propos",
     "/mentions-legales",
     "/guides/",

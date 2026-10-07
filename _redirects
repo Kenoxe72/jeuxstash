@@ -2,3 +2,11 @@
 https://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
 http://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
 http://www.jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
+
+# Preview Cloudflare Pages → domaine canonique
+https://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
+http://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
+
+# Coquille SPA /jeu sans slug → catalogue (évite page vide indexée)
+/jeu /deals 301
+/jeu/ /deals 301
