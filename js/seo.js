@@ -35,6 +35,16 @@
     },
   });
 
+  addJsonLd({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "JeuxStash",
+    url: origin + "/",
+    email: "contact@jeuxstash.fr",
+    description: "Guide éditorial indépendant pour choisir un jeu et comparer les prix.",
+    sameAs: [],
+  });
+
   function injectFaq(root) {
     if (!root) return;
     var items = [];

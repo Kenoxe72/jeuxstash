@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("jeuxstash-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light");
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confidentialité — JeuxStash</title>
+  <meta name="description" content="Politique de confidentialité JeuxStash : cookies, analytics, données locales et contact." />
+  <link rel="canonical" href="https://www.jeuxstash.fr/confidentialite" />
+  <meta property="og:title" content="Confidentialité — JeuxStash" />
+  <meta property="og:description" content="Ce que JeuxStash collecte (ou non) et comment vos données sont traitées." />
+  <meta property="og:url" content="https://www.jeuxstash.fr/confidentialite" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="JeuxStash" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://www.jeuxstash.fr/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JeuxStash — Choisir un jeu, payer moins" />
+  <meta name="twitter:image" content="https://www.jeuxstash.fr/img/og-default.png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css?v=20261007cred2" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="logo" href="/">Jeux<span>Stash</span></a>
+      <nav>
+        <a href="/">Accueil</a>
+        <a href="/guides/">Guides</a>
+        <a href="/deals">Jeux</a>
+        <a href="/a-propos">À propos</a>
+        <a class="nav-cta" href="/deals">Catalogue</a>
+      </nav>
+    </div>
+  </header>
+  <article class="article">
+    <p class="back-nav"><a class="back-link" href="/">← Accueil</a></p>
+    <h1>Confidentialité</h1>
+    <p class="meta">Dernière mise à jour&nbsp;: 7 octobre 2026</p>
+    <p class="tldr"><strong>En bref :</strong> pas de compte obligatoire, peu de données. Mesure d’audience limitée, préférences stockées dans votre navigateur.</p>
+
+    <h2>Responsable</h2>
+    <p>JeuxStash — contact&nbsp;: <a href="mailto:contact@jeuxstash.fr">contact@jeuxstash.fr</a>.</p>
+
+    <h2>Données que nous ne demandons pas</h2>
+    <p>Vous n’avez pas besoin de créer de compte pour utiliser le site. Nous ne demandons pas de nom, adresse, ni moyen de paiement. Les achats se font chez les marchands (Instant Gaming, Amazon, etc.).</p>
+
+    <h2>Stockage local (votre navigateur)</h2>
+    <p>Certaines préférences restent sur votre appareil via <code>localStorage</code>, par exemple&nbsp;:</p>
+    <ul>
+      <li>thème clair / sombre&nbsp;;</li>
+      <li>liste «&nbsp;Mes jeux&nbsp;» (favoris) — uniquement dans votre navigateur, non envoyée à nos serveurs.</li>
+    </ul>
+    <p>Vous pouvez les effacer en vidant les données du site dans les réglages du navigateur.</p>
+
+    <h2>Mesure d’audience</h2>
+    <p>Le site peut utiliser des outils d’analytics (par ex. Google Analytics / Cloudflare Insights) pour comprendre les pages consultées de façon agrégée. Ces outils peuvent déposer des cookies ou identifiants techniques.</p>
+    <p>Vous pouvez limiter le suivi via les réglages de votre navigateur, une extension anti-traceurs, ou le mode privé.</p>
+
+    <h2>Liens externes et affiliation</h2>
+    <p>Quand vous cliquez vers Instant Gaming, Amazon ou un autre site, leurs propres politiques de confidentialité s’appliquent. Les liens affiliés peuvent permettre au marchand de savoir que la visite vient de JeuxStash.</p>
+
+    <h2>Vos droits</h2>
+    <p>Pour toute question relative à vos données, contactez <a href="mailto:contact@jeuxstash.fr">contact@jeuxstash.fr</a>. Selon votre situation, vous pouvez demander un accès, une rectification ou une suppression des données que nous traiterions éventuellement.</p>
+
+    <p>
+      <a class="btn ghost small" href="/a-propos">À propos</a>
+      <a class="btn ghost small" href="/mentions-legales">Mentions légales</a>
+    </p>
+  </article>
+  <footer class="site-footer">
+    <p><strong>JeuxStash</strong> — comparer avant d’acheter.</p>
+    <div class="footer-links">
+      <a href="/">Accueil</a>
+      <a href="/a-propos">À propos</a>
+      <a href="/mentions-legales">Mentions</a>
+    </div>
+    <p class="fine">Affiliation Instant Gaming — sans surcoût pour vous.</p>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/ui.js?v=20261007cred2"></script>
+  <script src="/js/seo.js"></script>
+  <script src="/js/track.js"></script>
+</body>
+</html>

@@ -141,6 +141,7 @@ function writeSitemap(slugs, guidesXmlPath) {
     // /mes-jeux est noindex (liste perso) — ne pas le mettre dans le sitemap
     "/a-propos",
     "/mentions-legales",
+    "/confidentialite",
     "/guides/",
   ];
 

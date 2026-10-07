@@ -43,6 +43,47 @@
   }
   mountThemeToggle();
 
+  /* CTA nav → catalogue (moins « pub Instant Gaming ») */
+  (function softenNavCta() {
+    var cta = document.querySelector(".site-header nav .nav-cta");
+    if (!cta) return;
+    cta.textContent = "Catalogue";
+    cta.setAttribute("href", "/deals");
+    cta.removeAttribute("target");
+    cta.removeAttribute("rel");
+  })();
+
+  /* Signature auteur sur les guides d’achat */
+  (function mountGuideAuthor() {
+    var path = location.pathname || "";
+    if (path.indexOf("/guides/") !== 0) return;
+    if (/\/guides\/?(index\.html)?$/i.test(path)) return;
+    var article = document.querySelector("article.article");
+    if (!article || article.querySelector(".author-byline")) return;
+
+    var byline = document.createElement("p");
+    byline.className = "author-byline";
+    byline.innerHTML =
+      'Par la <a href="/a-propos">rédaction JeuxStash</a> · guide d’achat indépendant · <a href="/a-propos#affiliation">méthode &amp; affiliation</a>';
+
+    var meta = article.querySelector(".meta");
+    var h1 = article.querySelector("h1");
+    if (meta && meta.parentNode) meta.insertAdjacentElement("afterend", byline);
+    else if (h1 && h1.parentNode) h1.insertAdjacentElement("afterend", byline);
+    else article.insertBefore(byline, article.firstChild);
+
+    if (article.querySelector(".author-card")) return;
+    var card = document.createElement("aside");
+    card.className = "author-card";
+    card.innerHTML =
+      "<p><strong>JeuxStash</strong> — sélection éditoriale, prix indicatifs, verdict Acheter / Attendre / Game Pass. " +
+      "Les boutons «&nbsp;Voir le prix&nbsp;» sont affiliés Instant Gaming (même prix pour vous). " +
+      '<a href="/a-propos">Qui on est →</a></p>';
+    var related = article.querySelector(".related-guides");
+    if (related) article.insertBefore(card, related);
+    else article.appendChild(card);
+  })();
+
   function toast(msg) {
     var el = document.getElementById("js-toast");
     if (!el) {

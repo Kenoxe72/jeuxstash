@@ -159,15 +159,81 @@ nav .nav-current {
 .nav-cta {
   padding: 0.4rem 0.75rem !important;
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent) !important;
-  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
-  font-weight: 700 !important;
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  color: var(--ink) !important;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  font-weight: 650 !important;
 }
 
 .nav-cta:hover {
-  background: color-mix(in srgb, var(--accent) 18%, transparent);
-  border-color: color-mix(in srgb, var(--accent) 48%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 36%, transparent);
+  color: var(--accent) !important;
+}
+
+.author-byline {
+  margin: 0.15rem 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.author-byline a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.author-card {
+  margin: 2rem 0 0;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.author-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.author-card a {
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.edit-note {
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
+}
+
+.edit-note-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.15rem 1.25rem;
+  border-radius: calc(var(--radius) + 2px);
+  background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.edit-note-inner h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2.8vw, 1.55rem);
+  color: var(--ink);
+}
+
+.edit-note-inner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.edit-note-inner a {
+  color: var(--accent);
+  font-weight: 650;
 }
 
 .theme-toggle {
