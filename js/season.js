@@ -113,7 +113,15 @@ window.JEUXSTASH_SEASON = (function () {
       blurb: "Nouveautés, RPG et gros titres en promo.",
       heroPrefer: ["Call of Duty: Modern Warfare 4", "Resident Evil Requiem", "Grand Theft Auto VI", "Crimson Desert Enhanced", "EA Sports FC 27"],
       boost: ["hot", "action"],
-      guideBoost: ["black-friday-jeux-2026", "meilleurs-jeux-pas-cher-automne-2026", "call-of-duty-pas-cher", "gta-6-pas-cher", "expedition-33-pas-cher", "black-myth-wukong-pas-cher"],
+      guideBoost: [
+        "black-friday-jeux-2026",
+        "meilleurs-jeux-pas-cher-automne-2026",
+        "instant-gaming-fiable",
+        "disco-elysium-pas-cher",
+        "far-cry-5-pas-cher",
+        "ea-fc-pas-cher",
+        "call-of-duty-pas-cher",
+      ],
     },
   };
 

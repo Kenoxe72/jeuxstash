@@ -228,27 +228,28 @@ function buildPage(template, game, slug, win) {
 
   const url = "https://www.jeuxstash.fr/jeu/" + slug + "/";
   const img = coverOf(game);
+  // Pas de Product/Offer : on n’est pas marchand — évite les alertes GSC « Achats »
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: game.name,
-    description: game.blurb || desc,
-    image: img,
-    offers: game.price
-      ? {
-          "@type": "Offer",
-          priceCurrency: "EUR",
-          price: String(game.price),
-          availability:
-            game.stock === "out"
-              ? "https://schema.org/OutOfStock"
-              : "https://schema.org/InStock",
-          url: game.ig || url,
-          seller: { "@type": "Organization", name: "Instant Gaming" },
-        }
-      : undefined,
+    "@type": "WebPage",
+    name: title,
+    description: desc,
+    url: url,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "JeuxStash",
+      url: "https://www.jeuxstash.fr/",
+    },
+    about: {
+      "@type": "VideoGame",
+      name: game.name,
+      description: game.blurb || desc,
+      image: img,
+      url: url,
+      applicationCategory: "Game",
+      operatingSystem: platLabel(game) || "PC",
+    },
   };
-  if (!jsonLd.offers) delete jsonLd.offers;
 
   let html = template;
   html = html.replace(/\s*<meta\s+name=["']robots["']\s+content=["'][^"']*["']\s*\/?>\s*/gi, "\n  ");
