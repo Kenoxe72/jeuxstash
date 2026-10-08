@@ -2644,6 +2644,14 @@ html[data-theme="dark"] .back-top {
   font-size: 1.02rem;
 }
 
+.fiche-verdict-why {
+  margin: 0.35rem 0 0.65rem;
+  max-width: 36rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 .fiche-price-row {
   display: flex;
   flex-wrap: wrap;

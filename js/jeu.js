@@ -340,6 +340,32 @@
   } catch (e) {}
 
   setMeta(game);
-  renderShell(game);
+
+  // HTML déjà généré côté serveur (SEO) → hydrater au lieu d’écraser
+  var staticReady =
+    root.getAttribute("data-static") === "1" && root.querySelector("article.fiche");
+  if (staticReady) {
+    var priceEl = root.querySelector(".fiche-price");
+    var livePrice = formatPrice(game.price);
+    if (priceEl && livePrice) priceEl.textContent = livePrice;
+    var kicker = root.querySelector(".fiche-kicker");
+    if (kicker && window.JEUXSTASH_WATCH && !kicker.querySelector(".watch-btn")) {
+      kicker.insertAdjacentHTML("beforeend", window.JEUXSTASH_WATCH.btnHTML(game.name));
+    }
+    if (window.JEUXSTASH_WATCH) window.JEUXSTASH_WATCH.syncUI();
+    var img = root.querySelector(".fiche-cover[data-fallback]");
+    if (img) {
+      img.addEventListener("error", function onErr() {
+        img.removeEventListener("error", onErr);
+        var fb = img.getAttribute("data-fallback");
+        if (!fb) return;
+        img.removeAttribute("data-fallback");
+        img.removeAttribute("srcset");
+        img.src = fb;
+      });
+    }
+  } else {
+    renderShell(game);
+  }
   loadSteam(game);
 })();

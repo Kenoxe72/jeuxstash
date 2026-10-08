@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
  * Génère /jeu/{slug}/index.html pour chaque jeu du catalogue.
- * URLs propres (sans ?slug=) + meta SEO côté HTML pour Google.
+ * Contenu SEO en HTML statique (titre, prix, verdict, CTA) + schema Product.
  */
 const fs = require("fs");
 const path = require("path");
 
 const root = path.join(__dirname, "..");
 const catalogPath = path.join(root, "js", "catalog.js");
+const verdictPath = path.join(root, "js", "verdict.js");
 const templatePath = path.join(root, "jeu", "index.html");
 const sitemapPath = path.join(root, "sitemap-jeux.xml");
 
@@ -28,14 +29,23 @@ function esc(str) {
     .replace(/>/g, "&gt;");
 }
 
-function loadCatalog() {
-  const src = fs.readFileSync(catalogPath, "utf8");
+function formatPrice(n) {
+  if (n == null || Number.isNaN(Number(n))) return null;
+  return (
+    Number(n).toLocaleString("fr-FR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }) + "\u00a0€"
+  );
+}
+
+function loadWindow() {
   const sandbox = { window: {} };
   // eslint-disable-next-line no-new-func
-  Function("window", src)(sandbox.window);
-  const catalog = sandbox.window.JEUXSTASH_CATALOG;
-  if (!Array.isArray(catalog) || !catalog.length) throw new Error("empty catalog");
-  return catalog;
+  Function("window", fs.readFileSync(catalogPath, "utf8"))(sandbox.window);
+  // eslint-disable-next-line no-new-func
+  Function("window", fs.readFileSync(verdictPath, "utf8"))(sandbox.window);
+  return sandbox.window;
 }
 
 function coverOf(game) {
@@ -46,11 +56,156 @@ function coverOf(game) {
   return "https://www.jeuxstash.fr/img/og-default.png";
 }
 
-function buildPage(template, game, slug) {
+function bannerOf(game) {
+  if (game.steam) {
+    return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
+  }
+  return coverOf(game);
+}
+
+function platLabel(game) {
+  const plats = game.platforms || [];
+  const labels = { pc: "PC", ps5: "PS5", switch: "Switch", xbox: "Xbox" };
+  return plats
+    .map(function (p) {
+      return labels[p] || p;
+    })
+    .join(" · ");
+}
+
+function guideFor(game) {
+  const map = {
+    "Elden Ring": "/guides/elden-ring-pas-cher",
+    "Cyberpunk 2077": "/guides/cyberpunk-pas-cher",
+    "Baldur's Gate 3": "/guides/baldurs-gate-3-pas-cher",
+    "Forza Horizon 5": "/guides/forza-horizon-5-pas-cher",
+    "EA Sports FC 27": "/guides/ea-fc-pas-cher",
+    "Grand Theft Auto VI": "/guides/gta-6-pas-cher",
+    "Black Myth: Wukong": "/guides/black-myth-wukong-pas-cher",
+    "Clair Obscur: Expedition 33": "/guides/expedition-33-pas-cher",
+  };
+  if (map[game.name]) return map[game.name];
+  if ((game.name || "").indexOf("Call of Duty") === 0) return "/guides/call-of-duty-pas-cher";
+  return null;
+}
+
+function buildStaticArticle(game, win) {
+  const price = formatPrice(game.price);
+  const oos = game.stock === "out";
+  const Coming = win.JEUXSTASH_COMING;
+  const coming = Coming && Coming.isComing(game);
+  const V = win.JEUXSTASH_VERDICT;
+  const verdict = V ? V.for(game) : null;
+  const cover = bannerOf(game);
+  const coverFb = coverOf(game);
+  const guide = guideFor(game);
+  const plats = platLabel(game);
+
+  let html = '<article class="fiche" data-static="1">';
+  if (cover) {
+    html +=
+      '<div class="fiche-banner"><img class="fiche-cover" src="' +
+      esc(cover) +
+      '" alt="' +
+      esc(game.name) +
+      '" width="616" height="353" loading="eager" fetchpriority="high"' +
+      (coverFb && coverFb !== cover ? ' data-fallback="' + esc(coverFb) + '"' : "") +
+      " /></div>";
+  }
+  html += '<div class="fiche-hero"><div class="fiche-kicker">';
+  html += '<span class="tag">' + esc(game.tag || "Jeu") + "</span>";
+  if (coming && Coming) {
+    html +=
+      '<span class="verdict-chip verdict-chip--wait">' + esc(Coming.label(game)) + "</span>";
+  }
+  if (verdict && V) html += V.chipHTML(game);
+  html += "</div>";
+  html += "<h1>" + esc(game.name) + "</h1>";
+  html += '<p class="fiche-blurb">' + esc(game.blurb || "") + "</p>";
+  if (plats) html += '<p class="fine">Plateformes : ' + esc(plats) + "</p>";
+  if (verdict && verdict.compare) {
+    html += '<p class="price-compare">' + esc(verdict.compare) + "</p>";
+  }
+  if (verdict && verdict.title) {
+    html += '<p class="fiche-verdict-why">' + esc(verdict.title) + "</p>";
+  }
+  html += '<div class="fiche-price-row">';
+  if (oos && !coming) {
+    html += '<span class="btn buy is-oos" aria-disabled="true">Clé en rupture</span>';
+  } else {
+    if (price) html += '<span class="fiche-price">' + price + "</span>";
+    if (game.ig) {
+      html +=
+        '<a class="btn buy" href="' +
+        esc(game.ig) +
+        '" rel="sponsored noopener" target="_blank">' +
+        (coming ? "Précommander sur Instant Gaming" : "Voir le prix sur Instant Gaming") +
+        "</a>";
+    }
+  }
+  html +=
+    '<a class="btn ghost" href="' +
+    esc(game.gg || "https://gg.deals/") +
+    '" rel="noopener" target="_blank">Comparer</a>';
+  if (guide) html += '<a class="btn ghost" href="' + guide + '">Guide d’achat</a>';
+  html += "</div>";
+  html +=
+    '<p class="fine">Prix indicatif Instant Gaming (affiliation) — vous payez le même prix. JeuxStash n’est pas une boutique.</p>';
+  html += "</div>";
+
+  html += '<div class="fiche-grid">';
+  html += '<section class="fiche-block" id="fiche-resume"><h2>Résumé</h2>';
+  html +=
+    '<p class="fine" id="fiche-resume-status">Résumé éditorial JeuxStash' +
+    (game.steam ? " — détails Steam ci-dessous si disponibles." : ".") +
+    "</p>";
+  html +=
+    '<div id="fiche-resume-body"><p>' +
+    esc(game.blurb || "Fiche JeuxStash pour comparer le prix avant d’acheter.") +
+    "</p></div></section>";
+
+  html += '<section class="fiche-block" id="fiche-specs"><h2>Config PC</h2>';
+  if (game.steam) {
+    html +=
+      '<p class="fine" id="fiche-specs-status">Prérequis Steam chargés si JavaScript est actif.</p>';
+    html +=
+      '<div id="fiche-specs-body" class="fiche-specs-body"><p>Voir aussi la fiche <a href="https://store.steampowered.com/app/' +
+      esc(String(game.steam)) +
+      '/" rel="noopener" target="_blank">Steam</a>.</p></div>';
+  } else {
+    html +=
+      '<p class="fine" id="fiche-specs-status" hidden></p><div id="fiche-specs-body" class="fiche-specs-body"><p>Pas d’ID Steam — la config dépend de la plateforme (console / store).</p></div>';
+  }
+  html += "</section></div>";
+
+  html += '<section class="fiche-block fiche-cta"><h2>Prêt à comparer&nbsp;?</h2>';
+  html +=
+    "<p>Regardez le prix clé, vérifiez ailleurs, puis achetez seulement si le verdict vous convient.</p><div class=\"row\">";
+  if (!oos && game.ig) {
+    html +=
+      '<a class="btn buy" href="' +
+      esc(game.ig) +
+      '" rel="sponsored noopener" target="_blank">Instant Gaming</a>';
+  }
+  html +=
+    '<a class="btn ghost" href="' +
+    esc(game.gg || "https://gg.deals/") +
+    '" rel="noopener" target="_blank">GG.deals</a>';
+  html += '<a class="btn ghost" href="/deals">Retour catalogue</a>';
+  html += "</div></section></article>";
+  return html;
+}
+
+function buildPage(template, game, slug, win) {
+  const priceLabel = formatPrice(game.price);
+  const V = win.JEUXSTASH_VERDICT;
+  const verdict = V ? V.for(game) : null;
   const title = game.name + " — prix, résumé & config — JeuxStash";
-  const desc =
-    (game.blurb || "Fiche JeuxStash") +
-    " Prix clé Instant Gaming, verdict, config PC si dispo.";
+  let desc = game.blurb || "Fiche JeuxStash";
+  if (priceLabel) desc = game.name + " à " + priceLabel.replace(/\u00a0/g, " ") + " (indicatif). " + desc;
+  if (verdict) desc += " Verdict : " + verdict.label + ".";
+  desc += " Comparez avant d’acheter.";
+
   const url = "https://www.jeuxstash.fr/jeu/" + slug + "/";
   const img = coverOf(game);
   const jsonLd = {
@@ -76,7 +231,6 @@ function buildPage(template, game, slug) {
   if (!jsonLd.offers) delete jsonLd.offers;
 
   let html = template;
-  // Les fiches doivent être indexables (ne pas hériter du noindex du shell /jeu/)
   html = html.replace(/\s*<meta\s+name=["']robots["']\s+content=["'][^"']*["']\s*\/?>\s*/gi, "\n  ");
   html = html.replace(/<title>[^<]*<\/title>/, "<title>" + esc(title) + "</title>");
   html = html.replace(
@@ -89,7 +243,9 @@ function buildPage(template, game, slug) {
   );
   html = html.replace(
     /<meta property="og:image" content="[^"]*" \/>/,
-    '<meta property="og:image" content="' + esc(img) + '" />\n' +
+    '<meta property="og:image" content="' +
+      esc(img) +
+      '" />\n' +
       '  <meta property="og:title" content="' +
       esc(title) +
       '" />\n' +
@@ -102,33 +258,31 @@ function buildPage(template, game, slug) {
   );
   html = html.replace(
     /<meta name="twitter:image" content="[^"]*" \/>/,
-    '<meta name="twitter:image" content="' + esc(img) + '" />\n' +
+    '<meta name="twitter:image" content="' +
+      esc(img) +
+      '" />\n' +
       '  <meta name="twitter:title" content="' +
       esc(title) +
       '" />'
   );
 
-  const noscript =
-    '<noscript><article><h1>' +
-    esc(game.name) +
-    "</h1><p>" +
-    esc(game.blurb || "") +
-    '</p><p><a href="/deals">Voir le catalogue</a></p></article></noscript>\n  ';
-
+  const article = buildStaticArticle(game, win);
   html = html.replace(
-    '<div id="fiche-root" class="fiche-root">',
-    noscript + '<div id="fiche-root" class="fiche-root" data-slug="' + esc(slug) + '">'
+    /<div id="fiche-root" class="fiche-root">[\s\S]*?<\/div>\s*<\/main>/,
+    '<div id="fiche-root" class="fiche-root" data-slug="' +
+      esc(slug) +
+      '" data-static="1">\n' +
+      article +
+      "\n    </div>\n  </main>"
   );
 
   const ldTag =
-    '<script type="application/ld+json">' +
-    JSON.stringify(jsonLd) +
-    "</script>\n</head>";
+    '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  // bump cache so nouvelles fiches prennent fiche/jeu SEO
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261001seo");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261001seo");
+  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261008static");
+  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261008static");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261008static");
 
   return html;
 }
@@ -140,14 +294,12 @@ function writeSitemap(slugs, guidesXmlPath) {
     "/",
     "/deals",
     "/pc-builder",
-    // /mes-jeux est noindex (liste perso) — ne pas le mettre dans le sitemap
     "/a-propos",
     "/mentions-legales",
     "/confidentialite",
     "/guides/",
   ];
 
-  // keep existing guide URLs from current sitemap if present
   let guideLocs = [];
   if (fs.existsSync(guidesXmlPath)) {
     const prev = fs.readFileSync(guidesXmlPath, "utf8");
@@ -157,15 +309,13 @@ function writeSitemap(slugs, guidesXmlPath) {
   }
   guideLocs = Array.from(new Set(guideLocs));
 
-  const lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
+  const lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ];
   function add(loc) {
     lines.push(
-      "  <url><loc>" +
-        origin +
-        loc +
-        "</loc><lastmod>" +
-        today +
-        "</lastmod></url>"
+      "  <url><loc>" + origin + loc + "</loc><lastmod>" + today + "</lastmod></url>"
     );
   }
   staticUrls.forEach(add);
@@ -178,12 +328,13 @@ function writeSitemap(slugs, guidesXmlPath) {
 }
 
 function main() {
-  const catalog = loadCatalog();
+  const win = loadWindow();
+  const catalog = win.JEUXSTASH_CATALOG;
+  if (!Array.isArray(catalog) || !catalog.length) throw new Error("empty catalog");
   const template = fs.readFileSync(templatePath, "utf8");
   const slugs = [];
   const seen = new Set();
 
-  // purge old generated dirs (keep jeu/index.html)
   for (const ent of fs.readdirSync(path.join(root, "jeu"), { withFileTypes: true })) {
     if (ent.isDirectory()) {
       fs.rmSync(path.join(root, "jeu", ent.name), { recursive: true, force: true });
@@ -197,7 +348,7 @@ function main() {
     slugs.push(slug);
     const dir = path.join(root, "jeu", slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, "index.html"), buildPage(template, game, slug), "utf8");
+    fs.writeFileSync(path.join(dir, "index.html"), buildPage(template, game, slug, win), "utf8");
   }
 
   writeSitemap(slugs, sitemapPath);
