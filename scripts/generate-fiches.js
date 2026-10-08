@@ -83,10 +83,21 @@ function guideFor(game) {
     "Grand Theft Auto VI": "/guides/gta-6-pas-cher",
     "Black Myth: Wukong": "/guides/black-myth-wukong-pas-cher",
     "Clair Obscur: Expedition 33": "/guides/expedition-33-pas-cher",
+    "Disco Elysium": "/guides/disco-elysium-pas-cher",
+    "Far Cry 5": "/guides/far-cry-5-pas-cher",
   };
   if (map[game.name]) return map[game.name];
   if ((game.name || "").indexOf("Call of Duty") === 0) return "/guides/call-of-duty-pas-cher";
   return null;
+}
+
+/** Titre SERP court, orienté clic (prix / Instant Gaming) */
+function seoTitle(game) {
+  const name = game.name || "Jeu";
+  if (name.length <= 32) {
+    return name + " pas cher : prix Instant Gaming — JeuxStash";
+  }
+  return name + " : prix Instant Gaming — JeuxStash";
 }
 
 function buildStaticArticle(game, win) {
@@ -200,9 +211,18 @@ function buildPage(template, game, slug, win) {
   const priceLabel = formatPrice(game.price);
   const V = win.JEUXSTASH_VERDICT;
   const verdict = V ? V.for(game) : null;
-  const title = game.name + " — prix, résumé & config — JeuxStash";
+  const title = seoTitle(game);
   let desc = game.blurb || "Fiche JeuxStash";
-  if (priceLabel) desc = game.name + " à " + priceLabel.replace(/\u00a0/g, " ") + " (indicatif). " + desc;
+  if (priceLabel) {
+    desc =
+      game.name +
+      " à " +
+      priceLabel.replace(/\u00a0/g, " ") +
+      " sur Instant Gaming (indicatif). " +
+      desc;
+  } else {
+    desc = game.name + " — prix Instant Gaming à comparer. " + desc;
+  }
   if (verdict) desc += " Verdict : " + verdict.label + ".";
   desc += " Comparez avant d’acheter.";
 

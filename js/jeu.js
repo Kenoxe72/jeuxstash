@@ -70,6 +70,8 @@
       "Grand Theft Auto VI": "/guides/gta-6-pas-cher",
       "Black Myth: Wukong": "/guides/black-myth-wukong-pas-cher",
       "Clair Obscur: Expedition 33": "/guides/expedition-33-pas-cher",
+      "Disco Elysium": "/guides/disco-elysium-pas-cher",
+      "Far Cry 5": "/guides/far-cry-5-pas-cher",
     };
     if (map[game.name]) return map[game.name];
     if ((game.name || "").indexOf("Call of Duty") === 0) return "/guides/call-of-duty-pas-cher";
@@ -97,10 +99,21 @@
   }
 
   function setMeta(game) {
-    var title = game.name + " — prix, résumé & config — JeuxStash";
+    var title =
+      (game.name && game.name.length <= 32
+        ? game.name + " pas cher : prix Instant Gaming — JeuxStash"
+        : game.name + " : prix Instant Gaming — JeuxStash");
+    var price =
+      game.price != null
+        ? Number(game.price).toLocaleString("fr-FR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }) + " €"
+        : null;
     var desc =
+      (price ? game.name + " à " + price + " sur Instant Gaming (indicatif). " : "") +
       (game.blurb || "Fiche JeuxStash") +
-      " Prix clé Instant Gaming, verdict, config PC si dispo.";
+      " Verdict et comparaison avant d’acheter.";
     document.title = title;
     var md = document.getElementById("meta-desc");
     if (md) md.setAttribute("content", desc);
