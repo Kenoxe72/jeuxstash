@@ -223,11 +223,11 @@
   function setHero(game) {
     if (!game) return;
     const actions = document.querySelector(".hero-actions");
-    const eyebrow = document.querySelector(".hero .eyebrow");
     const bgImg = document.getElementById("hero-bg-img");
-    if (eyebrow) {
-      eyebrow.textContent = plan.eyebrow + " · " + plan.label;
-    }
+    const fiche =
+      window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url
+        ? window.JEUXSTASH_FICHE.url(game)
+        : "/deals?q=" + encodeURIComponent(game.name);
     if (bgImg) {
       const hd = heroBgUrl(game);
       bgImg.src = hd;
@@ -249,24 +249,18 @@
     if (actions) {
       const buy = actions.querySelector(".btn.buy, .btn.is-oos");
       if (buy) {
-        if (game.stock === "out") {
-          const span = document.createElement("span");
-          span.className = "btn buy is-oos";
-          span.setAttribute("aria-disabled", "true");
-          span.textContent = game.name + " — rupture";
-          buy.replaceWith(span);
-        } else if (buy.tagName === "A") {
-          buy.href = game.ig;
-          buy.rel = "sponsored noopener";
-          buy.target = "_blank";
-          buy.textContent = "Voir le prix — " + game.name;
+        if (buy.tagName === "A") {
+          buy.className = "btn buy";
+          buy.href = fiche;
+          buy.removeAttribute("rel");
+          buy.removeAttribute("target");
+          buy.removeAttribute("aria-disabled");
+          buy.textContent = "Voir " + game.name;
         } else {
           const a = document.createElement("a");
           a.className = "btn buy";
-          a.href = game.ig;
-          a.rel = "sponsored noopener";
-          a.target = "_blank";
-          a.textContent = "Voir le prix — " + game.name;
+          a.href = fiche;
+          a.textContent = "Voir " + game.name;
           buy.replaceWith(a);
         }
       }
