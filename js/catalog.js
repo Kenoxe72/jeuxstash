@@ -31,7 +31,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/8103-acheter-it-takes-two-pc-jeu-ea-app/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=It+Takes+Two",
     "price": 15.99,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ]
@@ -288,7 +288,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/9000/616x353/resident-evil-requiem-pc-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/9000-acheter-resident-evil-requiem-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Resident+Evil+Requiem",
-    "price": 41.85,
+    "price": 42.07,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -817,7 +817,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/13083-acheter-silent-hill-2-pc-jeu-steam-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Silent+Hill+2",
     "price": 22.82,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -1193,7 +1193,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/9766/616x353/s-t-a-l-k-e-r-2-heart-of-chornobyl-xbox-series-x-s-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/9766-acheter-s-t-a-l-k-e-r-2-heart-of-chornobyl-xbox-series-x-s-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=STALKER+2",
-    "price": 41.4,
+    "price": 40.95,
     "stock": "ok",
     "platforms": [
       "xbox",
@@ -1315,7 +1315,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 1174180,
     "ig": "https://www.instant-gaming.com/fr/5653-acheter-red-dead-redemption-2-ultimate-edition-ultimate-edition-pc-jeu-rockstar/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Red+Dead+Redemption+2",
-    "price": 17.67,
+    "price": 18.34,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1512,7 +1512,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 1817070,
     "ig": "https://www.instant-gaming.com/fr/11907-acheter-marvel-s-spider-man-remastered-pc-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Marvel%27s+Spider-Man+Remastered",
-    "price": 22.48,
+    "price": 22.82,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1874,7 +1874,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 588650,
     "ig": "https://www.instant-gaming.com/fr/2090-acheter-steam-dead-cells-pc-mac-jeu-steam-europe-us-canada/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Dead%20Cells",
-    "price": 4.69,
+    "price": 4.58,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2066,7 +2066,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 3280350,
     "ig": "https://www.instant-gaming.com/fr/13292-acheter-steam-death-stranding-2-on-the-beach-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Death%20Stranding%202",
-    "price": 55.95,
+    "price": 56.28,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2789,7 +2789,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/13794-acheter-steam-nine-sols-pc-mac-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Nine%20Sols",
-    "price": 18.57,
+    "price": 19.57,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2876,7 +2876,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/7467-acheter-steam-control-ultimate-edition-ultimate-edition-pc-jeu-steam-europe?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Control%20Ultimate%20Edition",
-    "price": 5.36,
+    "price": 5.81,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3067,7 +3067,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/17430-acheter-steam-dying-light-the-beast-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Dying%20Light%3A%20The%20Beast",
-    "price": 28.53,
+    "price": 26.18,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3644,7 +3644,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/5873-acheter-steam-resident-evil-3-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Resident%20Evil%203",
-    "price": 7.15,
+    "price": 6.93,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3687,7 +3687,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/13087-acheter-steam-silent-hill-f-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Silent%20Hill%20f",
-    "price": 30.77,
+    "price": 30.43,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3903,7 +3903,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/8863-acheter-steam-cities-skylines-ii-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Cities%3A%20Skylines%20II",
-    "price": 29.31,
+    "price": 30.43,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -4011,7 +4011,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/21128-acheter-steam-nba-2k26-slam-edition-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=NBA%202K26",
     "price": 14.87,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -4023,7 +4023,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 3472040
   }
 ];
-window.JEUXSTASH_PRICES_UPDATED = "2026-10-10";
+window.JEUXSTASH_PRICES_UPDATED = "2026-10-11";
 
 /** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
 window.JEUXSTASH_COMING = {
