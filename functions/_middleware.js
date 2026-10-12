@@ -2,9 +2,12 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const host = url.hostname;
-  const path = url.pathname.replace(/\/+$/, "") || "/";
-  const isJeuShell = path === "/jeu" || path === "/jeu/index.html";
+  const rawPath = url.pathname;
+  const path = rawPath.replace(/\/+$/, "") || "/";
+  const isJeuShell =
+    path === "/jeu" || rawPath === "/jeu/index.html" || path === "/jeu/index.html";
 
+  // /jeu (avec ou sans slash) → deals, depuis n’importe quel hostname
   if (isJeuShell) {
     return Response.redirect("https://www.jeuxstash.fr/deals", 301);
   }

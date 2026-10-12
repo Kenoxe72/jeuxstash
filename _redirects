@@ -1,22 +1,15 @@
-# --- Règles spécifiques d’abord (premier match gagne) ---
+# Redirections statiques (premier match gagne).
+# Apex / pages.dev → www : géré par functions/_middleware.js (évite les chaînes).
 
-# Coquille /jeu → catalogue en UN saut (évite chaîne apex→www/jeu→/deals)
-https://jeuxstash.fr/jeu https://www.jeuxstash.fr/deals 301
-https://jeuxstash.fr/jeu/ https://www.jeuxstash.fr/deals 301
-https://jeuxstash.fr/jeu/index.html https://www.jeuxstash.fr/deals 301
-http://jeuxstash.fr/jeu https://www.jeuxstash.fr/deals 301
-http://jeuxstash.fr/jeu/ https://www.jeuxstash.fr/deals 301
-http://jeuxstash.fr/jeu/index.html https://www.jeuxstash.fr/deals 301
-
+# Coquille /jeu → catalogue
 /jeu https://www.jeuxstash.fr/deals 301
 /jeu/ https://www.jeuxstash.fr/deals 301
 /jeu/index.html https://www.jeuxstash.fr/deals 301
 
-# Preview Cloudflare Pages → domaine canonique
-https://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
-http://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
-
-# Forcer www (canonical) — évite le double indexation apex / www
-https://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
-http://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
-http://www.jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
+# Anciennes URL .html (au cas où)
+/deals.html /deals 301
+/a-propos.html /a-propos 301
+/mentions-legales.html /mentions-legales 301
+/mes-jeux.html /mes-jeux 301
+/pc-builder.html /pc-builder 301
+/confidentialite.html /confidentialite 301
