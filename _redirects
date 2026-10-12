@@ -1,12 +1,22 @@
-# Forcer www (canonical) — évite le double indexation apex / www
-https://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
-http://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
-http://www.jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
+# --- Règles spécifiques d’abord (premier match gagne) ---
+
+# Coquille /jeu → catalogue en UN saut (évite chaîne apex→www/jeu→/deals)
+https://jeuxstash.fr/jeu https://www.jeuxstash.fr/deals 301
+https://jeuxstash.fr/jeu/ https://www.jeuxstash.fr/deals 301
+https://jeuxstash.fr/jeu/index.html https://www.jeuxstash.fr/deals 301
+http://jeuxstash.fr/jeu https://www.jeuxstash.fr/deals 301
+http://jeuxstash.fr/jeu/ https://www.jeuxstash.fr/deals 301
+http://jeuxstash.fr/jeu/index.html https://www.jeuxstash.fr/deals 301
+
+/jeu https://www.jeuxstash.fr/deals 301
+/jeu/ https://www.jeuxstash.fr/deals 301
+/jeu/index.html https://www.jeuxstash.fr/deals 301
 
 # Preview Cloudflare Pages → domaine canonique
 https://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
 http://jeuxstash.pages.dev/* https://www.jeuxstash.fr/:splat 301
 
-# Coquille SPA /jeu sans slug → catalogue (évite page vide indexée)
-/jeu /deals 301
-/jeu/ /deals 301
+# Forcer www (canonical) — évite le double indexation apex / www
+https://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
+http://jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
+http://www.jeuxstash.fr/* https://www.jeuxstash.fr/:splat 301
