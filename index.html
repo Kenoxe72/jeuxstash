@@ -34,7 +34,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.cloudflare.steamstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css?v=20261014polish" />
+  <link rel="stylesheet" href="/css/style.css?v=20261014p2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JeuxStash",
+    "url": "https://www.jeuxstash.fr/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.jeuxstash.fr/deals?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "JeuxStash vend-il des jeux ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. C’est un guide éditorial : prix indicatif, verdict, puis liens vers Instant Gaming ou un comparateur. Vous payez chez le marchand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi des liens Instant Gaming ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ce sont des liens d’affiliation : si vous achetez via nos liens, une commission peut revenir au site. Le prix pour vous reste le même."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que veulent dire Acheter / Attendre / Game Pass ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acheter : l’écart vs prix boutique est intéressant. Attendre : sortie trop récente, précommande, ou peu de baisse. Game Pass : souvent plus malin d’essayer via l’abo. Avis éditorial — le bouton Comparer reste là pour vérifier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les prix sont-ils à jour ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ils sont indicatifs et rafraîchis régulièrement (la date apparaît sous le hero). Le prix final est celui de la boutique au moment du paiement."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -45,7 +98,6 @@
       <nav>
         <a href="/#idees">Idées</a>
         <a href="/guides/">Guides</a>
-        <a href="/deals">Jeux</a>
         <a href="/pc-builder">Builder PC</a>
         <a href="/mes-jeux">Mes jeux</a>
         <a class="nav-cta" href="/deals">Catalogue</a>
@@ -53,7 +105,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero hero--immersive">
       <div class="hero-bg" aria-hidden="true">
         <img id="hero-bg-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_hero_2x.jpg" srcset="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_hero.jpg 960w, https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/library_hero_2x.jpg 1920w" sizes="100vw" alt="" width="1920" height="620" loading="eager" fetchpriority="high" />
@@ -64,8 +116,8 @@
         <h1 class="anim-fade delay-1">Le bon jeu.<br />Au bon prix.</h1>
         <p class="lead anim-fade delay-2">Prix sous la jaquette, verdict <strong>Acheter / Attendre / Game Pass</strong> — puis vous comparez.</p>
         <div class="hero-actions anim-fade delay-3">
-          <a class="btn buy" href="/deals">Explorer le catalogue</a>
-          <a class="btn ghost" href="#promos">Voir les baisses</a>
+          <a class="btn buy" href="/deals">Voir les jeux</a>
+          <a class="btn ghost" href="#promos">Les baisses</a>
         </div>
         <form class="hero-search anim-fade delay-4" action="/deals" method="get" role="search">
           <label class="sr-only" for="home-search">Rechercher un jeu</label>
@@ -251,7 +303,7 @@
         </details>
         <details>
           <summary>Les prix sont-ils à jour&nbsp;?</summary>
-          <p class="faq-a">Ils sont indicatifs et rafraîchis régulièrement (la date apparaît sous le hero). Le prix final est celui de la boutique au moment du paiement.</p>
+          <p class="faq-a">Ils sont indicatifs et rafraîchis régulièrement (la date apparaît dans le bandeau sous le hero). Le prix final est celui de la boutique au moment du paiement.</p>
         </details>
       </div>
     </section>
@@ -277,9 +329,9 @@
   <script src="/js/guides-data.js?v=20261004pass"></script>
   <script src="/js/fiche.js?v=20261004pass"></script>
   <script src="/js/watchlist.js?v=20261004pass"></script>
-  <script src="/js/home.js?v=20261014polish"></script>
+  <script src="/js/home.js?v=20261014p2"></script>
   <script src="/js/config.js"></script>
-  <script src="/js/ui.js?v=20261014polish"></script>
+  <script src="/js/ui.js?v=20261014p2"></script>
   <script src="/js/seo.js?v=20260929"></script>
   <script src="/js/track.js"></script>
 </body>

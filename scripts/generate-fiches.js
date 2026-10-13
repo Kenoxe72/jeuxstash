@@ -100,6 +100,36 @@ function seoTitle(game) {
   return name + " : prix Instant Gaming — JeuxStash";
 }
 
+function relatedGames(game, catalog, limit) {
+  const cats = game.cats || [];
+  const catSet = new Set(cats);
+  const scored = [];
+  for (const g of catalog) {
+    if (!g || g.name === game.name) continue;
+    if (g.stock === "out" && !(g.cats || []).includes("coming")) continue;
+    let score = 0;
+    for (const c of g.cats || []) {
+      if (catSet.has(c)) score += c === "hot" || c === "pass" ? 1 : 3;
+    }
+    if (game.tag && g.tag === game.tag) score += 1;
+    const plats = game.platforms || [];
+    for (const p of g.platforms || []) {
+      if (plats.indexOf(p) !== -1) score += 0.5;
+    }
+    if (score < 2) continue;
+    scored.push({ g, score });
+  }
+  scored.sort(function (a, b) {
+    if (b.score !== a.score) return b.score - a.score;
+    const pa = a.g.price == null ? 999 : a.g.price;
+    const pb = b.g.price == null ? 999 : b.g.price;
+    return pa - pb;
+  });
+  return scored.slice(0, limit || 4).map(function (x) {
+    return x.g;
+  });
+}
+
 function buildStaticArticle(game, win) {
   const price = formatPrice(game.price);
   const oos = game.stock === "out";
@@ -150,7 +180,7 @@ function buildStaticArticle(game, win) {
         '<a class="btn buy" href="' +
         esc(game.ig) +
         '" rel="sponsored noopener" target="_blank">' +
-        (coming ? "Précommander sur Instant Gaming" : "Voir le prix sur Instant Gaming") +
+        (coming ? "Précommander" : "Voir le prix") +
         "</a>";
     }
   }
@@ -188,6 +218,27 @@ function buildStaticArticle(game, win) {
       '<p class="fine" id="fiche-specs-status" hidden></p><div id="fiche-specs-body" class="fiche-specs-body"><p>Pas d’ID Steam — la config dépend de la plateforme (console / store).</p></div>';
   }
   html += "</section></div>";
+
+  const related = relatedGames(game, win.JEUXSTASH_CATALOG || [], 4);
+  if (related.length) {
+    html += '<section class="fiche-block fiche-related"><h2>Dans le même esprit</h2>';
+    html += '<ul class="fiche-related-list">';
+    for (const r of related) {
+      const rSlug = slugify(r.name);
+      const rPrice = formatPrice(r.price);
+      html +=
+        '<li><a href="/jeu/' +
+        esc(rSlug) +
+        '/"><span class="fiche-related-name">' +
+        esc(r.name) +
+        "</span>" +
+        (rPrice
+          ? '<span class="fiche-related-price">' + rPrice + "</span>"
+          : '<span class="fiche-related-price fiche-related-price--muted">Voir</span>') +
+        "</a></li>";
+    }
+    html += "</ul></section>";
+  }
 
   html += '<section class="fiche-block fiche-cta"><h2>Prêt à comparer&nbsp;?</h2>';
   html +=
@@ -303,8 +354,8 @@ function buildPage(template, game, slug, win) {
 
   html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261008static");
   html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261008static");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261014polish");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261014polish");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261014p2");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261014p2");
 
   return html;
 }

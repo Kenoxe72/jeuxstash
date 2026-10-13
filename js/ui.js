@@ -53,6 +53,74 @@
     cta.removeAttribute("rel");
   })();
 
+  /* Skip link + id main */
+  (function mountSkipLink() {
+    var main = document.querySelector("main");
+    if (main && !main.id) main.id = "main";
+    if (document.querySelector(".skip-link")) return;
+    var a = document.createElement("a");
+    a.className = "skip-link";
+    a.href = "#main";
+    a.textContent = "Aller au contenu";
+    document.body.insertBefore(a, document.body.firstChild);
+  })();
+
+  /* Nav : pas de doublon Jeux/Catalogue, état courant */
+  (function polishNav() {
+    var nav = document.querySelector(".site-header nav");
+    if (!nav) return;
+    var path = (location.pathname || "/").replace(/\/$/, "") || "/";
+    var cta = nav.querySelector(".nav-cta");
+    Array.prototype.slice.call(nav.querySelectorAll("a:not(.nav-cta)")).forEach(function (a) {
+      var href = (a.getAttribute("href") || "").replace(/\/$/, "") || "/";
+      var label = (a.textContent || "").trim().toLowerCase();
+      if ((href === "/deals" || href === "/jeu") && (label === "jeux" || label === "catalogue")) {
+        a.remove();
+      }
+    });
+    Array.prototype.forEach.call(nav.querySelectorAll("a"), function (a) {
+      var href = (a.getAttribute("href") || "").replace(/\/$/, "") || "/";
+      var on =
+        href === "/"
+          ? path === "/"
+          : path === href || path.indexOf(href + "/") === 0;
+      if (on) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    if (cta && (path === "/deals" || path.indexOf("/jeu/") === 0)) {
+      cta.setAttribute("aria-current", "page");
+      cta.classList.add("nav-cta--current");
+    }
+  })();
+
+  /* Ombre header au scroll */
+  (function headerScroll() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    function tick() {
+      header.classList.toggle("is-scrolled", window.scrollY > 10);
+    }
+    window.addEventListener("scroll", tick, { passive: true });
+    tick();
+  })();
+
+  /* Toolbar catalogue collante */
+  (function stickyDealsToolbar() {
+    var tb = document.querySelector(".deals-toolbar");
+    if (!tb || !("IntersectionObserver" in window)) return;
+    var sentinel = document.createElement("div");
+    sentinel.className = "deals-toolbar-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    tb.parentNode.insertBefore(sentinel, tb);
+    var io = new IntersectionObserver(
+      function (entries) {
+        tb.classList.toggle("is-stuck", !entries[0].isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    io.observe(sentinel);
+  })();
+
   /* Signature auteur sur les guides d’achat */
   (function mountGuideAuthor() {
     var path = location.pathname || "";
