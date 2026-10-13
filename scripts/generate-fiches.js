@@ -303,7 +303,8 @@ function buildPage(template, game, slug, win) {
 
   html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261008static");
   html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261008static");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261008static");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261014polish");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261014polish");
 
   return html;
 }

@@ -220,6 +220,18 @@
     if (window.JEUXSTASH_WATCH) window.JEUXSTASH_WATCH.syncUI();
   }
 
+  function shortHeroCta(name) {
+    if (!name) return "Voir la fiche";
+    var n = String(name)
+      .replace(/^Call of Duty:\s*/i, "COD ")
+      .replace(/^Warhammer 40,000:\s*/i, "")
+      .replace(/^The Elder Scrolls V:\s*/i, "Skyrim ")
+      .replace(/^Grand Theft Auto\s*/i, "GTA ")
+      .replace(/^EA Sports\s*/i, "");
+    if (n.length <= 26) return "Voir " + n;
+    return "Voir la fiche";
+  }
+
   function setHero(game) {
     if (!game) return;
     const actions = document.querySelector(".hero-actions");
@@ -255,12 +267,12 @@
           buy.removeAttribute("rel");
           buy.removeAttribute("target");
           buy.removeAttribute("aria-disabled");
-          buy.textContent = "Voir " + game.name;
+          buy.textContent = shortHeroCta(game.name);
         } else {
           const a = document.createElement("a");
           a.className = "btn buy";
           a.href = fiche;
-          a.textContent = "Voir " + game.name;
+          a.textContent = shortHeroCta(game.name);
           buy.replaceWith(a);
         }
       }

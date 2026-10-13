@@ -482,3 +482,26 @@
   s.defer = true;
   document.head.appendChild(s);
 })();
+
+/* Apparition douce des sections au scroll */
+(function revealOnScroll() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var nodes = document.querySelectorAll(".section, .trust-strip, .money-links a, .faq-list details");
+  if (!nodes.length || !("IntersectionObserver" in window)) return;
+  nodes.forEach(function (el) {
+    el.classList.add("reveal");
+  });
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+  );
+  nodes.forEach(function (el) {
+    io.observe(el);
+  });
+})();
