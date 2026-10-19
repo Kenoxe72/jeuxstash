@@ -14,7 +14,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/21740-acheter-wardogs-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=WARDOGS",
     "price": 33.66,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ]
@@ -30,8 +30,8 @@ window.JEUXSTASH_CATALOG = [
     "steam": 1426210,
     "ig": "https://www.instant-gaming.com/fr/8103-acheter-it-takes-two-pc-jeu-ea-app/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=It+Takes+Two",
-    "price": 17.67,
-    "stock": "ok",
+    "price": 17.33,
+    "stock": "out",
     "platforms": [
       "pc"
     ]
@@ -65,7 +65,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 1551360,
     "ig": "https://www.instant-gaming.com/fr/8701-acheter-forza-horizon-5-pc-xbox-one-xbox-series-x-s-jeu-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Forza+Horizon+5",
-    "price": 30.28,
+    "price": 30.17,
     "stock": "ok",
     "platforms": [
       "pc",
@@ -83,7 +83,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 548430,
     "ig": "https://www.instant-gaming.com/fr/6323-acheter-deep-rock-galactic-pc-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Deep+Rock+Galactic",
-    "price": 9.0,
+    "price": 9.11,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -288,7 +288,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/9000/616x353/resident-evil-requiem-pc-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/9000-acheter-resident-evil-requiem-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Resident+Evil+Requiem",
-    "price": 42.55,
+    "price": 42.66,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -629,7 +629,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/21656/616x353/ea-sports-fc-27-pc-ea-app-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/21656-acheter-ea-sports-fc-27-pc-ea-app/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=EA+Sports+FC+27",
-    "price": 61.92,
+    "price": 60.23,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -658,7 +658,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/7678/616x353/black-myth-wukong-pc-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/7678-acheter-black-myth-wukong-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Black+Myth+Wukong",
-    "price": 40.07,
+    "price": 40.52,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -816,8 +816,8 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/13083/616x353/silent-hill-2-pc-jeu-steam-europe-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/13083-acheter-silent-hill-2-pc-jeu-steam-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Silent+Hill+2",
-    "price": 22.96,
-    "stock": "out",
+    "price": 23.07,
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -905,7 +905,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/17864/616x353/split-fiction-pc-jeu-ea-app-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/17864-acheter-split-fiction-pc-jeu-ea-app/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Split+Fiction",
-    "price": 46.72,
+    "price": 41.76,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -971,7 +971,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/8855/616x353/lies-of-p-pc-jeu-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/8855-acheter-lies-of-p-pc-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Lies+of+P",
-    "price": 22.62,
+    "price": 22.73,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1128,7 +1128,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/7911/616x353/dragon-s-dogma-2-pc-jeu-steam-europe-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/7911-acheter-dragon-s-dogma-2-pc-jeu-steam-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Dragon%27s+Dogma+2",
-    "price": 15.75,
+    "price": 16.65,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1149,7 +1149,7 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/15739/616x353/until-dawn-pc-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/15739-acheter-until-dawn-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Until+Dawn",
-    "price": 34.11,
+    "price": 33.99,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1350,7 +1350,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 243470,
     "ig": "https://www.instant-gaming.com/fr/254-acheter-watch-dogs-pc-jeu-ubisoft-connect-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Watch+Dogs",
-    "price": 3.59,
+    "price": 3.48,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1420,7 +1420,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 2369390,
     "ig": "https://www.instant-gaming.com/fr/7080-acheter-far-cry-6-pc-jeu-ubisoft-connect-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Far+Cry+6",
-    "price": 9.33,
+    "price": 9.11,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1819,7 +1819,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/15920-acheter-steam-balatro-pc-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Balatro",
     "price": 11.49,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -1837,7 +1837,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 1794680,
     "ig": "https://www.instant-gaming.com/fr/10934-acheter-steam-vampire-survivors-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Vampire%20Survivors",
-    "price": 3.93,
+    "price": 3.37,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1892,7 +1892,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 753640,
     "ig": "https://www.instant-gaming.com/fr/2586-acheter-steam-outer-wilds-pc-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Outer%20Wilds",
-    "price": 11.81,
+    "price": 11.7,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -1912,7 +1912,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/414-acheter-steam-no-man-s-sky-pc-mac-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=No%20Man%27s%20Sky",
     "price": 16.88,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -2027,7 +2027,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 2881650,
     "ig": "https://www.instant-gaming.com/fr/16548-acheter-steam-content-warning-pc-jeu-steam-europe-us-canada/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Content%20Warning",
-    "price": 4.83,
+    "price": 5.73,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2385,7 +2385,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/857-acheter-steam-dark-souls-3-pc-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=DARK%20SOULS%20III",
-    "price": 27.91,
+    "price": 27.35,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2493,7 +2493,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/14129-acheter-steam-enshrouded-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Enshrouded",
-    "price": 39.51,
+    "price": 39.74,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2599,7 +2599,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/953-acheter-steam-project-zomboid-pc-mac-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Project%20Zomboid",
     "price": 25.66,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -2789,7 +2789,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/13794-acheter-steam-nine-sols-pc-mac-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Nine%20Sols",
-    "price": 19.47,
+    "price": 18.23,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2810,7 +2810,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/6329-acheter-steam-resident-evil-village-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Resident%20Evil%20Village",
-    "price": 9.11,
+    "price": 9.33,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2876,7 +2876,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/7467-acheter-steam-control-ultimate-edition-ultimate-edition-pc-jeu-steam-europe?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Control%20Ultimate%20Edition",
-    "price": 5.84,
+    "price": 6.29,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3366,8 +3366,8 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/19582-acheter-steam-ori-and-the-will-of-the-wisps-pc-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Ori%20and%20the%20Will%20of%20the%20Wisps",
-    "price": 7.08,
-    "stock": "ok",
+    "price": 8.32,
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -3388,7 +3388,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/17854-acheter-steam-cronos-the-new-dawn-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Cronos%3A%20The%20New%20Dawn",
     "price": 21.27,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -3623,8 +3623,8 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/2709-acheter-steam-resident-evil-2-biohazard-re-2-pc-jeu-steam-europe?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Resident%20Evil%202",
-    "price": 7.98,
-    "stock": "out",
+    "price": 7.53,
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -3687,8 +3687,8 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/13087-acheter-steam-silent-hill-f-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Silent%20Hill%20f",
-    "price": 27.69,
-    "stock": "out",
+    "price": 27.91,
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -3947,7 +3947,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/1230-acheter-steam-rust-pc-mac-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Rust",
-    "price": 26.22,
+    "price": 26.11,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3968,7 +3968,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/6401-acheter-steam-garry-s-mod-pc-mac-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Garry%27s%20Mod",
-    "price": 7.08,
+    "price": 6.97,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -4023,7 +4023,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 3472040
   }
 ];
-window.JEUXSTASH_PRICES_UPDATED = "2026-10-18";
+window.JEUXSTASH_PRICES_UPDATED = "2026-10-19";
 
 /** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
 window.JEUXSTASH_COMING = {
