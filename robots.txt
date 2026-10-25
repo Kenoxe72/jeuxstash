@@ -5,5 +5,5 @@ Allow: /
 Disallow: /mes-jeux
 Disallow: /suivi
 
-Sitemap: https://www.jeuxstash.fr/sitemap-jeux.xml
 Sitemap: https://www.jeuxstash.fr/sitemap.xml
+Sitemap: https://www.jeuxstash.fr/sitemap-jeux.xml
