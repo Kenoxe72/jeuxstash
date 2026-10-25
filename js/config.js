@@ -3,7 +3,7 @@ window.JEUXSTASH_ANALYTICS = {
   // Cloudflare Web Analytics : Dashboard → Analytics & logs → Web Analytics → ton site → copier le token
   cfBeacon: "be9c0a42c4c746ab8ae076552db8f4fd",
   // Google Analytics 4 : admin.analytics.google.com → Admin → Flux de données → ID de mesure (G-XXXX)
-  ga4: "",
+  ga4: "G-C68R91W9LC",
 };
 
 /* Amazon Partenaires — ton ID (souvent se termine par -21). Ex: jeuxstash-21 */
