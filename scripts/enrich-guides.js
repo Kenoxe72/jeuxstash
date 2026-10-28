@@ -24,7 +24,7 @@ for (const file of files) {
   html = html.replace(/<nav>[\s\S]*?<\/nav>/, unifiedNav);
 
   // 2. Cache busters
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028fix");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028design");
   html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028fix");
   html = html.replace(/deals\.js\?v=[^"]+/g, "deals.js?v=20261028fix");
   html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261004big");
