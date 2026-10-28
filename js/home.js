@@ -17,7 +17,7 @@
 
   function coverUrl(game) {
     if (game.cover) return game.cover;
-    return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/header.jpg";
+    return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
   }
 
   /** Fond hero : Steam library_hero HD (header.jpg est trop petit → flou) */
@@ -163,7 +163,7 @@
       coverUrl(game) +
       '" alt="' +
       name +
-      '" width="460" height="215" loading="lazy" />' +
+      '" width="616" height="353" loading="lazy" />' +
       badgesHTML(game) +
       "</a>" +
       (window.JEUXSTASH_WATCH ? window.JEUXSTASH_WATCH.btnHTML(game.name) : "") +

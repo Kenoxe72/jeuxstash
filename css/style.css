@@ -639,12 +639,13 @@ html[data-theme="dark"] .hero-inner {
 .hero-cover img {
   width: 100%;
   height: auto;
-  aspect-ratio: 460 / 215;
-  object-fit: contain;
+  aspect-ratio: 616 / 353;
+  object-fit: cover;
   object-position: center center;
   display: block;
   border-radius: 10px;
   background: #12161c;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .hero-feature strong {
@@ -946,10 +947,11 @@ html[data-theme="dark"] .game-card:hover {
 .game-cover {
   display: block;
   width: 100%;
-  aspect-ratio: 460 / 215;
+  aspect-ratio: 616 / 353;
   object-fit: cover;
   object-position: center center;
   background: #0f131a;
+  image-rendering: -webkit-optimize-contrast;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1789,7 +1791,7 @@ html[data-theme="dark"] .deals-toolbar.is-stuck {
   border-radius: 8px;
   overflow: hidden;
   background: var(--bg-deep);
-  aspect-ratio: 460 / 215;
+  aspect-ratio: 616 / 353;
 }
 
 .guide-pick-cover img {

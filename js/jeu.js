@@ -16,7 +16,7 @@
   function coverUrl(game) {
     if (game.cover) return game.cover;
     if (game.steam) {
-      return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/header.jpg";
+      return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
     }
     return "";
   }

@@ -51,7 +51,7 @@ function loadWindow() {
 function coverOf(game) {
   if (game.cover) return game.cover;
   if (game.steam) {
-    return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/header.jpg";
+    return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
   }
   return "https://www.jeuxstash.fr/img/og-default.png";
 }
@@ -841,8 +841,176 @@ function main() {
   }
 
   writeSitemaps(slugs);
+  preRenderDeals(win, catalog);
+  preRenderHome(win, catalog);
   console.log("Generated", slugs.length, "fiches under /jeu/{slug}/");
   console.log("Updated sitemap.xml and sitemap-jeux.xml with", slugs.length + 30, "URLs");
+}
+
+function preRenderDeals(win, catalog) {
+  const dealsHtmlPath = path.join(root, "deals.html");
+  if (!fs.existsSync(dealsHtmlPath)) return;
+  let html = fs.readFileSync(dealsHtmlPath, "utf8");
+
+  function platformsOf(g) {
+    if (g.platforms && g.platforms.length) return g.platforms;
+    return ["pc"];
+  }
+
+  function coverUrl(g) {
+    if (g.cover) return g.cover;
+    if (g.steam) {
+      return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/capsule_616x353.jpg";
+    }
+    return "";
+  }
+
+  function badgesHTML(g) {
+    const oos = g.stock === "out";
+    const price = formatPrice(g.price);
+    let badges = "";
+    if (oos) {
+      badges += '<span class="game-badge game-badge--out">Rupture</span>';
+    }
+    if (price) {
+      badges += '<span class="game-badge game-badge--price">' + price + '</span>';
+    }
+    return badges ? '<span class="game-badges">' + badges + '</span>' : "";
+  }
+
+  function guideLink(g) {
+    const map = {
+      "Elden Ring": "/guides/elden-ring-pas-cher",
+      "Cyberpunk 2077": "/guides/cyberpunk-pas-cher",
+      "Baldur's Gate 3": "/guides/baldurs-gate-3-pas-cher",
+      "Forza Horizon 5": "/guides/forza-horizon-5-pas-cher",
+      "EA Sports FC 27": "/guides/ea-fc-pas-cher",
+      "Grand Theft Auto VI": "/guides/gta-6-pas-cher",
+    };
+    if (map[g.name]) return '<a class="btn ghost small" href="' + map[g.name] + '">Guide</a>';
+    if ((g.name || "").indexOf("Call of Duty") === 0) {
+      return '<a class="btn ghost small" href="/guides/call-of-duty-pas-cher">Guide</a>';
+    }
+    return "";
+  }
+
+  const cardsHtml = catalog.map(function (game, index) {
+    const slug = slugify(game.name);
+    const fiche = "/jeu/" + slug + "/";
+    const cover = coverUrl(game);
+    const name = esc(game.name);
+    const blurb = esc(game.blurb || "");
+    const tag = esc(game.tag || "");
+    const gg = esc(game.gg || ("https://gg.deals/games/?title=" + encodeURIComponent(game.name)));
+    const oos = game.stock === "out";
+    const cats = (game.cats || []).join(" ");
+    const plats = platformsOf(game).join(" ");
+    const i = Math.min(index, 12);
+    const price = formatPrice(game.price);
+
+    const img = cover
+      ? '<img class="game-cover" src="' + cover + '" alt="' + name + '" width="460" height="215" loading="lazy" />'
+      : '<div class="game-cover game-cover--empty" aria-hidden="true"></div>';
+
+    let verdictChip = "";
+    let compareHtml = "";
+    if (win && win.JEUXSTASH_VERDICT) {
+      verdictChip = win.JEUXSTASH_VERDICT.chipHTML(game);
+      compareHtml = win.JEUXSTASH_VERDICT.compareHTML(game);
+    }
+
+    let buyBtn = "";
+    if (game.ig) {
+      if (oos) {
+        buyBtn = '<span class="btn buy small is-oos" aria-disabled="true">Clé en rupture</span>';
+      } else {
+        buyBtn = '<a class="btn buy small" href="' + esc(game.ig) + '" rel="sponsored noopener" target="_blank">Clé digitale' + (price ? ' — ' + price : '') + '</a>';
+      }
+    }
+
+    return (
+      '      <article class="game-card anim-card' + (oos ? ' is-oos' : '') + '" style="--i:' + i + '" data-name="' + game.name.toLowerCase().replace(/"/g, "") + '" data-cats="' + cats + '" data-platforms="' + plats + '">' +
+      '<div class="game-cover-wrap">' +
+      '<a class="game-cover-link" href="' + fiche + '">' +
+      img +
+      badgesHTML(game) +
+      '</a>' +
+      '</div>' +
+      '<div class="game-card-body">' +
+      '<div class="card-meta">' +
+      '<span class="tag">' + tag + '</span>' +
+      verdictChip +
+      '</div>' +
+      '<h3><a class="game-title-link" href="' + fiche + '">' + name + '</a></h3>' +
+      '<p>' + blurb + '</p>' +
+      compareHtml +
+      '<div class="row row--actions">' +
+      buyBtn +
+      '<a class="btn ghost small" href="' + gg + '" rel="noopener" target="_blank">Comparer</a>' +
+      guideLink(game) +
+      '<button type="button" class="btn-icon js-share-deal" data-name="' + name + '" title="Copier le lien" aria-label="Partager">' +
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 3.9M15.4 6.6l-6.8 3.9"/></svg>' +
+      '</button>' +
+      '</div></div></article>'
+    );
+  }).join("\n");
+
+  html = html.replace(
+    /<div id="deals-grid" class="game-grid">[\s\S]*?(?=\s*<div id="deals-empty")/,
+    `<div id="deals-grid" class="game-grid">\n${cardsHtml}\n    </div>`
+  );
+
+  fs.writeFileSync(dealsHtmlPath, html, "utf8");
+  console.log("Pre-rendered", catalog.length, "game cards into deals.html");
+}
+
+function preRenderHome(win, catalog) {
+  const indexHtmlPath = path.join(root, "index.html");
+  if (!fs.existsSync(indexHtmlPath)) return;
+  let html = fs.readFileSync(indexHtmlPath, "utf8");
+
+  // Pre-render top 6 games into budget section
+  const topGames = catalog.filter(function (g) {
+    return g.stock === "ok" && g.price != null && g.price > 0 && g.price < 20;
+  }).slice(0, 6);
+
+  function coverUrl(g) {
+    if (g.cover) return g.cover;
+    if (g.steam) return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/capsule_616x353.jpg";
+    return "";
+  }
+
+  const cardsHtml = topGames.map(function (game, i) {
+    const slug = slugify(game.name);
+    const fiche = "/jeu/" + slug + "/";
+    const cover = coverUrl(game);
+    const name = esc(game.name);
+    const price = formatPrice(game.price);
+    const tag = esc(game.tag || "");
+    const img = cover ? '<img class="game-cover" src="' + cover + '" alt="' + name + '" width="616" height="353" loading="lazy" />' : "";
+    return (
+      '        <article class="game-card anim-card" style="--i:' + i + '">' +
+      '<div class="game-cover-wrap">' +
+      '<a class="game-cover-link" href="' + fiche + '">' +
+      img +
+      '<span class="game-badges"><span class="game-badge game-badge--price">' + price + '</span></span>' +
+      '</a>' +
+      '</div>' +
+      '<div class="game-card-body">' +
+      '<div class="card-meta"><span class="tag">' + tag + '</span></div>' +
+      '<h3><a class="game-title-link" href="' + fiche + '">' + name + '</a></h3>' +
+      '<p>' + esc(game.blurb || "") + '</p>' +
+      '</div></article>'
+    );
+  }).join("\n");
+
+  html = html.replace(
+    /(<section class="section" id="petits-prix">[\s\S]*?<div class="game-grid" data-rotate>)[\s\S]*?(?=\s*<\/section>\s*<section class="section" id="tonight")/,
+    `$1\n${cardsHtml}\n      </div>`
+  );
+
+  fs.writeFileSync(indexHtmlPath, html, "utf8");
+  console.log("Pre-rendered", topGames.length, "featured games into index.html");
 }
 
 main();

@@ -6,6 +6,10 @@
 /jeu/ https://www.jeuxstash.fr/deals 301
 /jeu/index.html https://www.jeuxstash.fr/deals 301
 
+# Redirection coquilles signalées dans Google Search Console
+/jeu/wardgos https://www.jeuxstash.fr/jeu/wardogs/ 301
+/jeu/wardgos/ https://www.jeuxstash.fr/jeu/wardogs/ 301
+
 # Anciennes URL .html (au cas où)
 /deals.html /deals 301
 /a-propos.html /a-propos 301

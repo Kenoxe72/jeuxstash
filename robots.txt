@@ -5,5 +5,7 @@ Allow: /
 Disallow: /mes-jeux
 Disallow: /suivi
 
+# Préserve le budget de crawl (les pages canoniques /deals et /jeu/ restent indexées)
+Disallow: /deals?*
+
 Sitemap: https://www.jeuxstash.fr/sitemap.xml
-Sitemap: https://www.jeuxstash.fr/sitemap-jeux.xml

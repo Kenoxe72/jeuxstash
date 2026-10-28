@@ -82,7 +82,7 @@
   function coverUrl(game) {
     if (game.cover) return game.cover;
     if (game.steam) {
-      return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/header.jpg";
+      return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
     }
     return "";
   }
@@ -277,7 +277,7 @@
         cover +
         '" alt="' +
         name +
-        '" width="460" height="215" loading="lazy" />'
+        '" width="616" height="353" loading="lazy" />'
       : '<div class="game-cover game-cover--empty" aria-hidden="true"></div>';
     const i = typeof index === "number" ? Math.min(index, 12) : 0;
     return (

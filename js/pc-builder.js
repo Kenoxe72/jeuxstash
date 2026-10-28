@@ -268,7 +268,7 @@
         var price = formatEuro(g.price);
         var v = V ? V.for(g) : null;
         var pct = v && v.savePct ? "−" + v.savePct + "\u00a0%" : "";
-        var cov = g.cover || (g.steam ? "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/header.jpg" : "");
+        var cov = g.cover || (g.steam ? "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/capsule_616x353.jpg" : "");
         var fiche =
           window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url
             ? window.JEUXSTASH_FICHE.url(g)
@@ -282,7 +282,7 @@
               esc(cov) +
               '" alt="' +
               esc(g.name) +
-              '" width="230" height="107" loading="lazy" />' +
+              '" width="616" height="353" loading="lazy" />' +
               '<span class="builder-fps-pill">' +
               esc(item.fps) +
               "</span></a>"

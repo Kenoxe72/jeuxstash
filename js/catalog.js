@@ -34,7 +34,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/8103/616x353/it-takes-two-pc-jeu-ea-app-cover.jpg"
   },
   {
     "name": "Stardew Valley",
@@ -51,7 +52,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1767/616x353/stardew-valley-pc-mac-jeu-steam-cover.jpg"
   },
   {
     "name": "Forza Horizon 5",
@@ -71,7 +73,8 @@ window.JEUXSTASH_CATALOG = [
       "pc",
       "xbox"
     ],
-    "amazon": "Forza Horizon 5 Xbox"
+    "amazon": "Forza Horizon 5 Xbox",
+    "cover": "https://gaming-cdn.com/images/products/8701/616x353/forza-horizon-5-pc-xbox-one-xbox-series-x-s-jeu-microsoft-store-cover.jpg"
   },
   {
     "name": "Deep Rock Galactic",
@@ -87,7 +90,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/6323/616x353/deep-rock-galactic-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Overcooked 2",
@@ -103,7 +107,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/2705/616x353/overcooked-2-pc-mac-jeu-steam-cover.jpg"
   },
   {
     "name": "PlateUp!",
@@ -119,7 +124,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/12605/616x353/plateup-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Lethal Company",
@@ -136,7 +142,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/15274/616x353/lethal-company-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Phasmophobia",
@@ -152,7 +159,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/7677/616x353/phasmophobia-pc-steam-cover.jpg"
   },
   {
     "name": "Helldivers 2",
@@ -169,7 +177,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/9575/616x353/helldivers-2-pc-jeu-steam-europe-us-canada-cover.jpg"
   },
   {
     "name": "Valheim",
@@ -186,7 +195,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/7119/616x353/valheim-pc-mac-steam-cover.jpg"
   },
   {
     "name": "Hades",
@@ -202,7 +212,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/5972/616x353/hades-pc-mac-jeu-steam-cover.jpg"
   },
   {
     "name": "Risk of Rain 2",
@@ -219,7 +230,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/4378/616x353/risk-of-rain-2-pc-steam-cover.jpg"
   },
   {
     "name": "Grand Theft Auto VI",
@@ -1233,7 +1245,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Baldur's Gate 3 PC"
+    "amazon": "Baldur's Gate 3 PC",
+    "cover": "https://gaming-cdn.com/images/products/4804/616x353/baldur-s-gate-3-pc-jeu-gog-com-cover.jpg"
   },
   {
     "name": "Elden Ring",
@@ -1252,7 +1265,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Elden Ring PC"
+    "amazon": "Elden Ring PC",
+    "cover": "https://gaming-cdn.com/images/products/4824/616x353/elden-ring-pc-steam-cover.jpg"
   },
   {
     "name": "Cyberpunk 2077",
@@ -1271,7 +1285,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Cyberpunk 2077 PC"
+    "amazon": "Cyberpunk 2077 PC",
+    "cover": "https://gaming-cdn.com/images/products/840/616x353/cyberpunk-2077-pc-jeu-gog-com-cover.jpg"
   },
   {
     "name": "GTA V Enhanced",
@@ -1295,7 +1310,8 @@ window.JEUXSTASH_CATALOG = [
       "gta5",
       "gta v",
       "grand theft auto 5"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/4211/616x353/grand-theft-auto-v-enhanced-pc-rockstar-cover.jpg"
   },
   {
     "name": "Red Dead Redemption 2",
@@ -1314,7 +1330,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Red Dead Redemption 2 PC"
+    "amazon": "Red Dead Redemption 2 PC",
+    "cover": "https://gaming-cdn.com/images/products/5653/616x353/red-dead-redemption-2-ultimate-edition-ultimate-edition-pc-jeu-rockstar-cover.jpg"
   },
   {
     "name": "Sea of Thieves",
@@ -1331,7 +1348,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc",
       "xbox"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/967/616x353/sea-of-thieves-2026-edition-pc-xbox-one-xbox-series-x-s-microsoft-store-cover.jpg"
   },
   {
     "name": "Watch Dogs",
@@ -1348,7 +1366,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/254/616x353/watch-dogs-pc-jeu-ubisoft-connect-europe-cover.jpg"
   },
   {
     "name": "Watch Dogs 2",
@@ -1366,7 +1385,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "out",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1365/616x353/watch-dogs-2-pc-jeu-ubisoft-connect-europe-cover.jpg"
   },
   {
     "name": "Watch Dogs Legion",
@@ -1401,7 +1421,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/1842/616x353/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg"
   },
   {
     "name": "Far Cry 6",
@@ -1418,7 +1439,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/7080/616x353/far-cry-6-pc-jeu-ubisoft-connect-europe-cover.jpg"
   },
   {
     "name": "Assassin's Creed Odyssey",
@@ -1436,7 +1458,8 @@ window.JEUXSTASH_CATALOG = [
     "stock": "ok",
     "platforms": [
       "pc"
-    ]
+    ],
+    "cover": "https://gaming-cdn.com/images/products/2648/616x353/assassin-s-creed-odyssey-pc-jeu-ubisoft-connect-europe-cover.jpg"
   },
   {
     "name": "The Witcher 3",
@@ -1455,7 +1478,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "The Witcher 3 Complete Edition PC"
+    "amazon": "The Witcher 3 Complete Edition PC",
+    "cover": "https://gaming-cdn.com/images/products/1497/616x353/the-witcher-3-wild-hunt-complete-edition-pc-gog-com-cover.jpg"
   },
   {
     "name": "Hogwarts Legacy",
@@ -1474,7 +1498,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Hogwarts Legacy PC"
+    "amazon": "Hogwarts Legacy PC",
+    "cover": "https://gaming-cdn.com/images/products/7072/616x353/hogwarts-legacy-l-heritage-de-poudlard-pc-jeu-steam-europe-us-canada-cover.jpg"
   },
   {
     "name": "God of War",
@@ -1493,7 +1518,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "God of War PC"
+    "amazon": "God of War PC",
+    "cover": "https://gaming-cdn.com/images/products/7325/616x353/god-of-war-pc-jeu-steam-europe-cover.jpg"
   },
   {
     "name": "Marvel's Spider-Man",
@@ -1511,7 +1537,8 @@ window.JEUXSTASH_CATALOG = [
     "platforms": [
       "pc"
     ],
-    "amazon": "Spider-Man Remastered PC"
+    "amazon": "Spider-Man Remastered PC",
+    "cover": "https://gaming-cdn.com/images/products/11907/616x353/marvel-s-spider-man-remastered-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Zelda: Tears of the Kingdom",
@@ -1780,7 +1807,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 14.79,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/2198/616x353/hollow-knight-pc-mac-steam-cover.jpg"
   },
   {
     "name": "Hollow Knight: Silksong",
@@ -1799,7 +1826,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 19.5,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/3952/616x353/hollow-knight-silksong-pc-mac-steam-cover.jpg"
   },
   {
     "name": "Balatro",
@@ -1818,7 +1845,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 14.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2379780/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/15920/616x353/balatro-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Vampire Survivors",
@@ -1837,7 +1864,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 4.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1794680/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/10934/616x353/vampire-survivors-pc-steam-cover.jpg"
   },
   {
     "name": "Celeste",
@@ -1855,7 +1882,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 19.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/8003/616x353/celeste-pc-mac-jeu-steam-cover.jpg"
   },
   {
     "name": "Dead Cells",
@@ -1874,7 +1901,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 24.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/2090/616x353/dead-cells-pc-mac-jeu-steam-europe-us-canada-cover.jpg"
   },
   {
     "name": "Outer Wilds",
@@ -1892,7 +1919,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 22.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/753640/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/2586/616x353/outer-wilds-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "No Man's Sky",
@@ -1911,7 +1938,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 59.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/275850/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/414/616x353/no-man-s-sky-pc-mac-steam-cover.jpg"
   },
   {
     "name": "Disco Elysium",
@@ -1930,7 +1957,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 39.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/632470/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/9753/616x353/disco-elysium-the-final-cut-pc-mac-jeu-steam-cover.jpg"
   },
   {
     "name": "The Elder Scrolls V: Skyrim Special Edition",
@@ -1950,7 +1977,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "pass": true,
     "store": 39.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/1512/616x353/the-elder-scrolls-v-skyrim-special-edition-special-edition-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Borderlands 4",
@@ -1990,7 +2017,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 39.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1808500/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/10142/616x353/arc-raiders-pc-steam-cover.jpg"
   },
   {
     "name": "R.E.P.O.",
@@ -2009,7 +2036,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 9.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3241660/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/18808/616x353/r-e-p-o-pc-jeu-steam-cover.jpg"
   },
   {
     "name": "Content Warning",
@@ -2027,7 +2054,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 7.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/2881650/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/16548/616x353/content-warning-pc-jeu-steam-europe-us-canada-cover.jpg"
   },
   {
     "name": "Remnant II",
@@ -2047,7 +2074,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 49.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1282100/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/13288/616x353/remnant-2-pc-jeu-steam-europe-us-canada-cover.jpg"
   },
   {
     "name": "Death Stranding 2",
@@ -2066,7 +2093,7 @@ window.JEUXSTASH_CATALOG = [
       "pc"
     ],
     "store": 69.99,
-    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/3280350/header.jpg"
+    "cover": "https://gaming-cdn.com/images/products/13292/616x353/death-stranding-2-on-the-beach-pc-steam-cover.jpg"
   },
   {
     "name": "PEAK",

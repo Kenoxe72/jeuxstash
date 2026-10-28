@@ -8,6 +8,14 @@ const files = fs.readdirSync(guidesDir).filter(f => f.endsWith(".html"));
 let faqCount = 0;
 let articleCount = 0;
 
+function esc(str) {
+  return String(str == null ? "" : str)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 for (const file of files) {
   const filePath = path.join(guidesDir, file);
   let html = fs.readFileSync(filePath, "utf8");
@@ -32,7 +40,34 @@ for (const file of files) {
   html = html.replace(/season\.js\?v=[^"]+/g, "season.js?v=20261029v1");
 
   if (file === "index.html") {
+    const guidesDataPath = path.join(__dirname, "..", "js", "guides-data.js");
+    const sandbox = { window: {} };
+    // eslint-disable-next-line no-new-func
+    Function("window", fs.readFileSync(guidesDataPath, "utf8"))(sandbox.window);
+    const guidesList = sandbox.window.JEUXSTASH_GUIDES || [];
+
+    const cardsHtml = guidesList.map((g, i) => {
+      const num = String(i + 1).padStart(2, "0");
+      const featured = i === 0 ? " guide-card--featured" : "";
+      const thumb = g.thumb
+        ? `<img class="guide-thumb" src="${g.thumb}" alt="" loading="lazy" width="460" height="215" />`
+        : "";
+      return `      <a class="guide-card${featured}" href="${g.href}" style="--i:${i}">
+        ${thumb}
+        <span class="guide-num">${num}</span>
+        <span class="guide-kicker">${esc(g.kicker || "Guide")}</span>
+        <strong>${esc(g.title)}</strong>
+        <span>${esc(g.blurb || "")}</span>
+      </a>`;
+    }).join("\n");
+
+    html = html.replace(
+      /<div class="guide-grid" data-rotate>[\s\S]*?(?=\s*<\/main>)/,
+      `<div class="guide-grid" data-rotate>\n${cardsHtml}\n    </div>`
+    );
+
     fs.writeFileSync(filePath, html, "utf8");
+    console.log("Pre-rendered", guidesList.length, "guides into guides/index.html");
     continue;
   }
 

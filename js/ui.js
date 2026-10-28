@@ -244,7 +244,7 @@
     function coverG(game) {
       if (game.cover) return game.cover;
       if (game.steam) {
-        return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/header.jpg";
+        return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + game.steam + "/capsule_616x353.jpg";
       }
       return "";
     }
@@ -275,7 +275,7 @@
             escG(cover) +
             '" alt="' +
             escG(game.name) +
-            '" width="460" height="215" loading="lazy" /></a>'
+            '" width="616" height="353" loading="lazy" /></a>'
           : "") +
         '<div class="guide-pick-body"><h3><a href="' +
         escG(fiche) +
@@ -614,7 +614,7 @@
 
   function coverA(g) {
     if (g.cover) return g.cover;
-    if (g.steam) return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/header.jpg";
+    if (g.steam) return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/capsule_616x353.jpg";
     return "";
   }
 
