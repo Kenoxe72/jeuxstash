@@ -94,8 +94,15 @@ function guideFor(game) {
 /** Titre SERP court, orienté clic (prix / Instant Gaming) */
 function seoTitle(game) {
   const name = game.name || "Jeu";
+  const p = formatPrice(game.price);
+  if (p && game.stock !== "out") {
+    if (name.length <= 26) {
+      return name + " pas cher dès " + p + " : prix Instant Gaming — JeuxStash";
+    }
+    return name + " dès " + p + " : clé Instant Gaming — JeuxStash";
+  }
   if (name.length <= 32) {
-    return name + " pas cher : prix Instant Gaming — JeuxStash";
+    return name + " pas cher : prix Instant Gaming & verdict — JeuxStash";
   }
   return name + " : prix Instant Gaming — JeuxStash";
 }
@@ -254,7 +261,27 @@ function buildStaticArticle(game, win) {
     esc(game.gg || "https://gg.deals/") +
     '" rel="noopener" target="_blank">GG.deals</a>';
   html += '<a class="btn ghost" href="/deals">Retour catalogue</a>';
-  html += "</div></section></article>";
+  html += "</div></section>";
+
+  if (!oos && game.ig) {
+    html +=
+      '<div class="sticky-aff" aria-label="Acheter ou comparer">' +
+      '<span class="sticky-aff-label">' +
+      esc(game.name) +
+      "</span>" +
+      '<a class="btn buy small" href="' +
+      esc(game.ig) +
+      '" rel="sponsored noopener" target="_blank">' +
+      (coming ? "Préco" : "Clé") +
+      (price ? " " + price : "") +
+      "</a>" +
+      '<a class="btn ghost small" href="' +
+      esc(game.gg || "https://gg.deals/") +
+      '" rel="noopener" target="_blank">Comparer</a>' +
+      "</div>";
+  }
+
+  html += "</article>";
   return html;
 }
 
@@ -264,43 +291,94 @@ function buildPage(template, game, slug, win) {
   const verdict = V ? V.for(game) : null;
   const title = seoTitle(game);
   let desc = game.blurb || "Fiche JeuxStash";
-  if (priceLabel) {
+  if (priceLabel && game.stock !== "out") {
     desc =
       game.name +
-      " à " +
+      " au meilleur prix dès " +
       priceLabel.replace(/\u00a0/g, " ") +
-      " sur Instant Gaming (indicatif). " +
-      desc;
+      " sur Instant Gaming. Verdict : " +
+      (verdict ? verdict.label : "Acheter") +
+      ". Comparez avant d’acheter et vérifiez la config PC.";
   } else {
-    desc = game.name + " — prix Instant Gaming à comparer. " + desc;
+    desc =
+      game.name +
+      " — comparez le prix clé Instant Gaming et boutiques officielles. Verdict : " +
+      (verdict ? verdict.label : "Attendre") +
+      ". Config PC et disponibilité en direct.";
   }
-  if (verdict) desc += " Verdict : " + verdict.label + ".";
-  desc += " Comparez avant d’acheter.";
 
   const url = "https://www.jeuxstash.fr/jeu/" + slug + "/";
   const img = coverOf(game);
-  // Pas de Product/Offer : on n’est pas marchand — évite les alertes GSC « Achats »
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: title,
-    description: desc,
-    url: url,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "JeuxStash",
-      url: "https://www.jeuxstash.fr/",
-    },
-    about: {
-      "@type": "VideoGame",
-      name: game.name,
-      description: game.blurb || desc,
-      image: img,
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description: desc,
       url: url,
-      applicationCategory: "Game",
-      operatingSystem: platLabel(game) || "PC",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "JeuxStash",
+        url: "https://www.jeuxstash.fr/",
+      },
+      about: {
+        "@type": "VideoGame",
+        name: game.name,
+        description: game.blurb || desc,
+        image: img,
+        url: url,
+        applicationCategory: "Game",
+        operatingSystem: platLabel(game) || "PC",
+        ...(game.price && game.stock !== "out"
+          ? {
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "EUR",
+                lowPrice: Number(game.price),
+                offerCount: 1,
+                offers: [
+                  {
+                    "@type": "Offer",
+                    price: Number(game.price),
+                    priceCurrency: "EUR",
+                    availability: "https://schema.org/InStock",
+                    url: game.ig || url,
+                    seller: {
+                      "@type": "Organization",
+                      name: "Instant Gaming",
+                    },
+                  },
+                ],
+              },
+            }
+          : {}),
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: "https://www.jeuxstash.fr/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Catalogue",
+          item: "https://www.jeuxstash.fr/deals",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: game.name,
+          item: url,
+        },
+      ],
+    },
+  ];
 
   let html = template;
   html = html.replace(/\s*<meta\s+name=["']robots["']\s+content=["'][^"']*["']\s*\/?>\s*/gi, "\n  ");
@@ -352,10 +430,14 @@ function buildPage(template, game, slug, win) {
     '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261008static");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261008static");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261014p2");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261014p2");
+  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028fix");
+  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028fix");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028fix");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028fix");
+  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028fix");
+  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028fix");
+
+  return html;
 
   return html;
 }
