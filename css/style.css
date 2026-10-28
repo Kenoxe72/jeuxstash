@@ -3048,5 +3048,375 @@ html[data-theme="dark"] .fiche-banner {
   }
 }
 
+/* --- Tableau comparatif & FAQ sur les fiches jeux --- */
+.fiche-compare-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.fiche-compare-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.1fr auto;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+}
+
+.fiche-compare-row--best {
+  border-color: rgba(255, 87, 0, 0.35);
+  background: linear-gradient(135deg, rgba(255, 87, 0, 0.06) 0%, rgba(245, 158, 11, 0.05) 100%);
+}
+
+html[data-theme="dark"] .fiche-compare-row {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+html[data-theme="dark"] .fiche-compare-row--best {
+  border-color: rgba(255, 115, 29, 0.42);
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.12) 0%, rgba(245, 158, 11, 0.06) 100%);
+}
+
+.fiche-compare-col--source strong {
+  display: block;
+  font-size: 0.96rem;
+  color: var(--ink);
+}
+
+.fiche-compare-col--source span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.12rem;
+}
+
+.fiche-compare-col--price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.fiche-compare-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+.fiche-compare-store {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.fiche-compare-muted {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.fiche-compare-row .save-euro,
+.builder-bench-foot .save-euro,
+.watch-summary .save-euro {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0d6e43;
+  background: rgba(16, 185, 129, 0.13);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .fiche-compare-row .save-euro,
+html[data-theme="dark"] .builder-bench-foot .save-euro,
+html[data-theme="dark"] .watch-summary .save-euro {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(52, 211, 153, 0.28);
+}
+
+@media (max-width: 680px) {
+  .fiche-compare-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* --- Autocomplétion en direct (#home-search) --- */
+.search-autocomplete {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: rgba(16, 20, 29, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  text-align: left;
+}
+
+.search-ac-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  color: #f3f6fc;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.15s ease;
+}
+
+.search-ac-item:hover {
+  background: rgba(255, 106, 0, 0.16);
+}
+
+.search-ac-thumb {
+  width: 68px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #0b0e14;
+}
+
+.search-ac-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-ac-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-ac-meta {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-ac-right {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.search-ac-pct {
+  padding: 0.12rem 0.42rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.search-ac-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.search-ac-oos {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.search-ac-all {
+  display: block;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ff8c3b;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.search-ac-all:hover {
+  background: rgba(255, 106, 0, 0.12);
+}
+
+/* --- Builder PC : Benchmarks & jeux compatibles --- */
+.builder-benchmarks {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.builder-bench-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.65rem;
+}
+
+@media (max-width: 860px) {
+  .builder-bench-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .builder-bench-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.builder-bench-card {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+html[data-theme="dark"] .builder-bench-card {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.builder-bench-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 460 / 215;
+  overflow: hidden;
+  background: #10131a;
+}
+
+.builder-bench-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.builder-fps-pill {
+  position: absolute;
+  bottom: 0.45rem;
+  left: 0.45rem;
+  padding: 0.18rem 0.52rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  background: rgba(6, 78, 59, 0.9);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.builder-bench-body {
+  padding: 0.7rem 0.8rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.builder-bench-body h5 {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.25;
+}
+
+.builder-bench-body h5 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.builder-bench-body h5 a:hover {
+  color: var(--accent-2);
+}
+
+.builder-bench-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.builder-bench-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* --- Récapitulatif budget sur Mes jeux --- */
+.watch-summary {
+  margin-bottom: 1.35rem;
+  padding: 1.05rem 1.25rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 87, 0, 0.28);
+  background: linear-gradient(135deg, rgba(255, 87, 0, 0.06) 0%, rgba(245, 158, 11, 0.05) 100%);
+  box-shadow: var(--shadow);
+}
+
+html[data-theme="dark"] .watch-summary {
+  border-color: rgba(255, 115, 29, 0.35);
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.11) 0%, rgba(245, 158, 11, 0.06) 100%);
+}
+
+.watch-summary-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.watch-summary-kicker {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+  margin-bottom: 0.25rem;
+}
+
+.watch-summary-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.watch-summary-store {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.watch-summary-best {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+
 
 

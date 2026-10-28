@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.cloudflare.steamstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css?v=20261028v3" />
+  <link rel="stylesheet" href="/css/style.css?v=20261028v4" />
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -68,11 +68,14 @@
       <span id="watch-count" class="deals-count"></span>
     </div>
 
+    <div id="watch-summary" class="watch-summary" hidden></div>
+
     <div id="watch-empty" class="watch-empty" hidden>
       <p>Aucun jeu suivi pour l’instant.</p>
-      <p class="fine">Sur le catalogue ou l’accueil, cliquez l’étoile ☆ pour ajouter un titre.</p>
+      <p class="fine">Sur le catalogue ou l’accueil, cliquez l’étoile ☆ pour ajouter un titre et comparer le budget total.</p>
       <p><a class="btn buy" href="/deals">Parcourir le catalogue</a>
-        <a class="btn ghost" href="/deals?sort=save">Meilleures baisses</a></p>
+        <a class="btn ghost" href="/deals?sort=save">Meilleures baisses</a>
+        <a class="btn ghost" href="/deals?under5=1&amp;stock=1">Pépites &lt; 5&nbsp;€</a></p>
     </div>
 
     <div id="watch-grid" class="game-grid" data-rotate></div>
@@ -91,16 +94,17 @@
   </footer>
 
   <script src="/js/config.js"></script>
-  <script src="/js/catalog.js?v=20261028v3"></script>
-  <script src="/js/verdict.js?v=20261028v3"></script>
+  <script src="/js/catalog.js?v=20261028v4"></script>
+  <script src="/js/verdict.js?v=20261028v4"></script>
   <script src="/js/fiche.js?v=20261004pass"></script>
   <script src="/js/watchlist.js?v=20261004pass"></script>
-  <script src="/js/ui.js?v=20261028v3"></script>
+  <script src="/js/ui.js?v=20261028v4"></script>
   <script src="/js/seo.js?v=20260929"></script>
   <script>
     (function () {
       var grid = document.getElementById("watch-grid");
       var empty = document.getElementById("watch-empty");
+      var summaryEl = document.getElementById("watch-summary");
       var countEl = document.getElementById("watch-count");
       var catalog = window.JEUXSTASH_CATALOG || [];
       if (!grid) return;
@@ -223,6 +227,55 @@
         );
       }
 
+      function renderSummary(games) {
+        if (!summaryEl) return;
+        var V = window.JEUXSTASH_VERDICT;
+        var inStock = games.filter(function (g) {
+          return g && g.stock === "ok" && g.price != null && g.price > 0;
+        });
+        if (!inStock.length) {
+          summaryEl.hidden = true;
+          summaryEl.innerHTML = "";
+          return;
+        }
+        var totalIg = 0;
+        var totalStore = 0;
+        var bestGame = null;
+        var bestPct = -1;
+        inStock.forEach(function (g) {
+          var v = V ? V.for(g) : null;
+          var st = v && v.store != null ? Number(v.store) : Number(g.price);
+          totalIg += Number(g.price);
+          totalStore += st;
+          var pct = v && v.savePct != null ? v.savePct : 0;
+          if (pct > bestPct) {
+            bestPct = pct;
+            bestGame = g;
+          }
+        });
+        var saved = Math.max(0, Math.round((totalStore - totalIg) * 100) / 100);
+        var savedPct = totalStore > 0 ? Math.round((saved / totalStore) * 100) : 0;
+        var html = '<div class="watch-summary-inner">';
+        html += '<div class="watch-summary-stats">';
+        html += '<span class="watch-summary-kicker">Récapitulatif budget (' + inStock.length + (inStock.length > 1 ? " jeux disponibles" : " jeu disponible") + ")</span>";
+        html += '<div class="watch-summary-numbers">';
+        html += "<strong>Total clés : " + formatPrice(totalIg) + "</strong>";
+        if (saved >= 1) {
+          html += ' <span class="watch-summary-store">au lieu de <del>' + formatPrice(totalStore) + "</del> en boutique</span>";
+          html += ' <span class="save-euro">Économie totale : −' + formatPrice(saved) + " (−" + savedPct + "\u00a0%)</span>";
+        }
+        html += "</div></div>";
+        if (bestGame && bestGame.ig) {
+          html += '<div class="watch-summary-best">';
+          html += "<span>Meilleur deal de ta liste : <strong>" + esc(bestGame.name) + "</strong> (" + formatPrice(bestGame.price) + (bestPct > 0 ? " · −" + bestPct + "\u00a0%" : "") + ")</span>";
+          html += '<a class="btn buy small" href="' + esc(bestGame.ig) + '" rel="sponsored noopener" target="_blank">Voir ce deal</a>';
+          html += "</div>";
+        }
+        html += "</div>";
+        summaryEl.innerHTML = html;
+        summaryEl.hidden = false;
+      }
+
       function render() {
         var names = window.JEUXSTASH_WATCH ? window.JEUXSTASH_WATCH.load() : [];
         if (countEl) {
@@ -232,16 +285,23 @@
         }
         if (!names.length) {
           grid.innerHTML = "";
+          if (summaryEl) {
+            summaryEl.hidden = true;
+            summaryEl.innerHTML = "";
+          }
           if (empty) empty.hidden = false;
           return;
         }
         if (empty) empty.hidden = true;
+        var foundGames = [];
         grid.innerHTML = names
           .map(function (n) {
             var g = byName(n);
+            if (g) foundGames.push(g);
             return g ? cardHTML(g) : orphanHTML(n);
           })
           .join("");
+        renderSummary(foundGames);
         if (window.JEUXSTASH_WATCH) window.JEUXSTASH_WATCH.syncUI();
       }
 

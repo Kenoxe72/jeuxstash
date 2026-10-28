@@ -560,7 +560,7 @@
   var nodes = document.querySelectorAll(".section, .trust-strip, .money-links a, .faq-list details");
   if (!nodes.length || !("IntersectionObserver" in window)) return;
   nodes.forEach(function (el) {
-    if (el.tagName === "MAIN" || el.id === "deals-grid" || el.querySelector("#deals-grid, .game-grid")) return;
+    if (el.tagName === "MAIN" || el.id === "deals-grid" || el.id === "build-panel" || el.querySelector("#deals-grid, .game-grid, #build-panel")) return;
     el.classList.add("reveal");
   });
   var io = new IntersectionObserver(
@@ -577,5 +577,149 @@
     if (el.classList.contains("reveal")) {
       io.observe(el);
     }
+  });
+})();
+
+/* Autocomplétion en direct sur la barre de recherche d’accueil (#home-search) */
+(function mountLiveAutocomplete() {
+  var input = document.getElementById("home-search");
+  var catalog = window.JEUXSTASH_CATALOG;
+  if (!input || !catalog || !catalog.length) return;
+  var form = input.closest("form");
+  if (!form) return;
+
+  form.style.position = "relative";
+  var drop = document.createElement("div");
+  drop.className = "search-autocomplete";
+  drop.setAttribute("role", "listbox");
+  drop.hidden = true;
+  form.appendChild(drop);
+
+  function escA(str) {
+    return String(str == null ? "" : str)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function normA(s) {
+    return String(s || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
+  function coverA(g) {
+    if (g.cover) return g.cover;
+    if (g.steam) return "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/header.jpg";
+    return "";
+  }
+
+  function ficheA(g) {
+    if (window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url) return window.JEUXSTASH_FICHE.url(g);
+    return "/deals?q=" + encodeURIComponent(g.name);
+  }
+
+  function formatPriceA(n) {
+    if (n == null || Number.isNaN(Number(n))) return null;
+    return (
+      Number(n).toLocaleString("fr-FR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }) + "\u00a0€"
+    );
+  }
+
+  function searchGames(q) {
+    var nq = normA(q);
+    if (!nq || nq.length < 2) return [];
+    var compactQ = nq.replace(/\s+/g, "");
+    var scored = [];
+    for (var i = 0; i < catalog.length; i++) {
+      var g = catalog[i];
+      var nameNorm = normA(g.name);
+      var aliasNorm = normA((g.aliases || []).join(" "));
+      var hay = nameNorm + " " + aliasNorm + " " + normA(g.tag || "");
+      var hayCompact = hay.replace(/\s+/g, "");
+      var score = 0;
+      if (nameNorm.indexOf(nq) === 0) score = 100;
+      else if (nameNorm.indexOf(nq) !== -1) score = 75;
+      else if (aliasNorm.indexOf(nq) !== -1) score = 65;
+      else if (hayCompact.indexOf(compactQ) !== -1) score = 50;
+      else if (hay.indexOf(nq) !== -1) score = 40;
+      if (score > 0) {
+        if (g.stock === "ok") score += 10;
+        scored.push({ g: g, score: score });
+      }
+    }
+    scored.sort(function (a, b) {
+      return b.score - a.score;
+    });
+    return scored.slice(0, 5).map(function (x) {
+      return x.g;
+    });
+  }
+
+  function renderDrop() {
+    var q = (input.value || "").trim();
+    var matches = searchGames(q);
+    if (!matches.length) {
+      drop.hidden = true;
+      drop.innerHTML = "";
+      return;
+    }
+    var V = window.JEUXSTASH_VERDICT;
+    var html = matches
+      .map(function (g) {
+        var price = formatPriceA(g.price);
+        var v = V ? V.for(g) : null;
+        var pct = v && v.savePct ? "−" + v.savePct + "\u00a0%" : "";
+        var cov = coverA(g);
+        var url = ficheA(g);
+        return (
+          '<a class="search-ac-item" role="option" href="' +
+          escA(url) +
+          '">' +
+          (cov ? '<img class="search-ac-thumb" src="' + escA(cov) + '" alt="" width="68" height="32" loading="lazy" />' : "") +
+          '<span class="search-ac-info">' +
+          '<strong class="search-ac-title">' +
+          escA(g.name) +
+          "</strong>" +
+          '<span class="search-ac-meta">' +
+          escA(g.tag || "Jeu") +
+          (g.stock === "out" ? " · Rupture" : "") +
+          "</span>" +
+          "</span>" +
+          '<span class="search-ac-right">' +
+          (pct && g.stock !== "out" ? '<span class="search-ac-pct">' + pct + "</span>" : "") +
+          (price && g.stock !== "out"
+            ? '<strong class="search-ac-price">' + price + "</strong>"
+            : '<span class="search-ac-oos">Voir</span>') +
+          "</span></a>"
+        );
+      })
+      .join("");
+    html +=
+      '<a class="search-ac-all" href="/deals?q=' +
+      encodeURIComponent(q) +
+      '">Voir tous les résultats pour « ' +
+      escA(q) +
+      " » →</a>";
+    drop.innerHTML = html;
+    drop.hidden = false;
+  }
+
+  input.addEventListener("input", renderDrop);
+  input.addEventListener("focus", function () {
+    if ((input.value || "").trim().length >= 2) renderDrop();
+  });
+  document.addEventListener("click", function (e) {
+    if (!form.contains(e.target)) drop.hidden = true;
+  });
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") drop.hidden = true;
   });
 })();

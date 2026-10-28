@@ -88,6 +88,14 @@
           amazon: "boîtier PC mid-tower ATX airflow",
         },
       ],
+      benchmarks: [
+        { name: "Forza Horizon 5", fps: "1080p Ultra · ~95 FPS" },
+        { name: "Elden Ring", fps: "1080p Élevé · 60 FPS (cap)" },
+        { name: "Cyberpunk 2077", fps: "1080p Élevé · ~75 FPS" },
+        { name: "Detroit: Become Human", fps: "1080p Ultra · ~90 FPS" },
+        { name: "Monster Hunter Rise", fps: "1080p Max · 120+ FPS" },
+        { name: "Baldur's Gate 3", fps: "1080p Ultra · ~80 FPS" },
+      ],
     },
     mid: {
       title: "Confort · ~1100–1200 €",
@@ -143,6 +151,14 @@
           why: "Avant grillagé = GPU plus au frais, moins de bruit.",
           amazon: "boîtier PC mid-tower mesh ATX",
         },
+      ],
+      benchmarks: [
+        { name: "Cyberpunk 2077", fps: "1440p Ultra DLSS · ~95 FPS" },
+        { name: "Kingdom Come: Deliverance II", fps: "1440p Élevé · ~85 FPS" },
+        { name: "DOOM: The Dark Ages", fps: "1440p Ultra · ~110 FPS" },
+        { name: "FINAL FANTASY VII REBIRTH", fps: "1440p Élevé · ~90 FPS" },
+        { name: "Black Myth: Wukong", fps: "1440p Élevé DLSS · ~85 FPS" },
+        { name: "Red Dead Redemption 2", fps: "1440p Ultra · ~100 FPS" },
       ],
     },
     high: {
@@ -200,6 +216,14 @@
           amazon: "ventirad CPU tour AM5 AM4",
         },
       ],
+      benchmarks: [
+        { name: "Cyberpunk 2077", fps: "1440p RT Ultra / 4K DLSS · ~110 FPS" },
+        { name: "Assassin's Creed Shadows", fps: "1440p Ultra / 4K · ~95 FPS" },
+        { name: "Monster Hunter Wilds", fps: "1440p Ultra · ~100 FPS" },
+        { name: "Silent Hill 2", fps: "1440p Ultra RT · ~95 FPS" },
+        { name: "DOOM: The Dark Ages", fps: "4K DLSS · ~120 FPS" },
+        { name: "Call of Duty: Modern Warfare 4", fps: "1440p Compétitif · 165+ FPS" },
+      ],
     },
   };
 
@@ -213,6 +237,87 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function findGame(name) {
+    var cat = window.JEUXSTASH_CATALOG || [];
+    for (var i = 0; i < cat.length; i++) {
+      if (cat[i].name === name) return cat[i];
+    }
+    return null;
+  }
+
+  function formatEuro(n) {
+    if (n == null || Number.isNaN(Number(n))) return null;
+    return (
+      Number(n).toLocaleString("fr-FR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }) + "\u00a0€"
+    );
+  }
+
+  function renderBenchmarks(b) {
+    var list = b.benchmarks || [];
+    if (!list.length || !window.JEUXSTASH_CATALOG) return "";
+    var V = window.JEUXSTASH_VERDICT;
+    var cards = list
+      .map(function (item) {
+        var g = findGame(item.name);
+        if (!g) return "";
+        var price = formatEuro(g.price);
+        var v = V ? V.for(g) : null;
+        var pct = v && v.savePct ? "−" + v.savePct + "\u00a0%" : "";
+        var cov = g.cover || (g.steam ? "https://cdn.cloudflare.steamstatic.com/steam/apps/" + g.steam + "/header.jpg" : "");
+        var fiche =
+          window.JEUXSTASH_FICHE && window.JEUXSTASH_FICHE.url
+            ? window.JEUXSTASH_FICHE.url(g)
+            : "/deals?q=" + encodeURIComponent(g.name);
+        return (
+          '<article class="builder-bench-card">' +
+          (cov
+            ? '<a class="builder-bench-media" href="' +
+              esc(fiche) +
+              '"><img src="' +
+              esc(cov) +
+              '" alt="' +
+              esc(g.name) +
+              '" width="230" height="107" loading="lazy" />' +
+              '<span class="builder-fps-pill">' +
+              esc(item.fps) +
+              "</span></a>"
+            : "") +
+          '<div class="builder-bench-body">' +
+          '<h5><a href="' +
+          esc(fiche) +
+          '">' +
+          esc(g.name) +
+          "</a></h5>" +
+          '<div class="builder-bench-foot">' +
+          (price && g.stock !== "out"
+            ? '<strong class="builder-bench-price">' +
+              price +
+              (pct ? ' <span class="save-euro">' + pct + "</span>" : "") +
+              "</strong>"
+            : '<span class="fine">Voir fiche</span>') +
+          (g.ig && g.stock !== "out"
+            ? '<a class="btn buy small" href="' +
+              esc(g.ig) +
+              '" rel="sponsored noopener" target="_blank">Voir le prix</a>'
+            : '<a class="btn ghost small" href="' + esc(fiche) + '">Fiche</a>') +
+          "</div></div></article>"
+        );
+      })
+      .filter(Boolean)
+      .join("");
+    if (!cards) return "";
+    return (
+      '<div class="builder-benchmarks">' +
+      '<h4 class="builder-diy-title">Quels jeux tournent sur cette config&nbsp;? (estimations &amp; prix clés)</h4>' +
+      '<div class="builder-bench-grid">' +
+      cards +
+      "</div></div>"
+    );
   }
 
   function render(key) {
@@ -265,8 +370,9 @@
       '<table class="builder-table"><tbody>' +
       rows +
       "</tbody></table>" +
+      renderBenchmarks(b) +
       '<div class="row">' +
-      '<a class="btn ghost small" href="/deals?platform=pc">Voir les jeux PC</a>' +
+      '<a class="btn ghost small" href="/deals?platform=pc">Voir tous les jeux PC</a>' +
       "</div>" +
       '<p class="fine">Budgets indicatifs neuf, tour seule. Vérifie GPU / RAM / alim sur la fiche Amazon avant d’acheter. Liens affiliés' +
       (hasTag ? "" : " (ID Partenaire à renseigner)") +

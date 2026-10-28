@@ -73,6 +73,191 @@ function platLabel(game) {
     .join(" · ");
 }
 
+function launcherInfo(game) {
+  const ig = String(game.ig || "").toLowerCase();
+  const plats = game.platforms || ["pc"];
+  if ((game.cats || []).includes("pass")) {
+    return {
+      storeName: "Microsoft / Xbox Game Pass",
+      steps: [
+        "Achetez votre code d’abonnement sur Instant Gaming et récupérez-le immédiatement dans votre espace client.",
+        "Rendez-vous sur redeem.microsoft.com ou dans l’application Xbox (PC / Console) avec votre compte Microsoft.",
+        "Saisissez le code à 25 caractères pour activer vos mois de Game Pass instantanément.",
+      ],
+    };
+  }
+  if (ig.includes("battle-net")) {
+    return {
+      storeName: "Battle.net (PC)",
+      steps: [
+        "Une fois le paiement validé sur Instant Gaming, copiez le code d’activation affiché dans « Mes commandes ».",
+        "Ouvrez le launcher Battle.net sur votre PC (ou account.battle.net/overview).",
+        "Cliquez sur « Utiliser un code », collez votre clé et lancez le téléchargement.",
+      ],
+    };
+  }
+  if (ig.includes("ubisoft-connect")) {
+    return {
+      storeName: "Ubisoft Connect (PC)",
+      steps: [
+        "Récupérez votre clé ou utilisez le lien d’activation directe Ubisoft depuis votre compte Instant Gaming.",
+        "Connectez-vous à votre compte dans l’application Ubisoft Connect PC.",
+        "Le jeu s’ajoute automatiquement à votre bibliothèque PC sans surcoût.",
+      ],
+    };
+  }
+  if (ig.includes("ea-app") || ig.includes("origin")) {
+    return {
+      storeName: "EA App (PC)",
+      steps: [
+        "Copiez votre code produit reçu instantanément après l’achat sur Instant Gaming.",
+        "Ouvrez l’application EA App sur votre PC et allez dans « Bibliothèque » → « Utiliser un code ».",
+        "Collez la clé pour lier définitivement le jeu à votre compte EA.",
+      ],
+    };
+  }
+  if (ig.includes("rockstar")) {
+    return {
+      storeName: "Rockstar Games Launcher (PC)",
+      steps: [
+        "Copiez la clé Rockstar affichée dans votre historique d’achats Instant Gaming.",
+        "Ouvrez le Rockstar Games Launcher sur PC et cliquez sur votre profil → « Utiliser un code ».",
+        "Validez le code pour télécharger le jeu complet.",
+      ],
+    };
+  }
+  if (ig.includes("gog-com")) {
+    return {
+      storeName: "GOG.com (PC — sans DRM)",
+      steps: [
+        "Copiez votre code GOG depuis votre compte Instant Gaming.",
+        "Ouvrez GOG Galaxy ou rendez-vous sur gog.com/redeem.",
+        "Entrez la clé pour ajouter le jeu sans DRM à votre bibliothèque.",
+      ],
+    };
+  }
+  if (ig.includes("microsoft-store") || (plats.includes("xbox") && !game.steam)) {
+    return {
+      storeName: "Microsoft Store (Xbox / PC)",
+      steps: [
+        "Récupérez votre code à 25 caractères immédiatement après l’achat sur Instant Gaming.",
+        "Ouvrez le Microsoft Store sur PC, votre console Xbox ou la page redeem.microsoft.com.",
+        "Collez le code pour débloquer le jeu sur votre compte Microsoft.",
+      ],
+    };
+  }
+  if (ig.includes("playstation-store") || (plats.includes("ps5") && !plats.includes("pc"))) {
+    return {
+      storeName: "PlayStation Store (PS5 / PS4)",
+      steps: [
+        "Récupérez votre code PSN à 12 caractères dans votre compte Instant Gaming.",
+        "Sur votre PS5/PS4, ouvrez le PlayStation Store → menu « … » → « Utiliser un code ».",
+        "Validez le code pour lancer le téléchargement sur votre console.",
+      ],
+    };
+  }
+  if (ig.includes("nintendo-eshop") || (plats.includes("switch") && !plats.includes("pc"))) {
+    return {
+      storeName: "Nintendo eShop (Switch)",
+      steps: [
+        "Copiez votre code Nintendo eShop à 16 caractères depuis Instant Gaming.",
+        "Ouvrez le Nintendo eShop sur votre Switch et sélectionnez « Enregistrer un code ».",
+        "Entrez le code pour télécharger le jeu sur votre console.",
+      ],
+    };
+  }
+  return {
+    storeName: "Steam (PC)",
+    steps: [
+      "Après l’achat sur Instant Gaming, copiez votre clé Steam (format XXXXX-XXXXX-XXXXX) dans « Mes commandes ».",
+      "Ouvrez Steam sur votre PC, puis cliquez en bas à gauche sur « + Ajouter un jeu » → « Activer un produit sur Steam… ».",
+      "Collez la clé : le jeu officiel complet (mises à jour et multijoueur inclus) est lié à vie à votre compte Steam.",
+    ],
+  };
+}
+
+function buildFaqItems(game, verdict, info, price, oos, coming) {
+  const storePrice = verdict && verdict.store ? formatPrice(verdict.store) : null;
+  const saveEuro = verdict && verdict.saveEuro ? formatPrice(verdict.saveEuro) : null;
+  const pct = verdict && verdict.savePct ? verdict.savePct : null;
+  const items = [];
+
+  // Q1: Prix & économie
+  let a1 = "";
+  if (price && !oos) {
+    a1 =
+      game.name +
+      " est actuellement affiché aux alentours de " +
+      price.replace(/\u00a0/g, " ") +
+      " en clé digitale sur Instant Gaming";
+    if (storePrice && saveEuro && pct) {
+      a1 +=
+        ", contre environ " +
+        storePrice.replace(/\u00a0/g, " ") +
+        " sur la boutique officielle (" +
+        info.storeName +
+        "), soit une économie de " +
+        saveEuro.replace(/\u00a0/g, " ") +
+        " (−" +
+        pct +
+        " %).";
+    } else if (storePrice) {
+      a1 += " (prix boutique indicatif : " + storePrice.replace(/\u00a0/g, " ") + ").";
+    } else {
+      a1 += ".";
+    }
+  } else if (coming) {
+    a1 =
+      game.name +
+      " est en précommande ou à venir" +
+      (price ? " autour de " + price.replace(/\u00a0/g, " ") : "") +
+      ". Comparez le tarif sur Instant Gaming et GG.deals avant la sortie.";
+  } else {
+    a1 =
+      "La clé " +
+      game.name +
+      " est momentanément en rupture de stock sur Instant Gaming" +
+      (storePrice ? " (prix boutique officiel : " + storePrice.replace(/\u00a0/g, " ") + ")" : "") +
+      ". Vous pouvez activer une alerte stock ou comparer les autres boutiques via GG.deals.";
+  }
+  items.push({
+    q: "Quel est le meilleur prix pour " + game.name + " ?",
+    a: a1,
+  });
+
+  // Q2: Plateforme & activation
+  items.push({
+    q: "Sur quelle plateforme s’active la clé " + game.name + " ?",
+    a:
+      "L’offre référencée pour " +
+      game.name +
+      " s’active sur " +
+      info.storeName +
+      ". Une fois la clé activée, vous téléchargez exactement la même version officielle complète qu’en achetant directement sur la boutique.",
+  });
+
+  // Q3: Game Pass & Verdict
+  const passText =
+    verdict && verdict.pass
+      ? "Oui, " +
+        game.name +
+        " fait partie des titres régulièrement présents dans le catalogue Xbox / PC Game Pass. Si vous voulez conserver le jeu définitivement, la clé digitale reste souvent plus rentable dès quelques semaines de jeu."
+      : "Non, " +
+        game.name +
+        " n’est pas inclus par défaut dans le Game Pass actuellement. Le verdict JeuxStash est « " +
+        (verdict ? verdict.label : "Acheter") +
+        " » : " +
+        (verdict && verdict.title
+          ? verdict.title.charAt(0).toLowerCase() + verdict.title.slice(1)
+          : "comparez le prix clé avant de passer commande.");
+  items.push({
+    q: game.name + " est-il dans le Game Pass ou vaut-il mieux l’acheter ?",
+    a: passText,
+  });
+
+  return items;
+}
+
 function guideFor(game) {
   const map = {
     "Elden Ring": "/guides/elden-ring-pas-cher",
@@ -203,6 +388,98 @@ function buildStaticArticle(game, win) {
     '<p class="fine">Prix indicatif Instant Gaming (affiliation) — vous payez le même prix. JeuxStash n’est pas une boutique.</p>';
   html += "</div>";
 
+  const info = launcherInfo(game);
+  const storePrice = verdict && verdict.store ? formatPrice(verdict.store) : null;
+  const saveEuro = verdict && verdict.saveEuro ? formatPrice(verdict.saveEuro) : null;
+  const pct = verdict && verdict.savePct ? verdict.savePct : null;
+
+  // Tableau comparatif Prix Clé vs Boutique vs Game Pass
+  html += '<section class="fiche-block fiche-compare-section">';
+  html += "<h2>Comparatif prix &amp; éditions — " + esc(game.name) + "</h2>";
+  html += '<div class="fiche-compare-table" role="region" aria-label="Comparatif des offres">';
+  // Ligne 1 : Instant Gaming
+  html += '<div class="fiche-compare-row fiche-compare-row--best">';
+  html += '<div class="fiche-compare-col fiche-compare-col--source">';
+  html += "<strong>Clé digitale Instant Gaming</strong>";
+  html += "<span>Activation officielle sur " + esc(info.storeName) + "</span>";
+  html += "</div>";
+  html += '<div class="fiche-compare-col fiche-compare-col--price">';
+  if (price && !oos) {
+    html += '<strong class="fiche-compare-val">' + price + "</strong>";
+    if (saveEuro && pct) {
+      html += '<span class="save-euro">−' + saveEuro + " (−" + pct + "\u00a0%)</span>";
+    }
+  } else if (coming && price) {
+    html += '<strong class="fiche-compare-val">' + price + "</strong>";
+    html += '<span class="tag">Précommande</span>';
+  } else {
+    html += '<span class="fiche-compare-muted">Temporairement en rupture</span>';
+  }
+  html += "</div>";
+  html += '<div class="fiche-compare-col fiche-compare-col--cta">';
+  if ((!oos || coming) && game.ig) {
+    html +=
+      '<a class="btn buy small" href="' +
+      esc(game.ig) +
+      '" rel="sponsored noopener" target="_blank">' +
+      (coming ? "Précommander" : "Voir l’offre") +
+      "</a>";
+  } else {
+    html +=
+      '<a class="btn ghost small" href="' +
+      esc(game.gg || "https://gg.deals/") +
+      '" rel="noopener" target="_blank">Comparer stocks</a>';
+  }
+  html += "</div></div>";
+
+  // Ligne 2 : Boutique officielle
+  if (storePrice) {
+    html += '<div class="fiche-compare-row">';
+    html += '<div class="fiche-compare-col fiche-compare-col--source">';
+    html += "<strong>Boutique officielle (" + esc(info.storeName) + ")</strong>";
+    html += "<span>Tarif public conseillé hors soldes</span>";
+    html += "</div>";
+    html += '<div class="fiche-compare-col fiche-compare-col--price">';
+    html += '<span class="fiche-compare-store">' + storePrice + "</span>";
+    html += "</div>";
+    html += '<div class="fiche-compare-col fiche-compare-col--cta">';
+    if (game.steam) {
+      html +=
+        '<a class="btn ghost small" href="https://store.steampowered.com/app/' +
+        esc(String(game.steam)) +
+        '/" rel="noopener" target="_blank">Page Steam</a>';
+    } else {
+      html += '<span class="fine">Tarif référence</span>';
+    }
+    html += "</div></div>";
+  }
+
+  // Ligne 3 : Game Pass
+  html += '<div class="fiche-compare-row">';
+  html += '<div class="fiche-compare-col fiche-compare-col--source">';
+  html += "<strong>Abonnement Game Pass (PC / Xbox)</strong>";
+  html +=
+    "<span>" +
+    (verdict && verdict.pass
+      ? "Régulièrement inclus dans le catalogue Game Pass"
+      : "Achat à l’unité uniquement (non inclus par défaut)") +
+    "</span>";
+  html += "</div>";
+  html += '<div class="fiche-compare-col fiche-compare-col--price">';
+  html +=
+    '<span class="fiche-compare-muted">' +
+    (verdict && verdict.pass ? "Inclus avec l’abo" : "Non inclus") +
+    "</span>";
+  html += "</div>";
+  html += '<div class="fiche-compare-col fiche-compare-col--cta">';
+  if (verdict && verdict.pass) {
+    html += '<a class="btn ghost small" href="/deals?style=pass">Voir les abos</a>';
+  } else {
+    html += '<a class="btn ghost small" href="/guides/game-pass-vs-acheter">Abo ou achat ?</a>';
+  }
+  html += "</div></div>";
+  html += "</div></section>";
+
   html += '<div class="fiche-grid">';
   html += '<section class="fiche-block" id="fiche-resume"><h2>Résumé</h2>';
   html +=
@@ -221,12 +498,40 @@ function buildStaticArticle(game, win) {
     html +=
       '<div id="fiche-specs-body" class="fiche-specs-body"><p>Voir aussi la fiche <a href="https://store.steampowered.com/app/' +
       esc(String(game.steam)) +
-      '/" rel="noopener" target="_blank">Steam</a>.</p></div>';
+      '/" rel="noopener" target="_blank">Steam</a> ou tester sur notre <a href="/pc-builder">Builder PC</a>.</p></div>';
   } else {
     html +=
-      '<p class="fine" id="fiche-specs-status" hidden></p><div id="fiche-specs-body" class="fiche-specs-body"><p>Pas d’ID Steam — la config dépend de la plateforme (console / store).</p></div>';
+      '<p class="fine" id="fiche-specs-status" hidden></p><div id="fiche-specs-body" class="fiche-specs-body"><p>Pas d’ID Steam — la config dépend de la plateforme (' +
+      esc(info.storeName) +
+      '). Voir nos <a href="/pc-builder">configs PC gaming</a>.</p></div>';
   }
   html += "</section></div>";
+
+  // Comment activer sa clé en 3 étapes
+  html += '<section class="fiche-block fiche-activation">';
+  html += "<h2>Comment activer votre clé " + esc(game.name) + " sur " + esc(info.storeName) + "</h2>";
+  html += '<ol class="steps">';
+  for (const st of info.steps) {
+    html += "<li>" + esc(st) + "</li>";
+  }
+  html += "</ol>";
+  html +=
+    '<p class="fine">Besoin de vérifier si votre machine suit ? Comparez votre matériel sur notre <a href="/pc-builder">simulateur Builder PC</a> ou lisez notre guide <a href="/guides/instant-gaming-fiable">Instant Gaming est-il fiable ?</a>.</p>';
+  html += "</section>";
+
+  // FAQ dynamique par jeu
+  const faqItems = buildFaqItems(game, verdict, info, price, oos, coming);
+  if (faqItems.length) {
+    html += '<section class="fiche-block fiche-faq"><h2>Questions fréquentes — ' + esc(game.name) + "</h2>";
+    html += '<div class="faq-list">';
+    faqItems.forEach(function (item, idx) {
+      html += "<details" + (idx === 0 ? " open" : "") + ">";
+      html += "<summary>" + esc(item.q) + "</summary>";
+      html += '<div class="faq-a"><p>' + esc(item.a) + "</p></div>";
+      html += "</details>";
+    });
+    html += "</div></section>";
+  }
 
   const related = relatedGames(game, win.JEUXSTASH_CATALOG || [], 4);
   if (related.length) {
@@ -380,6 +685,27 @@ function buildPage(template, game, slug, win) {
         },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: buildFaqItems(
+        game,
+        verdict,
+        launcherInfo(game),
+        priceLabel,
+        game.stock === "out",
+        win.JEUXSTASH_COMING && win.JEUXSTASH_COMING.isComing(game)
+      ).map(function (it) {
+        return {
+          "@type": "Question",
+          name: it.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: it.a,
+          },
+        };
+      }),
+    },
   ];
 
   let html = template;
@@ -432,13 +758,13 @@ function buildPage(template, game, slug, win) {
     '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028v3");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028v3");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v3");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v3");
-  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028v3");
-  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v3");
-  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028v3");
+  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028v4");
+  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028v4");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v4");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v4");
+  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028v4");
+  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v4");
+  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028v4");
 
   return html;
 
