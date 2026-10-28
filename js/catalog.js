@@ -99,7 +99,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 728880,
     "ig": "https://www.instant-gaming.com/fr/2705-acheter-overcooked-2-pc-mac-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Overcooked+2",
-    "price": 5.0,
+    "price": 5,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -235,7 +235,7 @@ window.JEUXSTASH_CATALOG = [
     "gg": "https://gg.deals/games/?title=Grand+Theft+Auto+VI",
     "price": null,
     "stock": "out",
-    "release": "2026",
+    "release": "2027",
     "platforms": [
       "pc"
     ],
@@ -250,19 +250,17 @@ window.JEUXSTASH_CATALOG = [
   },
   {
     "name": "Call of Duty: Modern Warfare 4",
-    "blurb": "Sortie 23 oct. 2026 — précommande Xbox / PC. Compare avant le plein tarif.",
-    "tag": "Préco",
+    "blurb": "Le nouveau Modern Warfare — campagne et multijoueur sur PC & Xbox.",
+    "tag": "FPS",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "cover": "https://gaming-cdn.com/images/products/16809/616x353/call-of-duty-modern-warfare-4-xbox-series-x-s-pc-microsoft-store-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/16809-acheter-call-of-duty-modern-warfare-4-pc-xbox-series-x-s-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Call+of+Duty+Modern+Warfare+4",
-    "price": 69.08,
+    "price": 61.99,
     "stock": "ok",
-    "release": "2026-10-23",
     "platforms": [
       "pc",
       "xbox"
@@ -305,18 +303,16 @@ window.JEUXSTASH_CATALOG = [
   {
     "name": "Crimson Desert Enhanced",
     "blurb": "Open world Pearl Abyss — action, montures, factions.",
-    "tag": "Préco",
+    "tag": "Action",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "cover": "https://gaming-cdn.com/images/products/8400/616x353/crimson-desert-enhanced-pc-mac-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/8400-acheter-crimson-desert-enhanced-pc-mac-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Crimson+Desert",
-    "price": 44.9,
+    "price": 40.29,
     "stock": "ok",
-    "release": "2026",
     "platforms": [
       "pc"
     ],
@@ -330,18 +326,16 @@ window.JEUXSTASH_CATALOG = [
   {
     "name": "Pragmata",
     "blurb": "Action SF Capcom — duo humain / androïde sur la Lune.",
-    "tag": "Préco",
+    "tag": "Action",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "cover": "https://gaming-cdn.com/images/products/21402/616x353/pragmata-deluxe-edition-pc-steam-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/21402-acheter-pragmata-deluxe-edition-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Pragmata",
-    "price": 55.15,
+    "price": 37.79,
     "stock": "ok",
-    "release": "2026",
     "platforms": [
       "pc"
     ],
@@ -2095,16 +2089,15 @@ window.JEUXSTASH_CATALOG = [
   },
   {
     "name": "Ace Combat 8: Wings of Theve",
-    "blurb": "Combat aérien Project Aces — sortie imminente.",
-    "tag": "Préco",
+    "blurb": "Combat aérien Project Aces — dogfights haute vitesse.",
+    "tag": "Action",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "ig": "https://www.instant-gaming.com/fr/9408-acheter-steam-ace-combat-8-wings-of-theve-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Ace%20Combat%208%3A%20Wings%20of%20Theve",
-    "price": 49.02,
+    "price": 43.99,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2115,8 +2108,7 @@ window.JEUXSTASH_CATALOG = [
       "ace combat 8",
       "ace combat",
       "ac8"
-    ],
-    "release": "2026-10-17"
+    ]
   },
   {
     "name": "NieR: Automata Game of the YoRHa Edition",
@@ -3401,9 +3393,8 @@ window.JEUXSTASH_CATALOG = [
   {
     "name": "NINJA GAIDEN 4",
     "blurb": "Retour Ninja Gaiden — Team Ninja × Platinum.",
-    "tag": "Préco",
+    "tag": "Action",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
@@ -3580,7 +3571,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/11030-acheter-steam-v-rising-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=V%20Rising",
-    "price": 5.0,
+    "price": 5,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3679,15 +3670,14 @@ window.JEUXSTASH_CATALOG = [
   {
     "name": "Silent Hill f",
     "blurb": "Nouveau Silent Hill — Japon années 60.",
-    "tag": "Préco",
+    "tag": "Horror",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "ig": "https://www.instant-gaming.com/fr/13087-acheter-steam-silent-hill-f-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Silent%20Hill%20f",
-    "price": 27.29,
+    "price": 24.49,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3788,15 +3778,15 @@ window.JEUXSTASH_CATALOG = [
   },
   {
     "name": "Little Nightmares III",
-    "blurb": "Horreur puzzle coop.",
-    "tag": "Préco",
+    "blurb": "Horreur puzzle en solo ou coop en ligne.",
+    "tag": "Horror",
     "cats": [
-      "coming",
-      "hot"
+      "hot",
+      "coop"
     ],
     "ig": "https://www.instant-gaming.com/fr/14831-acheter-steam-little-nightmares-iii-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Little%20Nightmares%20III",
-    "price": 21.16,
+    "price": 18.99,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3873,16 +3863,15 @@ window.JEUXSTASH_CATALOG = [
   },
   {
     "name": "Battlefield 6",
-    "blurb": "Nouveau Battlefield — multi large échelle.",
-    "tag": "Préco",
+    "blurb": "Nouveau Battlefield — guerre totale et destruction à grande échelle.",
+    "tag": "FPS",
     "cats": [
-      "coming",
       "hot",
       "action"
     ],
     "ig": "https://www.instant-gaming.com/fr/17306-acheter-ea-app-battlefield-6-pc-ea-app?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Battlefield%206",
-    "price": 42.33,
+    "price": 37.99,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -4478,14 +4467,124 @@ window.JEUXSTASH_CATALOG = [
     "aliases": [
       "dayz"
     ]
+  },
+  {
+    "name": "Phantom Blade Zero",
+    "blurb": "Action kung-fu punk ultra-rapide sous Unreal Engine 5.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "release": "2026-10-29",
+    "ig": "https://www.instant-gaming.com/fr/14205-acheter-phantom-blade-zero-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Phantom%20Blade%20Zero",
+    "price": 45.99,
+    "store": 69.99,
+    "stock": "ok",
+    "platforms": [
+      "pc",
+      "ps5"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/14205/616x353/phantom-blade-zero-pc-steam-cover.jpg",
+    "aliases": [
+      "phantom blade zero",
+      "pbz"
+    ]
+  },
+  {
+    "name": "Warhammer 40,000: Dawn of War IV",
+    "blurb": "Le retour du STR culte dans l’univers Warhammer 40K.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "release": "2026-12-02",
+    "ig": "https://www.instant-gaming.com/fr/20153-acheter-warhammer-40-000-dawn-of-war-iv-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Warhammer%2040%2C000%3A%20Dawn%20of%20War%20IV",
+    "price": 39.49,
+    "store": 59.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/20153/616x353/warhammer-40-000-dawn-of-war-iv-pc-steam-cover.jpg",
+    "aliases": [
+      "dawn of war 4",
+      "dow4"
+    ]
+  },
+  {
+    "name": "Metro 2039",
+    "blurb": "Nouvel opus FPS survie post-apocalyptique dans le métro russe.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action"
+    ],
+    "release": "2027-02-04",
+    "ig": "https://www.instant-gaming.com/fr/18889-acheter-metro-2039-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Metro%202039",
+    "price": 51.49,
+    "store": 69.99,
+    "stock": "out",
+    "platforms": [
+      "pc",
+      "ps5",
+      "xbox"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/18889/616x353/metro-2039-pc-steam-cover.jpg",
+    "aliases": [
+      "metro 2039",
+      "metro 4"
+    ]
+  },
+  {
+    "name": "Fable",
+    "blurb": "Le reboot RPG d’Albion par Playground Games.",
+    "tag": "Préco",
+    "cats": [
+      "coming",
+      "hot",
+      "action",
+      "chill"
+    ],
+    "release": "2027-02-23",
+    "ig": "https://www.instant-gaming.com/fr/22985-acheter-fable-pc-xbox-series-x-s-microsoft-store/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Fable",
+    "price": 48.99,
+    "store": 69.99,
+    "pass": true,
+    "stock": "out",
+    "platforms": [
+      "pc",
+      "xbox"
+    ],
+    "cover": "https://gaming-cdn.com/images/products/22985/616x353/fable-pc-xbox-series-x-s-microsoft-store-cover.jpg",
+    "aliases": [
+      "fable",
+      "fable 4"
+    ]
   }
 ];
 window.JEUXSTASH_PRICES_UPDATED = "2026-10-28";
 
-/** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
+/** Jeux à venir / précommandes (cat « coming » + vérification date de sortie non dépassée) */
 window.JEUXSTASH_COMING = {
   isComing: function (game) {
-    return !!game && (game.cats || []).indexOf("coming") !== -1;
+    if (!game || (game.cats || []).indexOf("coming") === -1) return false;
+    if (game.release) {
+      var r = String(game.release).trim();
+      var now = new Date();
+      var todayStr = now.toISOString().slice(0, 10);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(r) && r <= todayStr) return false;
+      if (/^\d{4}$/.test(r) && Number(r) < now.getFullYear()) return false;
+    }
+    return true;
   },
   label: function (game) {
     if (!game || !game.release) return "À venir";

@@ -216,15 +216,17 @@ window.JEUXSTASH_VERDICT = (function () {
     "7 Days to Die": { store: 43.99 },
     "Manor Lords": { store: 39.99, pass: true },
     "DayZ": { store: 47.99 },
+    "Phantom Blade Zero": { store: 69.99 },
+    "Warhammer 40,000: Dawn of War IV": { store: 59.99 },
+    "Metro 2039": { store: 69.99 },
+    "Fable": { store: 69.99, pass: true },
   };
 
   var WAIT_ALWAYS = {
     "Grand Theft Auto VI": true,
     "Call of Duty: Black Ops 7": true,
-    "Call of Duty: Modern Warfare 4": true,
     "The Witcher 4": true,
     "Resident Evil Requiem": true,
-    "Crimson Desert Enhanced": true,
     "EA Sports FC 27": true,
     "Borderlands 4": true,
     "Death Stranding 2": true,

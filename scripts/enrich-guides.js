@@ -24,12 +24,12 @@ for (const file of files) {
   html = html.replace(/<nav>[\s\S]*?<\/nav>/, unifiedNav);
 
   // 2. Cache busters
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v2");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v2");
-  html = html.replace(/deals\.js\?v=[^"]+/g, "deals.js?v=20261028v2");
-  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v2");
-  html = html.replace(/guides-data\.js\?v=[^"]+/g, "guides-data.js?v=20261028v2");
-  html = html.replace(/season\.js\?v=[^"]+/g, "season.js?v=20261028v2");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v3");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v3");
+  html = html.replace(/deals\.js\?v=[^"]+/g, "deals.js?v=20261028v3");
+  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v3");
+  html = html.replace(/guides-data\.js\?v=[^"]+/g, "guides-data.js?v=20261028v3");
+  html = html.replace(/season\.js\?v=[^"]+/g, "season.js?v=20261028v3");
 
   if (file === "index.html") {
     fs.writeFileSync(filePath, html, "utf8");

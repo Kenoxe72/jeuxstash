@@ -64,7 +64,17 @@ def scrape(url: str):
 
 def main():
     games = load_catalog()
+    today_iso = __import__("datetime").date.today().isoformat()
     for g in games:
+        # Transition automatique Préco -> Sorti dès que la date de sortie est atteinte
+        rel = str(g.get("release") or "").strip()
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", rel) and rel <= today_iso:
+            cats = [c for c in (g.get("cats") or []) if c != "coming"]
+            g["cats"] = cats or ["hot", "action"]
+            if g.get("tag") == "Préco":
+                g["tag"] = "Action"
+            g.pop("release", None)
+
         url = g.get("ig")
         if not url:
             continue
@@ -79,10 +89,18 @@ def main():
         time.sleep(0.55)
 
     coming_helper = """
-/** Jeux à venir / précommandes (cat « coming » + date optionnelle) */
+/** Jeux à venir / précommandes (cat « coming » + vérification date de sortie non dépassée) */
 window.JEUXSTASH_COMING = {
   isComing: function (game) {
-    return !!game && (game.cats || []).indexOf("coming") !== -1;
+    if (!game || (game.cats || []).indexOf("coming") === -1) return false;
+    if (game.release) {
+      var r = String(game.release).trim();
+      var now = new Date();
+      var todayStr = now.toISOString().slice(0, 10);
+      if (/^\\d{4}-\\d{2}-\\d{2}$/.test(r) && r <= todayStr) return false;
+      if (/^\\d{4}$/.test(r) && Number(r) < now.getFullYear()) return false;
+    }
+    return true;
   },
   label: function (game) {
     if (!game || !game.release) return "À venir";

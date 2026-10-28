@@ -402,10 +402,11 @@
   // À venir : précommandes / sorties (tri date croissante)
   (function fillComing() {
     var prefer = [
-      "Call of Duty: Modern Warfare 4",
+      "Phantom Blade Zero",
+      "Warhammer 40,000: Dawn of War IV",
+      "Metro 2039",
+      "Fable",
       "Grand Theft Auto VI",
-      "Crimson Desert Enhanced",
-      "Pragmata",
       "The Witcher 4",
     ];
     var list = [];
