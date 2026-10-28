@@ -710,6 +710,21 @@
       " » →</a>";
     drop.innerHTML = html;
     drop.hidden = false;
+    selectedIndex = -1;
+  }
+
+  var selectedIndex = -1;
+
+  function updateSelected() {
+    var items = drop.querySelectorAll(".search-ac-item, .search-ac-all");
+    items.forEach(function (it, idx) {
+      if (idx === selectedIndex) {
+        it.classList.add("is-selected");
+        it.scrollIntoView({ block: "nearest" });
+      } else {
+        it.classList.remove("is-selected");
+      }
+    });
   }
 
   input.addEventListener("input", renderDrop);
@@ -717,9 +732,30 @@
     if ((input.value || "").trim().length >= 2) renderDrop();
   });
   document.addEventListener("click", function (e) {
-    if (!form.contains(e.target)) drop.hidden = true;
+    if (!form.contains(e.target)) {
+      drop.hidden = true;
+      selectedIndex = -1;
+    }
   });
   input.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") drop.hidden = true;
+    if (drop.hidden) return;
+    var items = drop.querySelectorAll(".search-ac-item, .search-ac-all");
+    if (!items.length) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      selectedIndex = (selectedIndex + 1) % items.length;
+      updateSelected();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      selectedIndex = selectedIndex <= 0 ? items.length - 1 : selectedIndex - 1;
+      updateSelected();
+    } else if (e.key === "Enter" && selectedIndex >= 0 && items[selectedIndex]) {
+      e.preventDefault();
+      items[selectedIndex].click();
+    } else if (e.key === "Escape") {
+      drop.hidden = true;
+      selectedIndex = -1;
+    }
   });
 })();

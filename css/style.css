@@ -347,13 +347,14 @@ nav a[aria-current="page"]:not(.nav-cta) {
 
 .hero--immersive {
   position: relative;
+  z-index: 30;
   max-width: none;
   min-height: min(42vh, 380px);
   margin: 0;
   padding: 0;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
+  overflow: visible;
   border-bottom: none;
   color: #f4f1ea;
 }
@@ -413,6 +414,7 @@ html[data-theme="dark"] .hero--immersive {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .hero-bg img {
@@ -513,6 +515,8 @@ html[data-theme="dark"] .hero-inner {
 }
 
 .hero-search {
+  position: relative;
+  z-index: 50;
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
@@ -3156,14 +3160,14 @@ html[data-theme="dark"] .watch-summary .save-euro {
   top: calc(100% + 0.45rem);
   left: 0;
   right: 0;
-  z-index: 60;
-  background: rgba(16, 20, 29, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  z-index: 100;
+  background: #111520;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
   overflow: hidden;
+  overflow-y: auto;
+  max-height: min(400px, 70vh);
   text-align: left;
 }
 
@@ -3178,8 +3182,10 @@ html[data-theme="dark"] .watch-summary .save-euro {
   transition: background 0.15s ease;
 }
 
-.search-ac-item:hover {
-  background: rgba(255, 106, 0, 0.16);
+.search-ac-item:hover,
+.search-ac-item.is-selected {
+  background: rgba(255, 106, 0, 0.18);
+  outline: none;
 }
 
 .search-ac-thumb {

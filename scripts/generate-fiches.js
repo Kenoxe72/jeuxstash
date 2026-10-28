@@ -758,13 +758,13 @@ function buildPage(template, game, slug, win) {
     '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028v4");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028v4");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v4");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v4");
-  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028v4");
-  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v4");
-  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028v4");
+  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261029v1");
+  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261029v1");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261029v1");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261029v1");
+  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261029v1");
+  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261029v1");
+  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261029v1");
 
   return html;
 
