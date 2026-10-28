@@ -1,6 +1,26 @@
 /* Catalogue des guides — rotation saisonnière (les fichiers HTML restent en ligne) */
 window.JEUXSTASH_GUIDES = [
   {
+    id: "meilleurs-jeux-moins-de-5-euros",
+    href: "/guides/meilleurs-jeux-moins-de-5-euros",
+    title: "Meilleurs jeux PC à moins de 5 €",
+    blurb: "Monster Hunter Rise, Batman Arkham Knight, Shadow of War, Brotato…",
+    kicker: "Budget < 5 €",
+    thumb: "https://gaming-cdn.com/images/products/7893/616x353/monster-hunter-rise-pc-jeu-steam-europe-cover.jpg",
+    evergreen: true,
+    seasons: ["automne", "hiver", "printemps", "ete"],
+  },
+  {
+    id: "meilleurs-jeux-moins-de-10-euros",
+    href: "/guides/meilleurs-jeux-moins-de-10-euros",
+    title: "Meilleurs jeux PC à moins de 10 €",
+    blurb: "Hogwarts Legacy, Detroit Become Human, Sifu, Resident Evil Village…",
+    kicker: "Budget < 10 €",
+    thumb: "https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg",
+    evergreen: true,
+    seasons: ["automne", "hiver", "printemps", "ete"],
+  },
+  {
     id: "black-friday-jeux-2026",
     href: "/guides/black-friday-jeux-2026",
     title: "Black Friday jeux 2026",

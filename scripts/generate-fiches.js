@@ -171,7 +171,9 @@ function buildStaticArticle(game, win) {
   html += "<h1>" + esc(game.name) + "</h1>";
   html += '<p class="fiche-blurb">' + esc(game.blurb || "") + "</p>";
   if (plats) html += '<p class="fine">Plateformes : ' + esc(plats) + "</p>";
-  if (verdict && verdict.compare) {
+  if (verdict && V && V.compareHTML) {
+    html += V.compareHTML(game);
+  } else if (verdict && verdict.compare) {
     html += '<p class="price-compare">' + esc(verdict.compare) + "</p>";
   }
   if (verdict && verdict.title) {
@@ -430,12 +432,13 @@ function buildPage(template, game, slug, win) {
     '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028fix");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028fix");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028fix");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028design");
-  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028fix");
-  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028fix");
+  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261028v2");
+  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261028v2");
+  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261028v2");
+  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261028v2");
+  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261028v2");
+  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261028v2");
+  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261028v2");
 
   return html;
 

@@ -287,6 +287,9 @@
           : game.blurb
             ? '<p class="guide-pick-note">' + escG(game.blurb) + "</p>"
             : "") +
+        (window.JEUXSTASH_VERDICT && window.JEUXSTASH_VERDICT.compareHTML
+          ? window.JEUXSTASH_VERDICT.compareHTML(game)
+          : "") +
         '<div class="guide-pick-row">' +
         (oos
           ? '<span class="guide-pick-price is-oos">Rupture / préco</span>'

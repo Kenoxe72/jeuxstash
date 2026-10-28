@@ -174,9 +174,11 @@
       esc(game.blurb || "") +
       "</p>" +
       (platLabel(game) ? '<p class="fine">Plateformes : ' + esc(platLabel(game)) + "</p>" : "") +
-      (verdict && verdict.compare
-        ? '<p class="price-compare">' + esc(verdict.compare) + "</p>"
-        : "") +
+      (verdict && V && V.compareHTML
+        ? V.compareHTML(game)
+        : verdict && verdict.compare
+          ? '<p class="price-compare">' + esc(verdict.compare) + "</p>"
+          : "") +
       '<div class="fiche-price-row">' +
       (oos && !coming
         ? '<span class="btn buy is-oos" aria-disabled="true">Clé en rupture</span>'

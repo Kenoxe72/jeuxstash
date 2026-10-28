@@ -114,6 +114,8 @@ window.JEUXSTASH_SEASON = (function () {
       heroPrefer: ["Call of Duty: Modern Warfare 4", "Resident Evil Requiem", "Grand Theft Auto VI", "Crimson Desert Enhanced", "EA Sports FC 27"],
       boost: ["hot", "action"],
       guideBoost: [
+        "meilleurs-jeux-moins-de-5-euros",
+        "meilleurs-jeux-moins-de-10-euros",
         "black-friday-jeux-2026",
         "meilleurs-jeux-pas-cher-automne-2026",
         "instant-gaming-fiable",

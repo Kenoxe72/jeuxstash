@@ -1250,11 +1250,40 @@ html[data-theme="dark"] .verdict--abo {
 }
 
 .price-compare {
-  margin: -0.25rem 0 0.85rem;
+  margin: -0.2rem 0 0.85rem;
   color: var(--muted);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.01em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.price-compare del {
+  color: var(--muted);
+  opacity: 0.82;
+  text-decoration: line-through;
+}
+
+.price-compare .save-euro {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.14rem 0.48rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0d6e43;
+  background: rgba(16, 185, 129, 0.13);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .price-compare .save-euro {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(52, 211, 153, 0.28);
 }
 
 .verdict-legend {

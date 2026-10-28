@@ -7,6 +7,8 @@
   const countEl = document.getElementById("deals-count");
   const sortEl = document.getElementById("deals-sort");
   const stockOnly = document.getElementById("deals-stock");
+  const under5 = document.getElementById("deals-under5");
+  const under10 = document.getElementById("deals-under10");
   const under20 = document.getElementById("deals-under20");
   const updatedEl = document.getElementById("deals-updated");
   const verdictFilters = document.getElementById("deals-verdicts");
@@ -27,7 +29,7 @@
     }
   }
 
-  // ?q= / ?platform= / ?style= / ?sort= / ?stock= / ?under20=
+  // ?q= / ?platform= / ?style= / ?sort= / ?stock= / ?under5= / ?under10= / ?under20=
   try {
     const params = new URLSearchParams(location.search);
     const q0 = params.get("q") || (location.hash ? decodeURIComponent(location.hash.slice(1)) : "");
@@ -48,7 +50,9 @@
     const v0 = (params.get("verdict") || "").toLowerCase();
     if (v0 && ["buy", "wait", "abo"].indexOf(v0) !== -1) activeVerdict = v0;
     if (params.get("stock") === "1" && stockOnly) stockOnly.checked = true;
-    if (params.get("under20") === "1" && under20) under20.checked = true;
+    if (params.get("under5") === "1" && under5) under5.checked = true;
+    else if (params.get("under10") === "1" && under10) under10.checked = true;
+    else if (params.get("under20") === "1" && under20) under20.checked = true;
   } catch (e) {}
 
   if (filters) {
@@ -413,6 +417,8 @@
       activePlat !== "all" ||
       activeVerdict !== "all" ||
       (stockOnly && stockOnly.checked) ||
+      (under5 && under5.checked) ||
+      (under10 && under10.checked) ||
       (under20 && under20.checked) ||
       !!(search && search.value.trim())
     );
@@ -467,6 +473,8 @@
     activeVerdict = "all";
     if (search) search.value = "";
     if (stockOnly) stockOnly.checked = false;
+    if (under5) under5.checked = false;
+    if (under10) under10.checked = false;
     if (under20) under20.checked = false;
     if (sortEl) sortEl.value = "featured";
     apply();
@@ -495,13 +503,21 @@
 
   function apply() {
     const q = (search && search.value ? search.value : "").trim().toLowerCase();
+    const maxPrice =
+      under5 && under5.checked
+        ? 5
+        : under10 && under10.checked
+          ? 10
+          : under20 && under20.checked
+            ? 20
+            : null;
     let list = window.JEUXSTASH_CATALOG.filter(function (g) {
       const plats = platformsOf(g);
       const catOk = activeCat === "all" || (g.cats || []).indexOf(activeCat) !== -1;
       const platOk = activePlat === "all" || plats.indexOf(activePlat) !== -1;
       const qOk = matchesQuery(g, q);
       const stockOk = !stockOnly || !stockOnly.checked || g.stock === "ok";
-      const cheapOk = !under20 || !under20.checked || (g.price != null && g.price > 0 && g.price < 20);
+      const cheapOk = maxPrice == null || (g.price != null && g.price > 0 && g.price <= maxPrice);
       const verdictOk =
         activeVerdict === "all" ||
         (window.JEUXSTASH_VERDICT && window.JEUXSTASH_VERDICT.for(g).kind === activeVerdict);
@@ -528,6 +544,10 @@
       else url.searchParams.delete("sort");
       if (stockOnly && stockOnly.checked) url.searchParams.set("stock", "1");
       else url.searchParams.delete("stock");
+      if (under5 && under5.checked) url.searchParams.set("under5", "1");
+      else url.searchParams.delete("under5");
+      if (under10 && under10.checked) url.searchParams.set("under10", "1");
+      else url.searchParams.delete("under10");
       if (under20 && under20.checked) url.searchParams.set("under20", "1");
       else url.searchParams.delete("under20");
       history.replaceState(null, "", url.pathname + url.search + url.hash);
@@ -545,6 +565,8 @@
     activePlat = "all";
     activeVerdict = "all";
     if (stockOnly) stockOnly.checked = false;
+    if (under5) under5.checked = false;
+    if (under10) under10.checked = false;
     if (under20) under20.checked = false;
     apply();
     saveRecent(g.name);
@@ -621,7 +643,33 @@
   if (search) search.addEventListener("input", apply);
   if (sortEl) sortEl.addEventListener("change", apply);
   if (stockOnly) stockOnly.addEventListener("change", apply);
-  if (under20) under20.addEventListener("change", apply);
+  if (under5) {
+    under5.addEventListener("change", function () {
+      if (under5.checked) {
+        if (under10) under10.checked = false;
+        if (under20) under20.checked = false;
+      }
+      apply();
+    });
+  }
+  if (under10) {
+    under10.addEventListener("change", function () {
+      if (under10.checked) {
+        if (under5) under5.checked = false;
+        if (under20) under20.checked = false;
+      }
+      apply();
+    });
+  }
+  if (under20) {
+    under20.addEventListener("change", function () {
+      if (under20.checked) {
+        if (under5) under5.checked = false;
+        if (under10) under10.checked = false;
+      }
+      apply();
+    });
+  }
 
   syncPlatChips();
   syncStyleChips();

@@ -300,6 +300,47 @@
   const used = {};
   if (hero) used[hero.name] = true;
 
+  // Pépites à moins de 5 € et 10 € : achats impulsifs à fort taux de conversion
+  (function fillPetitsPrix() {
+    var prefer = [
+      "Monster Hunter Rise",
+      "Batman: Arkham Knight Premium Edition",
+      "Detroit: Become Human",
+      "Hogwarts Legacy",
+      "Frostpunk 2",
+      "Middle-earth: Shadow of War Definitive Edition",
+      "Sifu",
+      "Control Ultimate Edition",
+      "Rise of the Tomb Raider: 20 Year Celebration",
+      "Monster Hunter: World",
+      "Resident Evil 2",
+      "DOOM Eternal",
+      "Slay the Spire",
+      "Watch Dogs 2",
+      "Mad Max",
+      "Brotato",
+    ];
+    var list = [];
+    prefer.forEach(function (name) {
+      if (list.length >= 4) return;
+      var g = byName(name);
+      if (g && g.stock === "ok" && g.price != null && g.price <= 10 && !used[g.name]) {
+        list.push(g);
+        used[g.name] = true;
+      }
+    });
+    if (list.length < 4) {
+      catalog.forEach(function (g) {
+        if (list.length >= 4) return;
+        if (g.stock === "ok" && g.price != null && g.price > 0 && g.price <= 10 && !used[g.name]) {
+          list.push(g);
+          used[g.name] = true;
+        }
+      });
+    }
+    fillGrid("petits-prix", list.slice(0, 4));
+  })();
+
   // Ce soir · 2h : sessions courtes, mix solo / coop
   (function fillTonight() {
     var prefer = [
@@ -447,6 +488,14 @@
       "Alan Wake 2": 0.7,
       Palworld: 0.7,
       "Stardew Valley": 0.7,
+      "Kingdom Come: Deliverance II": 0.95,
+      "DOOM: The Dark Ages": 0.95,
+      "Assassin's Creed Shadows": 0.9,
+      "Silent Hill 2": 0.9,
+      "FINAL FANTASY VII REBIRTH": 0.95,
+      "Dragon's Dogma 2": 0.85,
+      "Metaphor: ReFantazio": 0.85,
+      "Persona 3 Reload": 0.85,
     };
     function fameOf(g) {
       if (FAME[g.name] != null) return FAME[g.name];
@@ -509,7 +558,15 @@
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               }) +
-              "\u00a0€"
+              "\u00a0€" +
+              (x.v.saveEuro != null && x.v.saveEuro >= 1
+                ? " (−" +
+                  Number(x.v.saveEuro).toLocaleString("fr-FR", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 2,
+                  }) +
+                  "\u00a0€)"
+                : "")
             : "";
         return (
           '<div class="promo-card">' +

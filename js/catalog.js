@@ -4021,6 +4021,463 @@ window.JEUXSTASH_CATALOG = [
       "2k26"
     ],
     "steam": 3472040
+  },
+  {
+    "name": "FINAL FANTASY VII REBIRTH",
+    "blurb": "Deuxième volet du remake FF7 en monde ouvert.",
+    "tag": "JRPG",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/10365-acheter-final-fantasy-vii-rebirth-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=FINAL%20FANTASY%20VII%20REBIRTH",
+    "price": 19.99,
+    "store": 69.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 2909400,
+    "cover": "https://gaming-cdn.com/images/products/10365/616x353/final-fantasy-vii-rebirth-pc-steam-cover.jpg",
+    "aliases": [
+      "ff7 rebirth",
+      "rebirth"
+    ]
+  },
+  {
+    "name": "DRAGON BALL: Sparking! ZERO",
+    "blurb": "Le retour de Budokai Tenkaichi — roster géant.",
+    "tag": "Combat",
+    "cats": [
+      "hot",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/15531-acheter-dragon-ball-sparking-zero-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=DRAGON%20BALL%3A%20Sparking%21%20ZERO",
+    "price": 25.79,
+    "store": 69.99,
+    "stock": "out",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1790600,
+    "cover": "https://gaming-cdn.com/images/products/15531/616x353/dragon-ball-sparking-zero-pc-steam-cover.jpg",
+    "aliases": [
+      "sparking zero",
+      "tenkaichi 4",
+      "dbz"
+    ]
+  },
+  {
+    "name": "Monster Hunter Rise",
+    "blurb": "Chasse nerveuse au Filoptère — solo ou coop à 4.",
+    "tag": "Action",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7893-acheter-monster-hunter-rise-pc-jeu-steam-europe/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Monster%20Hunter%20Rise",
+    "price": 3.49,
+    "store": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1446780,
+    "cover": "https://gaming-cdn.com/images/products/7893/616x353/monster-hunter-rise-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "mh rise",
+      "mhr"
+    ]
+  },
+  {
+    "name": "Batman: Arkham Knight Premium Edition",
+    "blurb": "Trilogie Rocksteady — Gotham ouverte + tous les DLC.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/5660-acheter-batman-arkham-knight-premium-edition-premium-edition-pc-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Batman%3A%20Arkham%20Knight",
+    "price": 2.29,
+    "store": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 208650,
+    "cover": "https://gaming-cdn.com/images/products/5660/616x353/batman-arkham-knight-premium-edition-premium-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "batman",
+      "arkham knight"
+    ]
+  },
+  {
+    "name": "Middle-earth: Shadow of War Definitive Edition",
+    "blurb": "Système Nemesis géant et sièges de forteresses.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/3155-acheter-middle-earth-shadow-of-war-definitive-edition-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Middle-earth%3A%20Shadow%20of%20War",
+    "price": 2.29,
+    "store": 49.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 356190,
+    "cover": "https://gaming-cdn.com/images/products/3155/616x353/middle-earth-shadow-of-war-definitive-edition-pc-steam-cover.jpg",
+    "aliases": [
+      "shadow of war",
+      "lotr",
+      "ombre de la guerre"
+    ]
+  },
+  {
+    "name": "Mad Max",
+    "blurb": "Combat routier et désert post-apo explosif.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/835-acheter-mad-max-pc-mac-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Mad%20Max",
+    "price": 1.49,
+    "store": 19.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 234140,
+    "cover": "https://gaming-cdn.com/images/products/835/616x353/mad-max-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "mad max"
+    ]
+  },
+  {
+    "name": "Brotato",
+    "blurb": "Arena roguelite frénétique — runs de 20 min.",
+    "tag": "Roguelike",
+    "cats": [
+      "chill",
+      "action",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/13013-acheter-brotato-pc-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Brotato",
+    "price": 2.39,
+    "store": 4.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1942280,
+    "cover": "https://gaming-cdn.com/images/products/13013/616x353/brotato-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "brotato"
+    ]
+  },
+  {
+    "name": "Rise of the Tomb Raider: 20 Year Celebration",
+    "blurb": "Lara Croft en Sibérie — édition intégrale.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1640-acheter-rise-of-the-tomb-raider-20-year-celebration-pc-mac-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Rise%20of%20the%20Tomb%20Raider",
+    "price": 4.59,
+    "store": 29.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 391220,
+    "cover": "https://gaming-cdn.com/images/products/1640/616x353/rise-of-the-tomb-raider-20-year-celebration-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "tomb raider",
+      "rottr"
+    ]
+  },
+  {
+    "name": "Assetto Corsa",
+    "blurb": "La référence simracing PC et modding infini.",
+    "tag": "Course",
+    "cats": [
+      "sport",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1263-acheter-assetto-corsa-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Assetto%20Corsa",
+    "price": 4.69,
+    "store": 19.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 244210,
+    "cover": "https://gaming-cdn.com/images/products/1263/616x353/assetto-corsa-pc-steam-cover.jpg",
+    "aliases": [
+      "assetto corsa",
+      "ac"
+    ]
+  },
+  {
+    "name": "Frostpunk 2",
+    "blurb": "City-builder de survie glaciale et politique.",
+    "tag": "Stratégie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/9361-acheter-frostpunk-2-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Frostpunk%202",
+    "price": 4.99,
+    "store": 44.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1601580,
+    "cover": "https://gaming-cdn.com/images/products/9361/616x353/frostpunk-2-pc-steam-cover.jpg",
+    "aliases": [
+      "frostpunk 2"
+    ]
+  },
+  {
+    "name": "Sleeping Dogs: Definitive Edition",
+    "blurb": "Action open-world à Hong Kong — arts martiaux & polar.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "chill"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/545-acheter-sleeping-dogs-definitive-edition-pc-mac-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Sleeping%20Dogs%3A%20Definitive%20Edition",
+    "price": 5.09,
+    "store": 19.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 307690,
+    "cover": "https://gaming-cdn.com/images/products/545/616x353/sleeping-dogs-definitive-edition-pc-mac-steam-cover.jpg",
+    "aliases": [
+      "sleeping dogs"
+    ]
+  },
+  {
+    "name": "Detroit: Become Human",
+    "blurb": "Thriller narratif Quantic Dream à embranchements.",
+    "tag": "Narratif",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/7001-acheter-detroit-become-human-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Detroit%3A%20Become%20Human",
+    "price": 5.69,
+    "store": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1222140,
+    "cover": "https://gaming-cdn.com/images/products/7001/616x353/detroit-become-human-pc-steam-cover.jpg",
+    "aliases": [
+      "detroit"
+    ]
+  },
+  {
+    "name": "Slay the Spire",
+    "blurb": "Le deckbuilder roguelike de référence.",
+    "tag": "Roguelike",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2434-acheter-slay-the-spire-pc-mac-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Slay%20the%20Spire",
+    "price": 7.09,
+    "store": 22.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 646570,
+    "cover": "https://gaming-cdn.com/images/products/2434/616x353/slay-the-spire-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "sts",
+      "slay the spire"
+    ]
+  },
+  {
+    "name": "Dead by Daylight",
+    "blurb": "Horreur asymétrique 4v1 culte en multi.",
+    "tag": "Horror",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1904-acheter-dead-by-daylight-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Dead%20by%20Daylight",
+    "price": 8.29,
+    "store": 19.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 381210,
+    "cover": "https://gaming-cdn.com/images/products/1904/616x353/dead-by-daylight-pc-steam-cover.jpg",
+    "aliases": [
+      "dbd"
+    ]
+  },
+  {
+    "name": "Days Gone",
+    "blurb": "Survie moto en monde ouvert face aux hordes.",
+    "tag": "Action",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/6791-acheter-days-gone-pc-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Days%20Gone",
+    "price": 11.89,
+    "store": 49.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1259420,
+    "cover": "https://gaming-cdn.com/images/products/6791/616x353/days-gone-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "days gone"
+    ]
+  },
+  {
+    "name": "Mortal Kombat 1 Definitive Edition",
+    "blurb": "Nouvelle ère Mortal Kombat + combattants Kameo.",
+    "tag": "Combat",
+    "cats": [
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/19340-acheter-mortal-kombat-1-definitive-edition-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Mortal%20Kombat%201",
+    "price": 14.59,
+    "store": 69.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1971870,
+    "cover": "https://gaming-cdn.com/images/products/19340/616x353/mortal-kombat-1-definitive-edition-pc-steam-cover.jpg",
+    "aliases": [
+      "mk1",
+      "mortal kombat 1"
+    ]
+  },
+  {
+    "name": "Age of Empires IV: Anniversary Edition",
+    "blurb": "RTS historique moderne — solo et multi.",
+    "tag": "RTS",
+    "cats": [
+      "chill",
+      "coop"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/2244-acheter-age-of-empires-iv-anniversary-edition-anniversary-edition-pc-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Age%20of%20Empires%20IV",
+    "price": 15.09,
+    "store": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1466860,
+    "cover": "https://gaming-cdn.com/images/products/2244/616x353/age-of-empires-iv-anniversary-edition-anniversary-edition-pc-jeu-steam-cover.jpg",
+    "aliases": [
+      "aoe4",
+      "age of empires 4"
+    ]
+  },
+  {
+    "name": "7 Days to Die",
+    "blurb": "Survie zombie, craft et défense de base en coop.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "action"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/1028-acheter-7-days-to-die-pc-mac-jeu-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=7%20Days%20to%20Die",
+    "price": 16.79,
+    "store": 43.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 251570,
+    "cover": "https://gaming-cdn.com/images/products/1028/616x353/7-days-to-die-pc-mac-jeu-steam-cover.jpg",
+    "aliases": [
+      "7dtd",
+      "7 days"
+    ]
+  },
+  {
+    "name": "Manor Lords",
+    "blurb": "City-builder médiéval réaliste et batailles tactiques.",
+    "tag": "Stratégie",
+    "cats": [
+      "chill",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/8253-acheter-manor-lords-pc-jeu-steam-europe/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=Manor%20Lords",
+    "price": 18.7,
+    "store": 39.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 1363080,
+    "cover": "https://gaming-cdn.com/images/products/8253/616x353/manor-lords-pc-jeu-steam-europe-cover.jpg",
+    "aliases": [
+      "manor lords"
+    ]
+  },
+  {
+    "name": "DayZ",
+    "blurb": "Survie hardcore multijoueur en monde ouvert.",
+    "tag": "Survie",
+    "cats": [
+      "coop",
+      "action",
+      "hot"
+    ],
+    "ig": "https://www.instant-gaming.com/fr/3393-acheter-dayz-pc-steam/?igr=gamer-47bd4c",
+    "gg": "https://gg.deals/games/?title=DayZ",
+    "price": 25.99,
+    "store": 47.99,
+    "stock": "ok",
+    "platforms": [
+      "pc"
+    ],
+    "steam": 221100,
+    "cover": "https://gaming-cdn.com/images/products/3393/616x353/dayz-pc-steam-cover.jpg",
+    "aliases": [
+      "dayz"
+    ]
   }
 ];
 window.JEUXSTASH_PRICES_UPDATED = "2026-10-28";
