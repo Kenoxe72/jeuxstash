@@ -2097,6 +2097,13 @@ html[data-theme="light"] .chip:hover {
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
+main,
+main.section,
+main.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .reveal.is-in {
   opacity: 1;
   transform: none;

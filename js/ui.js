@@ -557,6 +557,7 @@
   var nodes = document.querySelectorAll(".section, .trust-strip, .money-links a, .faq-list details");
   if (!nodes.length || !("IntersectionObserver" in window)) return;
   nodes.forEach(function (el) {
+    if (el.tagName === "MAIN" || el.id === "deals-grid" || el.querySelector("#deals-grid, .game-grid")) return;
     el.classList.add("reveal");
   });
   var io = new IntersectionObserver(
@@ -567,9 +568,11 @@
         io.unobserve(entry.target);
       });
     },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+    { threshold: 0 }
   );
   nodes.forEach(function (el) {
-    io.observe(el);
+    if (el.classList.contains("reveal")) {
+      io.observe(el);
+    }
   });
 })();

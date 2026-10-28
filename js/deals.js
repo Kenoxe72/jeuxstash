@@ -255,7 +255,7 @@
     return game.ig || "https://www.instant-gaming.com/fr/?igr=gamer-47bd4c";
   }
 
-  function cardHTML(game) {
+  function cardHTML(game, index) {
     const cats = (game.cats || []).join(" ");
     const plats = platformsOf(game).join(" ");
     const name = esc(game.name);
@@ -275,9 +275,12 @@
         name +
         '" width="460" height="215" loading="lazy" />'
       : '<div class="game-cover game-cover--empty" aria-hidden="true"></div>';
+    const i = typeof index === "number" ? Math.min(index, 12) : 0;
     return (
-      '<article class="game-card' +
+      '<article class="game-card anim-card' +
       (oos ? " is-oos" : "") +
+      '" style="--i:' +
+      i +
       '" data-name="' +
       game.name.toLowerCase().replace(/"/g, "") +
       '" data-cats="' +
@@ -449,7 +452,7 @@
   function render(list) {
     grid.innerHTML = list
       .map(function (g, i) {
-        return cardHTML(g).replace('class="game-card', 'class="game-card anim-card" style="--i:' + i + '"');
+        return cardHTML(g, i);
       })
       .join("");
     if (countEl) countEl.textContent = list.length + (list.length > 1 ? " jeux" : " jeu");
@@ -540,6 +543,7 @@
     if (search) search.value = g.name;
     activeCat = "all";
     activePlat = "all";
+    activeVerdict = "all";
     if (stockOnly) stockOnly.checked = false;
     if (under20) under20.checked = false;
     apply();
