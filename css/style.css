@@ -940,6 +940,8 @@ html[data-theme="dark"] .game-card:hover {
 .game-cover-link {
   display: block;
   position: relative;
+  width: 100%;
+  aspect-ratio: 616 / 353;
   background: #0f131a;
   line-height: 0;
   overflow: hidden;
@@ -948,6 +950,7 @@ html[data-theme="dark"] .game-card:hover {
 .game-cover {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 616 / 353;
   object-fit: cover;
   object-position: center center;
