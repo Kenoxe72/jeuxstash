@@ -528,7 +528,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/3-acheter-xbox-game-pass-essential-1-mois-xbox-one-xbox-series-x-s-pc-microsoft-store/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Xbox+Game+Pass+Essential",
     "price": 7.68,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc",
       "xbox"
@@ -710,7 +710,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/7930-acheter-monster-hunter-wilds-pc-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Monster+Hunter+Wilds",
     "price": 24.83,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -911,8 +911,8 @@ window.JEUXSTASH_CATALOG = [
     "cover": "https://gaming-cdn.com/images/products/17864/616x353/split-fiction-pc-jeu-ea-app-cover.jpg",
     "ig": "https://www.instant-gaming.com/fr/17864-acheter-split-fiction-pc-jeu-ea-app/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Split+Fiction",
-    "price": 42.64,
-    "stock": "ok",
+    "price": 42.53,
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -1135,7 +1135,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/7911-acheter-dragon-s-dogma-2-pc-jeu-steam-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Dragon%27s+Dogma+2",
     "price": 13.42,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -1300,7 +1300,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/4211-acheter-grand-theft-auto-v-enhanced-pc-rockstar/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Grand+Theft+Auto+V",
     "price": 10.76,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -1326,7 +1326,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/5653-acheter-red-dead-redemption-2-ultimate-edition-ultimate-edition-pc-jeu-rockstar/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Red+Dead+Redemption+2",
     "price": 19.12,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -1381,7 +1381,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 447040,
     "ig": "https://www.instant-gaming.com/fr/1365-acheter-watch-dogs-2-pc-jeu-ubisoft-connect-europe/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Watch+Dogs+2",
-    "price": 4.61,
+    "price": 4.83,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2048,7 +2048,7 @@ window.JEUXSTASH_CATALOG = [
     "steam": 2881650,
     "ig": "https://www.instant-gaming.com/fr/16548-acheter-steam-content-warning-pc-jeu-steam-europe-us-canada/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Content%20Warning",
-    "price": 6.58,
+    "price": 4.39,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2212,7 +2212,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/7664-acheter-steam-doom-eternal-pc-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=DOOM%20Eternal",
-    "price": 9.99,
+    "price": 9.88,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -2491,7 +2491,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/9423-acheter-steam-cult-of-the-lamb-pc-mac-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Cult%20of%20the%20Lamb",
     "price": 9.33,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -2980,7 +2980,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/5913-acheter-steam-final-fantasy-vii-remake-intergrade-pc-jeu-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=FINAL%20FANTASY%20VII%20REMAKE%20INTERGRADE",
-    "price": 12.85,
+    "price": 12.63,
     "stock": "ok",
     "platforms": [
       "pc"
@@ -3814,7 +3814,7 @@ window.JEUXSTASH_CATALOG = [
     "ig": "https://www.instant-gaming.com/fr/14831-acheter-steam-little-nightmares-iii-pc-steam?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Little%20Nightmares%20III",
     "price": 20.88,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -4213,7 +4213,7 @@ window.JEUXSTASH_CATALOG = [
     "gg": "https://gg.deals/games/?title=Rise%20of%20the%20Tomb%20Raider",
     "price": 5.38,
     "store": 29.99,
-    "stock": "ok",
+    "stock": "out",
     "platforms": [
       "pc"
     ],
@@ -4323,7 +4323,7 @@ window.JEUXSTASH_CATALOG = [
     ],
     "ig": "https://www.instant-gaming.com/fr/2434-acheter-slay-the-spire-pc-mac-jeu-steam/?igr=gamer-47bd4c",
     "gg": "https://gg.deals/games/?title=Slay%20the%20Spire",
-    "price": 7.57,
+    "price": 7.79,
     "store": 22.99,
     "stock": "ok",
     "platforms": [
@@ -4462,7 +4462,7 @@ window.JEUXSTASH_CATALOG = [
     "gg": "https://gg.deals/games/?title=Manor%20Lords",
     "price": 20.56,
     "store": 39.99,
-    "stock": "out",
+    "stock": "ok",
     "platforms": [
       "pc"
     ],
@@ -4596,7 +4596,7 @@ window.JEUXSTASH_CATALOG = [
     ]
   }
 ];
-window.JEUXSTASH_PRICES_UPDATED = "2026-11-21";
+window.JEUXSTASH_PRICES_UPDATED = "2026-11-22";
 
 /** Jeux à venir / précommandes (cat « coming » + vérification date de sortie non dépassée) */
 window.JEUXSTASH_COMING = {
