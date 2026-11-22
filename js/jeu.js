@@ -190,7 +190,7 @@
         : '<a class="btn buy" href="' +
           esc(game.ig) +
           '" rel="sponsored noopener" target="_blank">' +
-          (coming ? "Précommander sur Instant Gaming" : "Voir le prix sur Instant Gaming") +
+          (coming ? "Précommander sur Instant Gaming" : "Voir l’offre sur Instant Gaming →") +
           "</a>") +
       '<a class="btn ghost" href="' +
       esc(game.gg || "https://gg.deals/") +
@@ -383,4 +383,20 @@
     renderShell(game);
   }
   loadSteam(game);
+
+  // Masquer la barre flottante tant que les boutons d'action du haut sont visibles
+  var stickyBar = document.querySelector(".sticky-aff");
+  var priceRow = document.querySelector(".fiche-price-row");
+  if (stickyBar && priceRow && "IntersectionObserver" in window) {
+    stickyBar.classList.add("is-hidden");
+    var stickyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          stickyBar.classList.toggle("is-hidden", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 }
+    );
+    stickyObserver.observe(priceRow);
+  }
 })();

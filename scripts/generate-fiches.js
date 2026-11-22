@@ -374,7 +374,7 @@ function buildStaticArticle(game, win) {
         '<a class="btn buy" href="' +
         esc(game.ig) +
         '" rel="sponsored noopener" target="_blank">' +
-        (coming ? "Précommander" : "Voir le prix") +
+        (coming ? "Précommander sur Instant Gaming" : "Voir l’offre sur Instant Gaming →") +
         "</a>";
     }
   }
@@ -422,7 +422,7 @@ function buildStaticArticle(game, win) {
       '<a class="btn buy small" href="' +
       esc(game.ig) +
       '" rel="sponsored noopener" target="_blank">' +
-      (coming ? "Précommander" : "Voir l’offre") +
+      (coming ? "Précommander" : "Voir sur Instant Gaming →") +
       "</a>";
   } else {
     html +=
@@ -572,7 +572,7 @@ function buildStaticArticle(game, win) {
 
   if (!oos && game.ig) {
     html +=
-      '<div class="sticky-aff" aria-label="Acheter ou comparer">' +
+      '<div class="sticky-aff is-hidden" aria-label="Acheter ou comparer">' +
       '<span class="sticky-aff-label">' +
       esc(game.name) +
       "</span>" +

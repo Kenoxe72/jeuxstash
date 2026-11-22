@@ -1622,15 +1622,15 @@ html[data-theme="dark"] .deals-toolbar.is-stuck {
 }
 
 .sort-wrap select {
-  height: 100%;
-  min-height: 2.85rem;
-  padding: 0 1.1rem;
-  border-radius: 12px;
+  height: 2.25rem;
+  min-height: 0;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--ink);
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
@@ -2129,6 +2129,14 @@ html[data-theme="light"] .chip.is-active {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.sticky-aff.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translate(-50%, 15px);
 }
 
 @media (min-width: 769px) {
@@ -2335,8 +2343,8 @@ main.reveal {
 }
 
 .game-card.anim-card {
-  animation: fade-up 0.45s ease both;
-  animation-delay: calc(var(--i, 0) * 0.03s);
+  animation: fade-up 0.35s ease both;
+  animation-delay: calc(min(var(--i, 0), 8) * 0.03s);
 }
 
 .game-card.is-lucky {

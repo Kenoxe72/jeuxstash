@@ -227,7 +227,7 @@
             (isPass ? "Abonnement Instant Gaming" : "Clé digitale Instant Gaming") +
             (price ? " — " + price : "") +
             '">' +
-            (coming ? "Précommander" : isPass ? "Voir l’abo" : "Clé digitale") +
+            (coming ? "Précommander" : isPass ? "Voir l’abo" : "Clé digitale" + (price ? " — " + price : "")) +
             "</a>"
         );
       }
