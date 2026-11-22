@@ -2133,10 +2133,10 @@ html[data-theme="light"] .chip.is-active {
 }
 
 .sticky-aff.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transform: translate(-50%, 15px);
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translate(-50%, 15px) !important;
 }
 
 @media (min-width: 769px) {
