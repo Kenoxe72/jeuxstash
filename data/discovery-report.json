@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-24",
+  "sourcesCount": 18,
+  "matchedTrending": [
+    {
+      "name": "Red Dead Redemption 2",
+      "rank": 4,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1174180
+    },
+    {
+      "name": "Baldur's Gate 3",
+      "rank": 5,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1086940
+    },
+    {
+      "name": "GTA V Enhanced",
+      "rank": 8,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 3240220
+    }
+  ],
+  "missingCandidates": [
+    {
+      "name": "Dead by Daylight: Terrifier",
+      "source": "steam:top_sellers",
+      "rank": 1,
+      "price": 7.99,
+      "steam": 5510420
+    },
+    {
+      "name": "Steam Machine",
+      "source": "steam:top_sellers",
+      "rank": 2,
+      "price": 1039.0,
+      "steam": 4165910
+    },
+    {
+      "name": "007 First Light",
+      "source": "steam:top_sellers",
+      "rank": 6,
+      "price": 34.99,
+      "steam": 3768760
+    },
+    {
+      "name": "No Asteroids",
+      "source": "steam:top_sellers",
+      "rank": 7,
+      "price": 6.23,
+      "steam": 5527800
+    },
+    {
+      "name": "Steam Deck",
+      "source": "steam:top_sellers",
+      "rank": 10,
+      "price": 419.0,
+      "steam": 1675200
+    },
+    {
+      "name": "BitLoaf",
+      "source": "steam:coming_soon",
+      "rank": 21,
+      "price": null,
+      "steam": 5436360
+    },
+    {
+      "name": "The Shadow Cosmos",
+      "source": "steam:coming_soon",
+      "rank": 22,
+      "price": null,
+      "steam": 3576560
+    },
+    {
+      "name": "Rec Room: A New Semester",
+      "source": "steam:coming_soon",
+      "rank": 23,
+      "price": null,
+      "steam": 4877420
+    },
+    {
+      "name": "The drawing of the Exodus",
+      "source": "steam:coming_soon",
+      "rank": 24,
+      "price": null,
+      "steam": 5457370
+    },
+    {
+      "name": "FC Tycoon 2027",
+      "source": "steam:coming_soon",
+      "rank": 25,
+      "price": null,
+      "steam": 3992000
+    },
+    {
+      "name": "Starwinder",
+      "source": "steam:coming_soon",
+      "rank": 26,
+      "price": null,
+      "steam": 5470000
+    },
+    {
+      "name": "Jester's Dungeon",
+      "source": "steam:coming_soon",
+      "rank": 27,
+      "price": null,
+      "steam": 5039070
+    },
+    {
+      "name": "Hypothesis Sudoku",
+      "source": "steam:coming_soon",
+      "rank": 28,
+      "price": null,
+      "steam": 5424390
+    },
+    {
+      "name": "TCG Town",
+      "source": "steam:coming_soon",
+      "rank": 29,
+      "price": null,
+      "steam": 5123930
+    },
+    {
+      "name": "Chess Lords",
+      "source": "steam:coming_soon",
+      "rank": 30,
+      "price": null,
+      "steam": 5507950
+    }
+  ],
+  "chronicOos": []
+}

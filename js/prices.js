@@ -76,7 +76,7 @@
           const span = document.createElement("span");
           span.className = "btn buy is-oos";
           span.setAttribute("aria-disabled", "true");
-          span.textContent = "WARDOGS — rupture";
+          span.textContent = (game.name || "Jeu") + " — rupture";
           btn.replaceWith(span);
         }
       });

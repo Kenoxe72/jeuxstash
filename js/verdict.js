@@ -235,11 +235,11 @@ window.JEUXSTASH_VERDICT = (function () {
 
   function hintFor(game) {
     if (!game) return null;
-    if (HINTS[game.name]) return HINTS[game.name];
-    if (game.store || game.pass) {
-      return { store: game.store, pass: !!game.pass };
-    }
-    return null;
+    var h = HINTS[game.name] || {};
+    var store = game.store != null ? game.store : h.store != null ? h.store : null;
+    var pass = game.pass != null ? !!game.pass : !!h.pass;
+    if (store == null && !pass) return null;
+    return { store: store, pass: pass };
   }
 
   function savePct(ig, store) {

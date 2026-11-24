@@ -530,8 +530,8 @@ html[data-theme="dark"] .hero-inner {
   min-width: 0;
   padding: 0.8rem 1.15rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(10, 14, 22, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(10, 14, 22, 0.78);
   color: #ffffff;
   font: inherit;
   font-size: 0.95rem;
@@ -541,7 +541,7 @@ html[data-theme="dark"] .hero-inner {
 }
 
 .hero-search input::placeholder {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .hero-search input:focus {
@@ -589,6 +589,20 @@ html[data-theme="dark"] .hero-inner {
 
 .hero-note-sep {
   opacity: 0.4;
+}
+
+.hero-spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 180, 84, 0.18);
+  border: 1px solid rgba(255, 180, 84, 0.38);
+  color: #ffd089;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .hero-feature {
@@ -730,6 +744,10 @@ html[data-theme="dark"] .hero-inner {
   max-width: var(--max);
   margin: 0 auto;
   padding: 1.4rem 1.2rem 2rem;
+}
+
+.section[id] {
+  scroll-margin-top: 5rem;
 }
 
 .section-head {
@@ -910,7 +928,7 @@ html[data-theme="dark"] .hero-inner {
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 0.9rem;
 }
 
@@ -1041,6 +1059,18 @@ html[data-theme="dark"] .game-card:hover {
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.game-badge--low {
+  right: 0.6rem;
+  bottom: 0.6rem;
+  color: #ecfdf5;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: 1px solid rgba(167, 243, 208, 0.35);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
 }
 
 .game-cover--empty {
@@ -1319,6 +1349,11 @@ html[data-theme="dark"] .price-compare .save-euro {
   flex: 1;
 }
 
+.game-card p.price-compare {
+  flex: 0 0 auto;
+  margin: -0.2rem 0 0.85rem;
+}
+
 .game-card .row {
   display: flex;
   gap: 0.5rem;
@@ -1328,6 +1363,7 @@ html[data-theme="dark"] .price-compare .save-euro {
 
 .game-card .row--actions {
   gap: 0.45rem;
+  margin-top: auto;
 }
 
 .btn-icon {
@@ -2071,6 +2107,10 @@ html[data-theme="light"] .chip.is-active {
   font-weight: 600;
 }
 
+#deals-updated {
+  white-space: nowrap;
+}
+
 .deals-title {
   margin: 0;
   font-family: var(--display);
@@ -2591,6 +2631,23 @@ html[data-theme="dark"] .promo-card:hover {
   box-shadow: 0 4px 10px rgba(220, 38, 38, 0.38);
 }
 
+.promo-low {
+  position: absolute;
+  left: 0.55rem;
+  top: 0.55rem;
+  z-index: 2;
+  padding: 0.24rem 0.5rem;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: 1px solid rgba(167, 243, 208, 0.35);
+  color: #ecfdf5;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
 .promo-card-body strong {
   font-size: 0.95rem;
   line-height: 1.25;
@@ -2662,6 +2719,10 @@ html[data-theme="light"] .watch-btn.is-on {
   font-size: 0.72rem;
   font-weight: 700;
   vertical-align: middle;
+}
+
+.watch-nav-count[hidden] {
+  display: none !important;
 }
 
 .watch-empty {

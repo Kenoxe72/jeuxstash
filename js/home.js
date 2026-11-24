@@ -65,6 +65,9 @@
         price +
         "</span>";
     }
+    if (game.isLow && !coming && !out) {
+      html += '<span class="game-badge game-badge--low">Plus bas</span>';
+    }
     return html ? '<span class="game-badges">' + html + "</span>" : "";
   }
 
@@ -85,6 +88,10 @@
     if (game.stock === "ok") s += 8;
     if (game.stock === "out") s -= 3;
     if (game.price != null && game.price > 0 && game.price < 20) s += 2;
+    if (game.trendingRank != null && game.trendingRank <= 40) s += Math.max(1, 25 - game.trendingRank);
+    if (game.popularity) s += Math.round(game.popularity * 0.15);
+    if (game.isLow) s += 4;
+    if (game.dropPct >= 10) s += 4;
     return s;
   }
 
@@ -277,28 +284,70 @@
         }
       }
     }
+    const spotLink = document.getElementById("hero-spotlight-link");
+    if (spotLink) {
+      spotLink.href = fiche;
+      const coming = window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(game);
+      const priceTxt = formatPrice(game.price);
+      const meta = coming
+        ? "Préco " + window.JEUXSTASH_COMING.label(game) + (priceTxt ? " · " + priceTxt : "")
+        : priceTxt
+          ? priceTxt
+          : game.stock === "out"
+            ? "Rupture"
+            : "Voir le prix";
+      spotLink.textContent = game.name + " · " + meta;
+    }
   }
 
-  // Hero : priorité stock OK parmi heroPrefer, sinon meilleur score hot
+  // Hero : rotation quotidienne parmi heroPrefer (stock OK ou préco attendue)
+  const heroCandidates = (plan.heroPrefer || [])
+    .map(byName)
+    .filter(function (g) {
+      return (
+        g &&
+        (g.stock === "ok" || (window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(g)))
+      );
+    });
+  const heroFallback = heroCandidates.length
+    ? heroCandidates
+    : (plan.heroPrefer || []).map(byName).filter(Boolean);
   let hero = null;
-  for (let i = 0; i < plan.heroPrefer.length; i++) {
-    const g = byName(plan.heroPrefer[i]);
-    if (g && g.stock === "ok") {
-      hero = g;
-      break;
-    }
-  }
-  if (!hero) {
-    for (let i = 0; i < plan.heroPrefer.length; i++) {
-      hero = byName(plan.heroPrefer[i]);
-      if (hero) break;
-    }
+  if (heroFallback.length) {
+    const rot = Math.abs((plan.daySeed != null ? plan.daySeed : seed) - 20781);
+    hero = heroFallback[rot % heroFallback.length];
   }
   if (!hero) hero = pick("hot", 1)[0] || catalog[0];
   setHero(hero);
 
   const used = {};
-  if (hero) used[hero.name] = true;
+
+  // Tendances & gros jeux du moment : placés juste sous les grosses baisses
+  (function fillHits() {
+    const hitForce = [];
+    [
+      "Grand Theft Auto VI",
+      "Call of Duty: Modern Warfare 4",
+      "Call of Duty: Black Ops 7",
+      "EA Sports FC 27",
+      "Resident Evil Requiem",
+      "Black Myth: Wukong",
+    ].forEach(function (name) {
+      const g = byName(name);
+      if (g && !used[g.name]) {
+        hitForce.push(g);
+        used[g.name] = true;
+      }
+    });
+    const need = Math.max(0, 8 - hitForce.length);
+    const hits = hitForce.concat(pick("hot", need, used)).slice(0, 8);
+    if (hits.length < 8) {
+      pick(null, 8 - hits.length, used).forEach(function (g) {
+        hits.push(g);
+      });
+    }
+    fillGrid("hits", hits);
+  })();
 
   // Pépites à moins de 5 € et 10 € : achats impulsifs à fort taux de conversion
   (function fillPetitsPrix() {
@@ -399,7 +448,7 @@
     fillGrid("pass", list.slice(0, 4), tipCard());
   })();
 
-  // À venir : précommandes / sorties (tri date croissante)
+  // À venir : précommandes / sorties (tri date croissante, hors titres déjà mis en avant)
   (function fillComing() {
     var prefer = [
       "Phantom Blade Zero",
@@ -412,41 +461,25 @@
     var list = [];
     prefer.forEach(function (name) {
       var g = byName(name);
-      if (g && window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(g)) list.push(g);
+      if (g && !used[g.name] && window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(g)) {
+        list.push(g);
+        used[g.name] = true;
+      }
     });
     catalog.forEach(function (g) {
-      if (list.length >= 6) return;
+      if (list.length >= 4) return;
+      if (used[g.name]) return;
       if (!window.JEUXSTASH_COMING || !window.JEUXSTASH_COMING.isComing(g)) return;
-      if (list.some(function (x) { return x.name === g.name; })) return;
       list.push(g);
+      used[g.name] = true;
     });
     list.sort(function (a, b) {
       var ra = a.release || "9999";
       var rb = b.release || "9999";
       return String(ra).localeCompare(String(rb));
     });
-    fillGrid("coming", list.slice(0, 6));
+    fillGrid("coming", list.slice(0, 4));
   })();
-
-  // Hits : gros titres + sport + hot (chill/sport sections retirées de l’accueil)
-  const hitForce = [];
-  ["Call of Duty: Black Ops 7", "Grand Theft Auto VI", "Black Myth: Wukong", "EA Sports FC 27"].forEach(function (name) {
-    const g = byName(name);
-    if (g && !used[g.name]) {
-      hitForce.push(g);
-      used[g.name] = true;
-    }
-  });
-  const hits = hitForce
-    .concat(pick("hot", 6, used))
-    .concat(pick("chill", 2, used))
-    .slice(0, 10);
-  if (hits.length < 8) {
-    pick(null, 8 - hits.length, used).forEach(function (g) {
-      hits.push(g);
-    });
-  }
-  fillGrid("hits", hits);
 
   // Grosses baisses : mix % fort + titres reconnus (pas que du −90 % obscur)
   (function fillPromos() {
@@ -507,7 +540,9 @@
       var pct = v.savePct || 0;
       var fame = fameOf(g);
       var euros = v.store != null && g.price != null ? Math.max(0, v.store - g.price) : 0;
-      return pct * (0.5 + 0.5 * fame) + Math.min(euros, 35) * 0.35 + fame * 28;
+      var dropBonus = g.dropPct >= 10 ? Math.min(g.dropPct, 40) * 0.4 : 0;
+      var lowBonus = g.isLow ? 8 : 0;
+      return pct * (0.5 + 0.5 * fame) + Math.min(euros, 35) * 0.35 + fame * 28 + dropBonus + lowBonus;
     }
     var ranked = catalog
       .filter(function (g) {
@@ -578,6 +613,7 @@
           '<img src="' +
           coverUrl(g) +
           '" alt="" width="230" height="107" loading="lazy" />' +
+          (g.isLow ? '<span class="promo-low">Plus bas</span>' : "") +
           '<span class="promo-save">−' +
           x.pct +
           "&nbsp;%</span>" +

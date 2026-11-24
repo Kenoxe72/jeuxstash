@@ -2,8 +2,22 @@
 const fs = require("fs");
 const path = require("path");
 
-const guidesDir = path.join(__dirname, "..", "guides");
+const root = path.join(__dirname, "..");
+const guidesDir = path.join(root, "guides");
 const files = fs.readdirSync(guidesDir).filter(f => f.endsWith(".html"));
+
+let updatedDate = new Date().toISOString().slice(0, 10);
+try {
+  const catalogPath = path.join(root, "js", "catalog.js");
+  const sandbox = { window: {} };
+  // eslint-disable-next-line no-new-func
+  Function("window", fs.readFileSync(catalogPath, "utf8"))(sandbox.window);
+  if (sandbox.window.JEUXSTASH_PRICES_UPDATED) {
+    updatedDate = String(sandbox.window.JEUXSTASH_PRICES_UPDATED);
+  }
+} catch (e) {}
+const assetVersion = updatedDate.replace(/-/g, "") + "v1";
+const dateModifiedIso = `${updatedDate}T12:00:00+01:00`;
 
 let faqCount = 0;
 let articleCount = 0;
@@ -20,7 +34,7 @@ for (const file of files) {
   const filePath = path.join(guidesDir, file);
   let html = fs.readFileSync(filePath, "utf8");
 
-  // 1. Unified nav
+  // 1. Unified nav (idempotent: match leading horizontal spaces too)
   const unifiedNav = 
 `      <nav>
         <a href="/">Accueil</a>
@@ -29,15 +43,18 @@ for (const file of files) {
         <a href="/mes-jeux">Mes jeux</a>
         <a class="nav-cta" href="/deals">Catalogue</a>
       </nav>`;
-  html = html.replace(/<nav>[\s\S]*?<\/nav>/, unifiedNav);
+  html = html.replace(/[ \t]*<nav>[\s\S]*?<\/nav>/, unifiedNav);
 
-  // 2. Cache busters
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261122v1");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261122v1");
-  html = html.replace(/deals\.js\?v=[^"]+/g, "deals.js?v=20261122v1");
-  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261122v1");
-  html = html.replace(/guides-data\.js\?v=[^"]+/g, "guides-data.js?v=20261122v1");
-  html = html.replace(/season\.js\?v=[^"]+/g, "season.js?v=20261122v1");
+  // 2. Cache busters synchronized with catalog date
+  html = html.replace(/style\.css\?v=[^"]+/g, `style.css?v=${assetVersion}`);
+  html = html.replace(/ui\.js\?v=[^"]+/g, `ui.js?v=${assetVersion}`);
+  html = html.replace(/deals\.js\?v=[^"]+/g, `deals.js?v=${assetVersion}`);
+  html = html.replace(/catalog\.js\?v=[^"]+/g, `catalog.js?v=${assetVersion}`);
+  html = html.replace(/guides-data\.js\?v=[^"]+/g, `guides-data.js?v=${assetVersion}`);
+  html = html.replace(/guides-list\.js\?v=[^"]+/g, `guides-list.js?v=${assetVersion}`);
+  html = html.replace(/season\.js\?v=[^"]+/g, `season.js?v=${assetVersion}`);
+  html = html.replace(/verdict\.js\?v=[^"]+/g, `verdict.js?v=${assetVersion}`);
+  html = html.replace(/fiche\.js\?v=[^"]+/g, `fiche.js?v=${assetVersion}`);
 
   if (file === "index.html") {
     const guidesDataPath = path.join(__dirname, "..", "js", "guides-data.js");
@@ -118,7 +135,7 @@ for (const file of files) {
       url: url,
       image: img,
       datePublished: "2026-09-15T10:00:00+02:00",
-      dateModified: "2026-10-28T12:00:00+02:00",
+      dateModified: dateModifiedIso,
       author: {
         "@type": "Organization",
         name: "JeuxStash",
@@ -172,12 +189,12 @@ for (const file of files) {
     faqCount++;
   }
 
-  // Remove existing JSON-LD if any
-  html = html.replace(/<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>\s*/gi, "");
+  // Remove existing JSON-LD cleanly (idempotent)
+  html = html.replace(/[ \t]*<script\s+type=["']application\/ld\+json["']>[\s\S]*?<\/script>\s*/gi, "");
 
   // Insert new JSON-LD before </head>
   const ldScript = `  <script type="application/ld+json">\n  ${JSON.stringify(jsonLd)}\n  </script>\n</head>`;
-  html = html.replace("</head>", ldScript);
+  html = html.replace(/[ \t]*<\/head>/, ldScript);
 
   fs.writeFileSync(filePath, html, "utf8");
   articleCount++;

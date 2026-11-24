@@ -137,6 +137,9 @@
       html +=
         '<span class="game-badge game-badge--price game-badge--amz" title="Voir le prix sur Amazon">Sur Amazon</span>';
     }
+    if (game.isLow && !coming && !out) {
+      html += '<span class="game-badge game-badge--low" title="Plus bas prix observé">Plus bas</span>';
+    }
     return html ? '<span class="game-badges">' + html + "</span>" : "";
   }
 
@@ -332,6 +335,53 @@
     );
   }
 
+  const POPULAR_BOOST = {
+    "Grand Theft Auto VI": 100,
+    "Call of Duty: Modern Warfare 4": 92,
+    "Call of Duty: Black Ops 7": 90,
+    "EA Sports FC 27": 88,
+    "Black Myth: Wukong": 86,
+    "Elden Ring": 85,
+    "Baldur's Gate 3": 84,
+    "Cyberpunk 2077": 83,
+    "Resident Evil Requiem": 82,
+    "Red Dead Redemption 2": 80,
+    "Monster Hunter Wilds": 79,
+    "Clair Obscur: Expedition 33": 78,
+    "Hollow Knight: Silksong": 77,
+    "GTA V Enhanced": 76,
+    "Grand Theft Auto V Enhanced": 76,
+    "The Witcher 4": 75,
+    "Forza Horizon 5": 74,
+    "Helldivers 2": 72,
+    "Kingdom Come: Deliverance II": 71,
+    "DOOM: The Dark Ages": 70,
+    "Crimson Desert Enhanced": 68,
+    Fable: 66,
+    Balatro: 65,
+    Minecraft: 64,
+    "The Witcher 3": 62,
+  };
+
+  function featuredScore(g) {
+    let s = 0;
+    const basePop = Math.max(g.popularity || 0, POPULAR_BOOST[g.name] || 0);
+    s += basePop;
+    if (g.trendingRank != null && g.trendingRank <= 50) {
+      s += 55 - g.trendingRank;
+    }
+    const cats = g.cats || [];
+    const coming = window.JEUXSTASH_COMING && window.JEUXSTASH_COMING.isComing(g);
+    if (g.stock === "ok") s += 35;
+    else if (coming && (basePop >= 60 || cats.indexOf("hot") !== -1)) s += 32;
+    if (cats.indexOf("hot") !== -1) s += 15;
+    const pct = window.JEUXSTASH_VERDICT ? window.JEUXSTASH_VERDICT.for(g).savePct || 0 : 0;
+    s += Math.min(pct, 80) * 0.2;
+    if (g.isLow) s += 8;
+    if (g.dropPct >= 10) s += 10;
+    return s;
+  }
+
   function sortList(list) {
     const mode = sortEl ? sortEl.value : "featured";
     const copy = list.slice();
@@ -370,12 +420,15 @@
       });
     } else {
       copy.sort(function (a, b) {
+        const diff = featuredScore(b) - featuredScore(a);
+        if (Math.abs(diff) > 0.001) return diff;
         const sa = a.stock === "ok" ? 0 : 1;
         const sb = b.stock === "ok" ? 0 : 1;
         if (sa !== sb) return sa - sb;
         const pa = a.price == null ? 9999 : a.price;
         const pb = b.price == null ? 9999 : b.price;
-        return pa - pb;
+        if (pa !== pb) return pa - pb;
+        return a.name.localeCompare(b.name, "fr");
       });
     }
     return copy;

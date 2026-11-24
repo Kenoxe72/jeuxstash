@@ -592,7 +592,89 @@ function buildStaticArticle(game, win) {
   return html;
 }
 
-function buildPage(template, game, slug, win) {
+function assetVersionOf(win) {
+  const d =
+    win && win.JEUXSTASH_PRICES_UPDATED
+      ? String(win.JEUXSTASH_PRICES_UPDATED)
+      : new Date().toISOString().slice(0, 10);
+  return d.replace(/-/g, "") + "v1";
+}
+
+function bumpAssetVersions(html, v) {
+  const assets = [
+    "style\\.css",
+    "catalog\\.js",
+    "verdict\\.js",
+    "season\\.js",
+    "guides-data\\.js",
+    "fiche\\.js",
+    "watchlist\\.js",
+    "home\\.js",
+    "deals\\.js",
+    "jeu\\.js",
+    "pc-builder\\.js",
+    "ui\\.js",
+    "config\\.js",
+  ];
+  for (const name of assets) {
+    html = html.replace(
+      new RegExp("(" + name + "\\?v=)[^\"]+", "g"),
+      "$1" + v
+    );
+  }
+  return html;
+}
+
+const POPULAR_BOOST = {
+  "Grand Theft Auto VI": 100,
+  "Call of Duty: Modern Warfare 4": 92,
+  "Call of Duty: Black Ops 7": 90,
+  "EA Sports FC 27": 88,
+  "Black Myth: Wukong": 86,
+  "Elden Ring": 85,
+  "Baldur's Gate 3": 84,
+  "Cyberpunk 2077": 83,
+  "Resident Evil Requiem": 82,
+  "Red Dead Redemption 2": 80,
+  "Monster Hunter Wilds": 79,
+  "Clair Obscur: Expedition 33": 78,
+  "Hollow Knight: Silksong": 77,
+  "GTA V Enhanced": 76,
+  "Grand Theft Auto V Enhanced": 76,
+  "The Witcher 4": 75,
+  "Forza Horizon 5": 74,
+  "Helldivers 2": 72,
+  "Kingdom Come: Deliverance II": 71,
+  "DOOM: The Dark Ages": 70,
+  "Crimson Desert Enhanced": 68,
+  "Fable": 66,
+  "Balatro": 65,
+  "Minecraft": 64,
+  "The Witcher 3": 62,
+};
+
+function featuredScore(g, win) {
+  let s = 0;
+  const basePop = Math.max(g.popularity || 0, POPULAR_BOOST[g.name] || 0);
+  s += basePop;
+  if (g.trendingRank != null && g.trendingRank <= 50) {
+    s += 55 - g.trendingRank;
+  }
+  const cats = g.cats || [];
+  const Coming = win && win.JEUXSTASH_COMING;
+  const coming = Coming && Coming.isComing(g);
+  if (g.stock === "ok") s += 35;
+  else if (coming && (basePop >= 60 || cats.indexOf("hot") !== -1)) s += 32;
+  if (cats.indexOf("hot") !== -1) s += 15;
+  const pct =
+    win && win.JEUXSTASH_VERDICT ? win.JEUXSTASH_VERDICT.for(g).savePct || 0 : 0;
+  s += Math.min(pct, 80) * 0.2;
+  if (g.isLow) s += 8;
+  if (g.dropPct >= 10) s += 10;
+  return s;
+}
+
+function buildPage(template, game, slug, win, assetVer) {
   const priceLabel = formatPrice(game.price);
   const V = win.JEUXSTASH_VERDICT;
   const verdict = V ? V.for(game) : null;
@@ -758,15 +840,7 @@ function buildPage(template, game, slug, win) {
     '<script type="application/ld+json">' + JSON.stringify(jsonLd) + "</script>\n</head>";
   html = html.replace("</head>", ldTag);
 
-  html = html.replace(/fiche\.js\?v=[^"]+/g, "fiche.js?v=20261122v1");
-  html = html.replace(/jeu\.js\?v=[^"]+/g, "jeu.js?v=20261122v1");
-  html = html.replace(/ui\.js\?v=[^"]+/g, "ui.js?v=20261122v1");
-  html = html.replace(/style\.css\?v=[^"]+/g, "style.css?v=20261122v1");
-  html = html.replace(/verdict\.js\?v=[^"]+/g, "verdict.js?v=20261122v1");
-  html = html.replace(/catalog\.js\?v=[^"]+/g, "catalog.js?v=20261122v1");
-  html = html.replace(/watchlist\.js\?v=[^"]+/g, "watchlist.js?v=20261122v1");
-
-  return html;
+  html = bumpAssetVersions(html, assetVer);
 
   return html;
 }
@@ -816,10 +890,22 @@ function writeSitemaps(slugs) {
   fs.writeFileSync(path.join(root, "sitemap-jeux.xml"), xml, "utf8");
 }
 
+function syncRootAssetVersions(assetVer) {
+  const files = ["mes-jeux.html", "pc-builder.html", "jeu/index.html", "404.html", "a-propos.html", "mentions-legales.html", "confidentialite.html"];
+  for (const rel of files) {
+    const fp = path.join(root, rel);
+    if (!fs.existsSync(fp)) continue;
+    const raw = fs.readFileSync(fp, "utf8");
+    const next = bumpAssetVersions(raw, assetVer);
+    if (next !== raw) fs.writeFileSync(fp, next, "utf8");
+  }
+}
+
 function main() {
   const win = loadWindow();
   const catalog = win.JEUXSTASH_CATALOG;
   if (!Array.isArray(catalog) || !catalog.length) throw new Error("empty catalog");
+  const assetVer = assetVersionOf(win);
   const template = fs.readFileSync(templatePath, "utf8");
   const slugs = [];
   const seen = new Set();
@@ -837,20 +923,26 @@ function main() {
     slugs.push(slug);
     const dir = path.join(root, "jeu", slug);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, "index.html"), buildPage(template, game, slug, win), "utf8");
+    fs.writeFileSync(
+      path.join(dir, "index.html"),
+      buildPage(template, game, slug, win, assetVer),
+      "utf8"
+    );
   }
 
   writeSitemaps(slugs);
-  preRenderDeals(win, catalog);
-  preRenderHome(win, catalog);
-  console.log("Generated", slugs.length, "fiches under /jeu/{slug}/");
+  preRenderDeals(win, catalog, assetVer);
+  preRenderHome(win, catalog, assetVer);
+  syncRootAssetVersions(assetVer);
+  console.log("Generated", slugs.length, "fiches under /jeu/{slug}/ (v=" + assetVer + ")");
   console.log("Updated sitemap.xml and sitemap-jeux.xml with", slugs.length + 30, "URLs");
 }
 
-function preRenderDeals(win, catalog) {
+function preRenderDeals(win, catalog, assetVer) {
   const dealsHtmlPath = path.join(root, "deals.html");
   if (!fs.existsSync(dealsHtmlPath)) return;
   let html = fs.readFileSync(dealsHtmlPath, "utf8");
+  const Coming = win && win.JEUXSTASH_COMING;
 
   function platformsOf(g) {
     if (g.platforms && g.platforms.length) return g.platforms;
@@ -867,15 +959,21 @@ function preRenderDeals(win, catalog) {
 
   function badgesHTML(g) {
     const oos = g.stock === "out";
+    const coming = Coming && Coming.isComing(g);
     const price = formatPrice(g.price);
     let badges = "";
-    if (oos) {
-      badges += '<span class="game-badge game-badge--out">Rupture</span>';
+    if (coming) {
+      badges += '<span class="game-badge game-badge--coming">' + esc(Coming.label(g)) + "</span>";
+    } else if (oos) {
+      badges += '<span class="game-badge game-badge--out">Clé rupture</span>';
     }
-    if (price) {
-      badges += '<span class="game-badge game-badge--price">' + price + '</span>';
+    if (price && (!oos || coming)) {
+      badges += '<span class="game-badge game-badge--price">' + (coming && oos ? "Préco " : "") + price + "</span>";
     }
-    return badges ? '<span class="game-badges">' + badges + '</span>' : "";
+    if (g.isLow && !coming && !oos) {
+      badges += '<span class="game-badge game-badge--low">Plus bas</span>';
+    }
+    return badges ? '<span class="game-badges">' + badges + "</span>" : "";
   }
 
   function guideLink(g) {
@@ -894,7 +992,19 @@ function preRenderDeals(win, catalog) {
     return "";
   }
 
-  const cardsHtml = catalog.map(function (game, index) {
+  const ordered = catalog.slice().sort(function (a, b) {
+    const diff = featuredScore(b, win) - featuredScore(a, win);
+    if (Math.abs(diff) > 0.001) return diff;
+    const sa = a.stock === "ok" ? 0 : 1;
+    const sb = b.stock === "ok" ? 0 : 1;
+    if (sa !== sb) return sa - sb;
+    const pa = a.price == null ? 9999 : a.price;
+    const pb = b.price == null ? 9999 : b.price;
+    if (pa !== pb) return pa - pb;
+    return String(a.name || "").localeCompare(String(b.name || ""), "fr");
+  });
+
+  const cardsHtml = ordered.map(function (game, index) {
     const slug = slugify(game.name);
     const fiche = "/jeu/" + slug + "/";
     const cover = coverUrl(game);
@@ -903,6 +1013,7 @@ function preRenderDeals(win, catalog) {
     const tag = esc(game.tag || "");
     const gg = esc(game.gg || ("https://gg.deals/games/?title=" + encodeURIComponent(game.name)));
     const oos = game.stock === "out";
+    const coming = Coming && Coming.isComing(game);
     const cats = (game.cats || []).join(" ");
     const plats = platformsOf(game).join(" ");
     const i = Math.min(index, 12);
@@ -921,10 +1032,15 @@ function preRenderDeals(win, catalog) {
 
     let buyBtn = "";
     if (game.ig) {
-      if (oos) {
+      if (oos && !coming) {
         buyBtn = '<span class="btn buy small is-oos" aria-disabled="true">Clé en rupture</span>';
       } else {
-        buyBtn = '<a class="btn buy small" href="' + esc(game.ig) + '" rel="sponsored noopener" target="_blank">Clé digitale' + (price ? ' — ' + price : '') + '</a>';
+        buyBtn =
+          '<a class="btn buy small" href="' +
+          esc(game.ig) +
+          '" rel="sponsored noopener" target="_blank">' +
+          (coming ? "Précommander" : "Clé digitale" + (price ? " — " + price : "")) +
+          "</a>";
       }
     }
 
@@ -959,20 +1075,22 @@ function preRenderDeals(win, catalog) {
     /<div id="deals-grid" class="game-grid">[\s\S]*?(?=\s*<div id="deals-empty")/,
     `<div id="deals-grid" class="game-grid">\n${cardsHtml}\n    </div>`
   );
+  html = bumpAssetVersions(html, assetVer);
 
   fs.writeFileSync(dealsHtmlPath, html, "utf8");
-  console.log("Pre-rendered", catalog.length, "game cards into deals.html");
+  console.log("Pre-rendered", ordered.length, "game cards into deals.html");
 }
 
-function preRenderHome(win, catalog) {
+function preRenderHome(win, catalog, assetVer) {
   const indexHtmlPath = path.join(root, "index.html");
   if (!fs.existsSync(indexHtmlPath)) return;
   let html = fs.readFileSync(indexHtmlPath, "utf8");
+  const Coming = win && win.JEUXSTASH_COMING;
+  const V = win && win.JEUXSTASH_VERDICT;
 
-  // Pre-render top 6 games into budget section
-  const topGames = catalog.filter(function (g) {
-    return g.stock === "ok" && g.price != null && g.price > 0 && g.price < 20;
-  }).slice(0, 6);
+  function byName(name) {
+    return catalog.find(function (g) { return g && g.name === name; }) || null;
+  }
 
   function coverUrl(g) {
     if (g.cover) return g.cover;
@@ -980,37 +1098,136 @@ function preRenderHome(win, catalog) {
     return "";
   }
 
-  const cardsHtml = topGames.map(function (game, i) {
-    const slug = slugify(game.name);
-    const fiche = "/jeu/" + slug + "/";
-    const cover = coverUrl(game);
-    const name = esc(game.name);
-    const price = formatPrice(game.price);
-    const tag = esc(game.tag || "");
-    const img = cover ? '<img class="game-cover" src="' + cover + '" alt="' + name + '" width="616" height="353" loading="lazy" />' : "";
-    return (
-      '        <article class="game-card anim-card" style="--i:' + i + '">' +
-      '<div class="game-cover-wrap">' +
-      '<a class="game-cover-link" href="' + fiche + '">' +
-      img +
-      '<span class="game-badges"><span class="game-badge game-badge--price">' + price + '</span></span>' +
-      '</a>' +
-      '</div>' +
-      '<div class="game-card-body">' +
-      '<div class="card-meta"><span class="tag">' + tag + '</span></div>' +
-      '<h3><a class="game-title-link" href="' + fiche + '">' + name + '</a></h3>' +
-      '<p>' + esc(game.blurb || "") + '</p>' +
-      '</div></article>'
-    );
-  }).join("\n");
+  function renderCards(list) {
+    return list.map(function (game, i) {
+      const slug = slugify(game.name);
+      const fiche = "/jeu/" + slug + "/";
+      const cover = coverUrl(game);
+      const name = esc(game.name);
+      const price = formatPrice(game.price);
+      const oos = game.stock === "out";
+      const coming = Coming && Coming.isComing(game);
+      const tag = esc(game.tag || "");
+      let badges = "";
+      if (coming) {
+        badges += '<span class="game-badge game-badge--coming">' + esc(Coming.label(game)) + "</span>";
+      } else if (oos) {
+        badges += '<span class="game-badge game-badge--out">Rupture</span>';
+      }
+      if (price) {
+        badges += '<span class="game-badge game-badge--price">' + (coming && oos ? "Préco " : "") + price + "</span>";
+      }
+      if (game.isLow && !coming && !oos) {
+        badges += '<span class="game-badge game-badge--low">Plus bas</span>';
+      }
+      const chip = V ? V.chipHTML(game) : "";
+      const img = cover
+        ? '<img class="game-cover" src="' + cover + '" alt="' + name + '" width="616" height="353" loading="lazy" />'
+        : "";
+      return (
+        '        <article class="game-card' +
+        (oos && !coming ? " is-oos" : "") +
+        (coming ? " is-coming" : "") +
+        '" style="--i:' + i + '">' +
+        '<div class="game-cover-wrap">' +
+        '<a class="game-cover-link" href="' + fiche + '">' +
+        img +
+        (badges ? '<span class="game-badges">' + badges + "</span>" : "") +
+        "</a></div>" +
+        '<div class="game-card-body">' +
+        '<div class="card-meta"><span class="tag">' + tag + "</span>" + chip + "</div>" +
+        '<h3><a class="game-title-link" href="' + fiche + '">' + name + "</a></h3>" +
+        "<p>" + esc(game.blurb || "") + "</p>" +
+        "</div></article>"
+      );
+    }).join("\n");
+  }
 
-  html = html.replace(
-    /(<section class="section" id="petits-prix">[\s\S]*?<div class="game-grid" data-rotate>)[\s\S]*?(?=\s*<\/section>\s*<section class="section" id="tonight")/,
-    `$1\n${cardsHtml}\n      </div>`
-  );
+  function replaceGridInSection(source, sectionId, cardsHtml) {
+    const re = new RegExp(
+      '(<section class="section" id="' + sectionId + '">[\\s\\S]*?<div class="game-grid" data-rotate>)[\\s\\S]*?(<\\/div>\\s*<\\/section>)'
+    );
+    return source.replace(re, "$1\n" + cardsHtml + "\n      $2");
+  }
+
+  const used = {};
+  const hitsList = [];
+  [
+    "Grand Theft Auto VI",
+    "Call of Duty: Modern Warfare 4",
+    "Call of Duty: Black Ops 7",
+    "EA Sports FC 27",
+    "Resident Evil Requiem",
+    "Black Myth: Wukong",
+  ].forEach(function (name) {
+    const g = byName(name);
+    if (g && !used[g.name]) {
+      hitsList.push(g);
+      used[g.name] = true;
+    }
+  });
+  if (hitsList.length < 8) {
+    catalog
+      .slice()
+      .sort(function (a, b) { return featuredScore(b, win) - featuredScore(a, win); })
+      .forEach(function (g) {
+        if (hitsList.length >= 8 || used[g.name]) return;
+        hitsList.push(g);
+        used[g.name] = true;
+      });
+  }
+
+  const cheapPrefer = [
+    "Monster Hunter Rise",
+    "Batman: Arkham Knight Premium Edition",
+    "Detroit: Become Human",
+    "Frostpunk 2",
+    "Sifu",
+    "Control Ultimate Edition",
+    "Mad Max",
+    "Brotato",
+  ];
+  const cheapList = [];
+  cheapPrefer.forEach(function (name) {
+    if (cheapList.length >= 4) return;
+    const g = byName(name);
+    if (g && g.stock === "ok" && g.price != null && g.price > 0 && g.price <= 10 && !used[g.name]) {
+      cheapList.push(g);
+      used[g.name] = true;
+    }
+  });
+  catalog.forEach(function (g) {
+    if (cheapList.length >= 4) return;
+    if (g.stock === "ok" && g.price != null && g.price > 0 && g.price <= 10 && !used[g.name]) {
+      cheapList.push(g);
+      used[g.name] = true;
+    }
+  });
+
+  const comingList = catalog
+    .filter(function (g) {
+      return !used[g.name] && Coming && Coming.isComing(g);
+    })
+    .sort(function (a, b) {
+      return String(a.release || "9999").localeCompare(String(b.release || "9999"));
+    })
+    .slice(0, 4);
+
+  html = replaceGridInSection(html, "hits", renderCards(hitsList));
+  html = replaceGridInSection(html, "petits-prix", renderCards(cheapList));
+  html = replaceGridInSection(html, "coming", renderCards(comingList));
+  html = bumpAssetVersions(html, assetVer);
 
   fs.writeFileSync(indexHtmlPath, html, "utf8");
-  console.log("Pre-rendered", topGames.length, "featured games into index.html");
+  console.log(
+    "Pre-rendered home sections (hits=" +
+      hitsList.length +
+      ", petits-prix=" +
+      cheapList.length +
+      ", coming=" +
+      comingList.length +
+      ")"
+  );
 }
 
 main();

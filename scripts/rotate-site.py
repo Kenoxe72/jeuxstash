@@ -49,8 +49,20 @@ PLANS = {
     },
     "automne": {
         "label": "Automne",
-        "hero": ["WARDOGS", "Elden Ring", "Baldur's Gate 3"],
-        "guides": ["elden-ring-pas-cher", "cyberpunk-pas-cher", "instant-gaming-fiable"],
+        "hero": [
+            "Grand Theft Auto VI",
+            "Call of Duty: Modern Warfare 4",
+            "Resident Evil Requiem",
+            "Crimson Desert Enhanced",
+            "EA Sports FC 27",
+        ],
+        "guides": [
+            "gta-6-pas-cher",
+            "black-friday-jeux-2026",
+            "elden-ring-pas-cher",
+            "cyberpunk-pas-cher",
+            "instant-gaming-fiable",
+        ],
     },
 }
 

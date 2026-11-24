@@ -34,17 +34,23 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Refresh IG prices & stock
+      - name: Refresh IG prices, Steam store prices & history
         run: python3 scripts/refresh-ig-prices.py
 
-      - name: Regenerate fiches
+      - name: Discover trending games & update ranks
+        run: python3 scripts/discover-games.py --update-ranks
+
+      - name: Regenerate fiches & pre-rendered pages
         run: node scripts/generate-fiches.js
+
+      - name: Enrich guides & sync assets
+        run: node scripts/enrich-guides.js
 
       - name: Commit if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh Instant Gaming prices/stock"
-          file_pattern: js/catalog.js jeu sitemap-jeux.xml
+          commit_message: "chore: refresh Instant Gaming prices/stock & trends"
+          file_pattern: js/catalog.js data index.html deals.html mes-jeux.html pc-builder.html 404.html a-propos.html mentions-legales.html confidentialite.html jeu guides sitemap.xml sitemap-jeux.xml
           commit_user_name: jeuxstash-bot
           commit_user_email: bot@jeuxstash.fr
 

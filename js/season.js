@@ -61,6 +61,12 @@ window.JEUXSTASH_SEASON = (function () {
     return x.getFullYear() * 12 + x.getMonth();
   }
 
+  /** Seed stable sur la journée → rotation quotidienne du hero */
+  function daySeed(d) {
+    const x = d || new Date();
+    return Math.floor(Date.UTC(x.getFullYear(), x.getMonth(), x.getDate()) / 86400000);
+  }
+
   function mulberry32(a) {
     return function () {
       let t = (a += 0x6d2b79f5);
@@ -111,12 +117,19 @@ window.JEUXSTASH_SEASON = (function () {
       label: "Automne",
       eyebrow: "Rentrée",
       blurb: "Nouveautés, RPG et gros titres en promo.",
-      heroPrefer: ["Call of Duty: Modern Warfare 4", "Resident Evil Requiem", "Grand Theft Auto VI", "Crimson Desert Enhanced", "EA Sports FC 27"],
+      heroPrefer: [
+        "Grand Theft Auto VI",
+        "Call of Duty: Modern Warfare 4",
+        "Resident Evil Requiem",
+        "Crimson Desert Enhanced",
+        "EA Sports FC 27",
+      ],
       boost: ["hot", "action"],
       guideBoost: [
+        "gta-6-pas-cher",
+        "black-friday-jeux-2026",
         "meilleurs-jeux-moins-de-5-euros",
         "meilleurs-jeux-moins-de-10-euros",
-        "black-friday-jeux-2026",
         "meilleurs-jeux-pas-cher-automne-2026",
         "instant-gaming-fiable",
         "disco-elysium-pas-cher",
@@ -135,6 +148,7 @@ window.JEUXSTASH_SEASON = (function () {
         key: key,
         month: monthOf(d),
         seed: monthSeed(d),
+        daySeed: daySeed(d),
         blackFriday: blackFridayPlan(bfPhase),
       },
       plans[key]
@@ -144,6 +158,7 @@ window.JEUXSTASH_SEASON = (function () {
   return {
     seasonOf: seasonOf,
     monthSeed: monthSeed,
+    daySeed: daySeed,
     shuffle: shuffle,
     plans: plans,
     current: current,

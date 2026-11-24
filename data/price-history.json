@@ -1,0 +1,2137 @@
+{
+  "wardogs": {
+    "history": [
+      [
+        "2026-11-24",
+        29.89
+      ]
+    ],
+    "low": 29.89,
+    "oosDays": 0
+  },
+  "it-takes-two": {
+    "history": [
+      [
+        "2026-11-24",
+        14.19
+      ]
+    ],
+    "low": 14.19,
+    "oosDays": 0
+  },
+  "stardew-valley": {
+    "history": [
+      [
+        "2026-11-24",
+        13.69
+      ]
+    ],
+    "low": 13.69,
+    "oosDays": 1
+  },
+  "forza-horizon-5": {
+    "history": [
+      [
+        "2026-11-24",
+        26.09
+      ]
+    ],
+    "low": 26.09,
+    "oosDays": 0
+  },
+  "deep-rock-galactic": {
+    "history": [
+      [
+        "2026-11-24",
+        7.69
+      ]
+    ],
+    "low": 7.69,
+    "oosDays": 0
+  },
+  "overcooked-2": {
+    "history": [
+      [
+        "2026-11-24",
+        5.89
+      ]
+    ],
+    "low": 5.89,
+    "oosDays": 0
+  },
+  "plateup": {
+    "history": [
+      [
+        "2026-11-24",
+        1.79
+      ]
+    ],
+    "low": 1.79,
+    "oosDays": 0
+  },
+  "lethal-company": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "phasmophobia": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "helldivers-2": {
+    "history": [
+      [
+        "2026-11-24",
+        23.99
+      ]
+    ],
+    "low": 23.99,
+    "oosDays": 0
+  },
+  "valheim": {
+    "history": [
+      [
+        "2026-11-24",
+        21.49
+      ]
+    ],
+    "low": 21.49,
+    "oosDays": 0
+  },
+  "hades": {
+    "history": [
+      [
+        "2026-11-24",
+        19.3
+      ]
+    ],
+    "low": 19.3,
+    "oosDays": 1
+  },
+  "risk-of-rain-2": {
+    "history": [
+      [
+        "2026-11-24",
+        17.99
+      ]
+    ],
+    "low": 17.99,
+    "oosDays": 0
+  },
+  "grand-theft-auto-vi": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "call-of-duty-modern-warfare-4": {
+    "history": [
+      [
+        "2026-11-24",
+        51.59
+      ]
+    ],
+    "low": 51.59,
+    "oosDays": 0
+  },
+  "resident-evil-requiem": {
+    "history": [
+      [
+        "2026-11-24",
+        37.09
+      ]
+    ],
+    "low": 37.09,
+    "oosDays": 0
+  },
+  "crimson-desert-enhanced": {
+    "history": [
+      [
+        "2026-11-24",
+        49.21
+      ]
+    ],
+    "low": 49.21,
+    "oosDays": 0
+  },
+  "pragmata": {
+    "history": [
+      [
+        "2026-11-24",
+        49.49
+      ]
+    ],
+    "low": 49.49,
+    "oosDays": 0
+  },
+  "mafia-the-old-country": {
+    "history": [
+      [
+        "2026-11-24",
+        44.99
+      ]
+    ],
+    "low": 44.99,
+    "oosDays": 0
+  },
+  "ghost-of-yotei": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "the-witcher-4": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "xbox-game-pass-ultimate-1-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        16.99
+      ]
+    ],
+    "low": 16.99,
+    "oosDays": 0
+  },
+  "xbox-game-pass-ultimate-3-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        44.99
+      ]
+    ],
+    "low": 44.99,
+    "oosDays": 0
+  },
+  "xbox-game-pass-premium-1-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        9.99
+      ]
+    ],
+    "low": 9.99,
+    "oosDays": 0
+  },
+  "xbox-game-pass-premium-3-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        27.99
+      ]
+    ],
+    "low": 27.99,
+    "oosDays": 0
+  },
+  "xbox-game-pass-essential-1-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        6.99
+      ]
+    ],
+    "low": 6.99,
+    "oosDays": 1
+  },
+  "xbox-game-pass-essential-3-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        17.99
+      ]
+    ],
+    "low": 17.99,
+    "oosDays": 0
+  },
+  "xbox-game-pass-essential-12-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        52.99
+      ]
+    ],
+    "low": 52.99,
+    "oosDays": 1
+  },
+  "pc-game-pass-3-mois": {
+    "history": [
+      [
+        "2026-11-24",
+        33.99
+      ]
+    ],
+    "low": 33.99,
+    "oosDays": 1
+  },
+  "minecraft": {
+    "history": [
+      [
+        "2026-11-24",
+        15.99
+      ]
+    ],
+    "low": 15.99,
+    "oosDays": 0
+  },
+  "ea-sports-fc-27": {
+    "history": [
+      [
+        "2026-11-24",
+        48.89
+      ]
+    ],
+    "low": 48.89,
+    "oosDays": 0
+  },
+  "black-myth-wukong": {
+    "history": [
+      [
+        "2026-11-24",
+        36.09
+      ]
+    ],
+    "low": 36.09,
+    "oosDays": 0
+  },
+  "clair-obscur-expedition-33": {
+    "history": [
+      [
+        "2026-11-24",
+        22.79
+      ]
+    ],
+    "low": 22.79,
+    "oosDays": 0
+  },
+  "monster-hunter-wilds": {
+    "history": [
+      [
+        "2026-11-24",
+        22.59
+      ]
+    ],
+    "low": 22.59,
+    "oosDays": 0
+  },
+  "assassin-s-creed-shadows": {
+    "history": [
+      [
+        "2026-11-24",
+        25.19
+      ]
+    ],
+    "low": 25.19,
+    "oosDays": 0
+  },
+  "indiana-jones-and-the-great-circle": {
+    "history": [
+      [
+        "2026-11-24",
+        34.79
+      ]
+    ],
+    "low": 34.79,
+    "oosDays": 0
+  },
+  "doom-the-dark-ages": {
+    "history": [
+      [
+        "2026-11-24",
+        22.89
+      ]
+    ],
+    "low": 22.89,
+    "oosDays": 0
+  },
+  "kingdom-come-deliverance-ii": {
+    "history": [
+      [
+        "2026-11-24",
+        20.39
+      ]
+    ],
+    "low": 20.39,
+    "oosDays": 0
+  },
+  "silent-hill-2": {
+    "history": [
+      [
+        "2026-11-24",
+        20.09
+      ]
+    ],
+    "low": 20.09,
+    "oosDays": 0
+  },
+  "ghost-of-tsushima-director-s-cut": {
+    "history": [
+      [
+        "2026-11-24",
+        22.99
+      ]
+    ],
+    "low": 22.99,
+    "oosDays": 0
+  },
+  "palworld": {
+    "history": [
+      [
+        "2026-11-24",
+        19.99
+      ]
+    ],
+    "low": 19.99,
+    "oosDays": 0
+  },
+  "hades-ii": {
+    "history": [
+      [
+        "2026-11-24",
+        16.2
+      ]
+    ],
+    "low": 16.2,
+    "oosDays": 1
+  },
+  "split-fiction": {
+    "history": [
+      [
+        "2026-11-24",
+        43.79
+      ]
+    ],
+    "low": 43.79,
+    "oosDays": 0
+  },
+  "warhammer-40-000-space-marine-2": {
+    "history": [
+      [
+        "2026-11-24",
+        14.99
+      ]
+    ],
+    "low": 14.99,
+    "oosDays": 0
+  },
+  "stellar-blade": {
+    "history": [
+      [
+        "2026-11-24",
+        35.29
+      ]
+    ],
+    "low": 35.29,
+    "oosDays": 0
+  },
+  "lies-of-p": {
+    "history": [
+      [
+        "2026-11-24",
+        20.09
+      ]
+    ],
+    "low": 20.09,
+    "oosDays": 0
+  },
+  "resident-evil-4": {
+    "history": [
+      [
+        "2026-11-24",
+        8.39
+      ]
+    ],
+    "low": 8.39,
+    "oosDays": 0
+  },
+  "tekken-8": {
+    "history": [
+      [
+        "2026-11-24",
+        18.21
+      ]
+    ],
+    "low": 18.21,
+    "oosDays": 0
+  },
+  "street-fighter-6": {
+    "history": [
+      [
+        "2026-11-24",
+        12.29
+      ]
+    ],
+    "low": 12.29,
+    "oosDays": 0
+  },
+  "metaphor-refantazio": {
+    "history": [
+      [
+        "2026-11-24",
+        18.19
+      ]
+    ],
+    "low": 18.19,
+    "oosDays": 0
+  },
+  "persona-3-reload": {
+    "history": [
+      [
+        "2026-11-24",
+        13.09
+      ]
+    ],
+    "low": 13.09,
+    "oosDays": 0
+  },
+  "sekiro-shadows-die-twice": {
+    "history": [
+      [
+        "2026-11-24",
+        33.33
+      ]
+    ],
+    "low": 33.33,
+    "oosDays": 1
+  },
+  "dragon-s-dogma-2": {
+    "history": [
+      [
+        "2026-11-24",
+        12.21
+      ]
+    ],
+    "low": 12.21,
+    "oosDays": 0
+  },
+  "until-dawn": {
+    "history": [
+      [
+        "2026-11-24",
+        27.49
+      ]
+    ],
+    "low": 27.49,
+    "oosDays": 0
+  },
+  "schedule-i": {
+    "history": [
+      [
+        "2026-11-24",
+        17.84
+      ]
+    ],
+    "low": 17.84,
+    "oosDays": 1
+  },
+  "s-t-a-l-k-e-r-2-heart-of-chornobyl": {
+    "history": [
+      [
+        "2026-11-24",
+        35.89
+      ]
+    ],
+    "low": 35.89,
+    "oosDays": 0
+  },
+  "alan-wake-2": {
+    "history": [
+      [
+        "2026-11-24",
+        39.99
+      ]
+    ],
+    "low": 39.99,
+    "oosDays": 1
+  },
+  "baldur-s-gate-3": {
+    "history": [
+      [
+        "2026-11-24",
+        49.99
+      ]
+    ],
+    "low": 49.99,
+    "oosDays": 0
+  },
+  "elden-ring": {
+    "history": [
+      [
+        "2026-11-24",
+        45.99
+      ]
+    ],
+    "low": 45.99,
+    "oosDays": 0
+  },
+  "cyberpunk-2077": {
+    "history": [
+      [
+        "2026-11-24",
+        31.69
+      ]
+    ],
+    "low": 31.69,
+    "oosDays": 0
+  },
+  "gta-v-enhanced": {
+    "history": [
+      [
+        "2026-11-24",
+        9.79
+      ]
+    ],
+    "low": 9.79,
+    "oosDays": 0
+  },
+  "red-dead-redemption-2": {
+    "history": [
+      [
+        "2026-11-24",
+        17.39
+      ]
+    ],
+    "low": 17.39,
+    "oosDays": 0
+  },
+  "sea-of-thieves": {
+    "history": [
+      [
+        "2026-11-24",
+        17.29
+      ]
+    ],
+    "low": 17.29,
+    "oosDays": 0
+  },
+  "watch-dogs": {
+    "history": [
+      [
+        "2026-11-24",
+        3.59
+      ]
+    ],
+    "low": 3.59,
+    "oosDays": 0
+  },
+  "watch-dogs-2": {
+    "history": [
+      [
+        "2026-11-24",
+        3.99
+      ]
+    ],
+    "low": 3.99,
+    "oosDays": 0
+  },
+  "watch-dogs-legion": {
+    "history": [
+      [
+        "2026-11-24",
+        5.29
+      ]
+    ],
+    "low": 5.29,
+    "oosDays": 0
+  },
+  "far-cry-5": {
+    "history": [
+      [
+        "2026-11-24",
+        8.69
+      ]
+    ],
+    "low": 8.69,
+    "oosDays": 0
+  },
+  "far-cry-6": {
+    "history": [
+      [
+        "2026-11-24",
+        8.69
+      ]
+    ],
+    "low": 8.69,
+    "oosDays": 0
+  },
+  "assassin-s-creed-odyssey": {
+    "history": [
+      [
+        "2026-11-24",
+        9.89
+      ]
+    ],
+    "low": 9.89,
+    "oosDays": 0
+  },
+  "the-witcher-3": {
+    "history": [
+      [
+        "2026-11-24",
+        14.49
+      ]
+    ],
+    "low": 14.49,
+    "oosDays": 0
+  },
+  "hogwarts-legacy": {
+    "history": [
+      [
+        "2026-11-24",
+        7.59
+      ]
+    ],
+    "low": 7.59,
+    "oosDays": 1
+  },
+  "god-of-war": {
+    "history": [
+      [
+        "2026-11-24",
+        16.29
+      ]
+    ],
+    "low": 16.29,
+    "oosDays": 0
+  },
+  "marvel-s-spider-man": {
+    "history": [
+      [
+        "2026-11-24",
+        18.21
+      ]
+    ],
+    "low": 18.21,
+    "oosDays": 0
+  },
+  "zelda-tears-of-the-kingdom": {
+    "history": [
+      [
+        "2026-11-24",
+        63.49
+      ]
+    ],
+    "low": 63.49,
+    "oosDays": 0
+  },
+  "zelda-breath-of-the-wild": {
+    "history": [
+      [
+        "2026-11-24",
+        66.59
+      ]
+    ],
+    "low": 66.59,
+    "oosDays": 0
+  },
+  "mario-kart-8-deluxe": {
+    "history": [
+      [
+        "2026-11-24",
+        57.49
+      ]
+    ],
+    "low": 57.49,
+    "oosDays": 0
+  },
+  "super-mario-odyssey": {
+    "history": [
+      [
+        "2026-11-24",
+        54.8
+      ]
+    ],
+    "low": 54.8,
+    "oosDays": 0
+  },
+  "animal-crossing-new-horizons": {
+    "history": [
+      [
+        "2026-11-24",
+        55.19
+      ]
+    ],
+    "low": 55.19,
+    "oosDays": 0
+  },
+  "super-smash-bros-ultimate": {
+    "history": [
+      [
+        "2026-11-24",
+        65.99
+      ]
+    ],
+    "low": 65.99,
+    "oosDays": 0
+  },
+  "marvel-s-spider-man-2": {
+    "history": [
+      [
+        "2026-11-24",
+        65.9
+      ]
+    ],
+    "low": 65.9,
+    "oosDays": 1
+  },
+  "god-of-war-ragnarok": {
+    "history": [
+      [
+        "2026-11-24",
+        43.42
+      ]
+    ],
+    "low": 43.42,
+    "oosDays": 1
+  },
+  "horizon-forbidden-west": {
+    "history": [
+      [
+        "2026-11-24",
+        36.41
+      ]
+    ],
+    "low": 36.41,
+    "oosDays": 1
+  },
+  "the-last-of-us-part-i": {
+    "history": [
+      [
+        "2026-11-24",
+        67.02
+      ]
+    ],
+    "low": 67.02,
+    "oosDays": 1
+  },
+  "astro-bot": {
+    "history": [
+      [
+        "2026-11-24",
+        63.99
+      ]
+    ],
+    "low": 63.99,
+    "oosDays": 1
+  },
+  "call-of-duty-black-ops-7": {
+    "history": [
+      [
+        "2026-11-24",
+        41.99
+      ]
+    ],
+    "low": 41.99,
+    "oosDays": 0
+  },
+  "halo-infinite-campaign": {
+    "history": [
+      [
+        "2026-11-24",
+        14.29
+      ]
+    ],
+    "low": 14.29,
+    "oosDays": 0
+  },
+  "hollow-knight": {
+    "history": [
+      [
+        "2026-11-24",
+        10.09
+      ]
+    ],
+    "low": 10.09,
+    "oosDays": 0
+  },
+  "hollow-knight-silksong": {
+    "history": [
+      [
+        "2026-11-24",
+        15.25
+      ]
+    ],
+    "low": 15.25,
+    "oosDays": 1
+  },
+  "balatro": {
+    "history": [
+      [
+        "2026-11-24",
+        9.21
+      ]
+    ],
+    "low": 9.21,
+    "oosDays": 0
+  },
+  "vampire-survivors": {
+    "history": [
+      [
+        "2026-11-24",
+        2.89
+      ]
+    ],
+    "low": 2.89,
+    "oosDays": 0
+  },
+  "celeste": {
+    "history": [
+      [
+        "2026-11-24",
+        2.79
+      ]
+    ],
+    "low": 2.79,
+    "oosDays": 0
+  },
+  "dead-cells": {
+    "history": [
+      [
+        "2026-11-24",
+        4.09
+      ]
+    ],
+    "low": 4.09,
+    "oosDays": 0
+  },
+  "outer-wilds": {
+    "history": [
+      [
+        "2026-11-24",
+        10.09
+      ]
+    ],
+    "low": 10.09,
+    "oosDays": 1
+  },
+  "no-man-s-sky": {
+    "history": [
+      [
+        "2026-11-24",
+        14.99
+      ]
+    ],
+    "low": 14.99,
+    "oosDays": 0
+  },
+  "disco-elysium": {
+    "history": [
+      [
+        "2026-11-24",
+        4.21
+      ]
+    ],
+    "low": 4.21,
+    "oosDays": 0
+  },
+  "the-elder-scrolls-v-skyrim-special-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        9.19
+      ]
+    ],
+    "low": 9.19,
+    "oosDays": 0
+  },
+  "borderlands-4": {
+    "history": [
+      [
+        "2026-11-24",
+        49.99
+      ]
+    ],
+    "low": 49.99,
+    "oosDays": 0
+  },
+  "arc-raiders": {
+    "history": [
+      [
+        "2026-11-24",
+        27.99
+      ]
+    ],
+    "low": 27.99,
+    "oosDays": 0
+  },
+  "r-e-p-o": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "content-warning": {
+    "history": [
+      [
+        "2026-11-24",
+        3.99
+      ]
+    ],
+    "low": 3.99,
+    "oosDays": 0
+  },
+  "remnant-ii": {
+    "history": [
+      [
+        "2026-11-24",
+        3.89
+      ]
+    ],
+    "low": 3.89,
+    "oosDays": 0
+  },
+  "death-stranding-2": {
+    "history": [
+      [
+        "2026-11-24",
+        42.99
+      ]
+    ],
+    "low": 42.99,
+    "oosDays": 0
+  },
+  "peak": {
+    "history": [
+      [
+        "2026-11-24",
+        3.09
+      ]
+    ],
+    "low": 3.09,
+    "oosDays": 0
+  },
+  "ace-combat-8-wings-of-theve": {
+    "history": [
+      [
+        "2026-11-24",
+        42.99
+      ]
+    ],
+    "low": 42.99,
+    "oosDays": 0
+  },
+  "nier-automata-game-of-the-yorha-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        14.49
+      ]
+    ],
+    "low": 14.49,
+    "oosDays": 0
+  },
+  "armored-core-vi-fires-of-rubicon": {
+    "history": [
+      [
+        "2026-11-24",
+        25.99
+      ]
+    ],
+    "low": 25.99,
+    "oosDays": 1
+  },
+  "devil-may-cry-5": {
+    "history": [
+      [
+        "2026-11-24",
+        4.89
+      ]
+    ],
+    "low": 4.89,
+    "oosDays": 0
+  },
+  "doom-eternal": {
+    "history": [
+      [
+        "2026-11-24",
+        8.99
+      ]
+    ],
+    "low": 8.99,
+    "oosDays": 0
+  },
+  "fallout-4-goty-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        11.99
+      ]
+    ],
+    "low": 11.99,
+    "oosDays": 0
+  },
+  "terraria": {
+    "history": [
+      [
+        "2026-11-24",
+        6.49
+      ]
+    ],
+    "low": 6.49,
+    "oosDays": 0
+  },
+  "satisfactory": {
+    "history": [
+      [
+        "2026-11-24",
+        22.69
+      ]
+    ],
+    "low": 22.69,
+    "oosDays": 0
+  },
+  "factorio": {
+    "history": [
+      [
+        "2026-11-24",
+        28.99
+      ]
+    ],
+    "low": 28.99,
+    "oosDays": 0
+  },
+  "sid-meier-s-civilization-vi": {
+    "history": [
+      [
+        "2026-11-24",
+        42.99
+      ]
+    ],
+    "low": 42.99,
+    "oosDays": 0
+  },
+  "persona-5-royal": {
+    "history": [
+      [
+        "2026-11-24",
+        11.29
+      ]
+    ],
+    "low": 11.29,
+    "oosDays": 0
+  },
+  "starfield": {
+    "history": [
+      [
+        "2026-11-24",
+        34.79
+      ]
+    ],
+    "low": 34.79,
+    "oosDays": 0
+  },
+  "ready-or-not": {
+    "history": [
+      [
+        "2026-11-24",
+        18.59
+      ]
+    ],
+    "low": 18.59,
+    "oosDays": 0
+  },
+  "dark-souls-iii": {
+    "history": [
+      [
+        "2026-11-24",
+        24.89
+      ]
+    ],
+    "low": 24.89,
+    "oosDays": 0
+  },
+  "dark-souls-remastered": {
+    "history": [
+      [
+        "2026-11-24",
+        17.79
+      ]
+    ],
+    "low": 17.79,
+    "oosDays": 0
+  },
+  "core-keeper": {
+    "history": [
+      [
+        "2026-11-24",
+        6.59
+      ]
+    ],
+    "low": 6.59,
+    "oosDays": 0
+  },
+  "dave-the-diver": {
+    "history": [
+      [
+        "2026-11-24",
+        7.09
+      ]
+    ],
+    "low": 7.09,
+    "oosDays": 0
+  },
+  "cult-of-the-lamb": {
+    "history": [
+      [
+        "2026-11-24",
+        8.49
+      ]
+    ],
+    "low": 8.49,
+    "oosDays": 0
+  },
+  "enshrouded": {
+    "history": [
+      [
+        "2026-11-24",
+        34.09
+      ]
+    ],
+    "low": 34.09,
+    "oosDays": 0
+  },
+  "avowed": {
+    "history": [
+      [
+        "2026-11-24",
+        55.2
+      ]
+    ],
+    "low": 55.2,
+    "oosDays": 1
+  },
+  "euro-truck-simulator-2": {
+    "history": [
+      [
+        "2026-11-24",
+        10.99
+      ]
+    ],
+    "low": 10.99,
+    "oosDays": 0
+  },
+  "farming-simulator-25": {
+    "history": [
+      [
+        "2026-11-24",
+        14.99
+      ]
+    ],
+    "low": 14.99,
+    "oosDays": 0
+  },
+  "raft": {
+    "history": [],
+    "low": null,
+    "oosDays": 1
+  },
+  "project-zomboid": {
+    "history": [
+      [
+        "2026-11-24",
+        23.09
+      ]
+    ],
+    "low": 23.09,
+    "oosDays": 1
+  },
+  "rimworld": {
+    "history": [
+      [
+        "2026-11-24",
+        23.09
+      ]
+    ],
+    "low": 23.09,
+    "oosDays": 0
+  },
+  "sons-of-the-forest": {
+    "history": [
+      [
+        "2026-11-24",
+        19.99
+      ]
+    ],
+    "low": 19.99,
+    "oosDays": 1
+  },
+  "portal-2": {
+    "history": [
+      [
+        "2026-11-24",
+        6.94
+      ]
+    ],
+    "low": 6.94,
+    "oosDays": 1
+  },
+  "left-4-dead-2": {
+    "history": [
+      [
+        "2026-11-24",
+        3.61
+      ]
+    ],
+    "low": 3.61,
+    "oosDays": 1
+  },
+  "cuphead": {
+    "history": [
+      [
+        "2026-11-24",
+        8.99
+      ]
+    ],
+    "low": 8.99,
+    "oosDays": 0
+  },
+  "ultrakill": {
+    "history": [
+      [
+        "2026-11-24",
+        8.19
+      ]
+    ],
+    "low": 8.19,
+    "oosDays": 0
+  },
+  "inscryption": {
+    "history": [
+      [
+        "2026-11-24",
+        6.29
+      ]
+    ],
+    "low": 6.29,
+    "oosDays": 0
+  },
+  "animal-well": {
+    "history": [
+      [
+        "2026-11-24",
+        18.0
+      ]
+    ],
+    "low": 18.0,
+    "oosDays": 1
+  },
+  "nine-sols": {
+    "history": [
+      [
+        "2026-11-24",
+        18.79
+      ]
+    ],
+    "low": 18.79,
+    "oosDays": 1
+  },
+  "resident-evil-village": {
+    "history": [
+      [
+        "2026-11-24",
+        8.69
+      ]
+    ],
+    "low": 8.69,
+    "oosDays": 1
+  },
+  "sifu": {
+    "history": [
+      [
+        "2026-11-24",
+        6.09
+      ]
+    ],
+    "low": 6.09,
+    "oosDays": 0
+  },
+  "dying-light-2-stay-human": {
+    "history": [
+      [
+        "2026-11-24",
+        9.49
+      ]
+    ],
+    "low": 9.49,
+    "oosDays": 0
+  },
+  "control-ultimate-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        6.29
+      ]
+    ],
+    "low": 6.29,
+    "oosDays": 0
+  },
+  "yakuza-0": {
+    "history": [
+      [
+        "2026-11-24",
+        9.0
+      ]
+    ],
+    "low": 9.0,
+    "oosDays": 1
+  },
+  "like-a-dragon-infinite-wealth": {
+    "history": [
+      [
+        "2026-11-24",
+        5.39
+      ]
+    ],
+    "low": 5.39,
+    "oosDays": 0
+  },
+  "final-fantasy-xvi": {
+    "history": [
+      [
+        "2026-11-24",
+        25.49
+      ]
+    ],
+    "low": 25.49,
+    "oosDays": 0
+  },
+  "final-fantasy-vii-remake-intergrade": {
+    "history": [
+      [
+        "2026-11-24",
+        9.89
+      ]
+    ],
+    "low": 9.89,
+    "oosDays": 0
+  },
+  "star-wars-jedi-survivor": {
+    "history": [
+      [
+        "2026-11-24",
+        34.19
+      ]
+    ],
+    "low": 34.19,
+    "oosDays": 1
+  },
+  "star-wars-outlaws": {
+    "history": [
+      [
+        "2026-11-24",
+        11.79
+      ]
+    ],
+    "low": 11.79,
+    "oosDays": 0
+  },
+  "wuchang-fallen-feathers": {
+    "history": [
+      [
+        "2026-11-24",
+        26.19
+      ]
+    ],
+    "low": 26.19,
+    "oosDays": 0
+  },
+  "metal-gear-solid-snake-eater": {
+    "history": [
+      [
+        "2026-11-24",
+        37.29
+      ]
+    ],
+    "low": 37.29,
+    "oosDays": 0
+  },
+  "dying-light-the-beast": {
+    "history": [
+      [
+        "2026-11-24",
+        21.89
+      ]
+    ],
+    "low": 21.89,
+    "oosDays": 0
+  },
+  "f1-25": {
+    "history": [
+      [
+        "2026-11-24",
+        43.49
+      ]
+    ],
+    "low": 43.49,
+    "oosDays": 1
+  },
+  "ea-sports-fc-26": {
+    "history": [
+      [
+        "2026-11-24",
+        35.99
+      ]
+    ],
+    "low": 35.99,
+    "oosDays": 1
+  },
+  "payday-3": {
+    "history": [
+      [
+        "2026-11-24",
+        15.49
+      ]
+    ],
+    "low": 15.49,
+    "oosDays": 1
+  },
+  "hunt-showdown-1896": {
+    "history": [
+      [
+        "2026-11-24",
+        10.39
+      ]
+    ],
+    "low": 10.39,
+    "oosDays": 0
+  },
+  "the-elder-scrolls-iv-oblivion-remastered": {
+    "history": [
+      [
+        "2026-11-24",
+        40.99
+      ]
+    ],
+    "low": 40.99,
+    "oosDays": 0
+  },
+  "diablo-iv": {
+    "history": [
+      [
+        "2026-11-24",
+        43.99
+      ]
+    ],
+    "low": 43.99,
+    "oosDays": 1
+  },
+  "a-plague-tale-requiem": {
+    "history": [
+      [
+        "2026-11-24",
+        13.59
+      ]
+    ],
+    "low": 13.59,
+    "oosDays": 0
+  },
+  "the-last-of-us-part-ii": {
+    "history": [
+      [
+        "2026-11-24",
+        28.79
+      ]
+    ],
+    "low": 28.79,
+    "oosDays": 0
+  },
+  "uncharted-legacy-of-thieves-collection": {
+    "history": [
+      [
+        "2026-11-24",
+        13.21
+      ]
+    ],
+    "low": 13.21,
+    "oosDays": 0
+  },
+  "titanfall-2": {
+    "history": [
+      [
+        "2026-11-24",
+        22.61
+      ]
+    ],
+    "low": 22.61,
+    "oosDays": 1
+  },
+  "powerwash-simulator": {
+    "history": [
+      [
+        "2026-11-24",
+        10.99
+      ]
+    ],
+    "low": 10.99,
+    "oosDays": 0
+  },
+  "grounded": {
+    "history": [
+      [
+        "2026-11-24",
+        19.99
+      ]
+    ],
+    "low": 19.99,
+    "oosDays": 1
+  },
+  "don-t-starve-together": {
+    "history": [
+      [
+        "2026-11-24",
+        5.19
+      ]
+    ],
+    "low": 5.19,
+    "oosDays": 0
+  },
+  "ori-and-the-will-of-the-wisps": {
+    "history": [
+      [
+        "2026-11-24",
+        7.39
+      ]
+    ],
+    "low": 7.39,
+    "oosDays": 1
+  },
+  "cronos-the-new-dawn": {
+    "history": [
+      [
+        "2026-11-24",
+        17.29
+      ]
+    ],
+    "low": 17.29,
+    "oosDays": 0
+  },
+  "ninja-gaiden-4": {
+    "history": [
+      [
+        "2026-11-24",
+        33.0
+      ]
+    ],
+    "low": 33.0,
+    "oosDays": 1
+  },
+  "mass-effect-legendary-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        23.0
+      ]
+    ],
+    "low": 23.0,
+    "oosDays": 1
+  },
+  "dragon-age-the-veilguard": {
+    "history": [
+      [
+        "2026-11-24",
+        28.34
+      ]
+    ],
+    "low": 28.34,
+    "oosDays": 1
+  },
+  "returnal": {
+    "history": [
+      [
+        "2026-11-24",
+        14.99
+      ]
+    ],
+    "low": 14.99,
+    "oosDays": 0
+  },
+  "ratchet-clank-rift-apart": {
+    "history": [
+      [
+        "2026-11-24",
+        19.79
+      ]
+    ],
+    "low": 19.79,
+    "oosDays": 0
+  },
+  "dead-space": {
+    "history": [
+      [
+        "2026-11-24",
+        20.45
+      ]
+    ],
+    "low": 20.45,
+    "oosDays": 1
+  },
+  "alan-wake-remastered": {
+    "history": [
+      [
+        "2026-11-24",
+        9.99
+      ]
+    ],
+    "low": 9.99,
+    "oosDays": 1
+  },
+  "half-life-alyx": {
+    "history": [
+      [
+        "2026-11-24",
+        42.31
+      ]
+    ],
+    "low": 42.31,
+    "oosDays": 1
+  },
+  "v-rising": {
+    "history": [
+      [
+        "2026-11-24",
+        5.39
+      ]
+    ],
+    "low": 5.39,
+    "oosDays": 0
+  },
+  "monster-hunter-world": {
+    "history": [
+      [
+        "2026-11-24",
+        5.89
+      ]
+    ],
+    "low": 5.89,
+    "oosDays": 0
+  },
+  "resident-evil-2": {
+    "history": [
+      [
+        "2026-11-24",
+        6.99
+      ]
+    ],
+    "low": 6.99,
+    "oosDays": 0
+  },
+  "resident-evil-3": {
+    "history": [
+      [
+        "2026-11-24",
+        6.79
+      ]
+    ],
+    "low": 6.79,
+    "oosDays": 0
+  },
+  "metro-exodus": {
+    "history": [
+      [
+        "2026-11-24",
+        4.99
+      ]
+    ],
+    "low": 4.99,
+    "oosDays": 0
+  },
+  "silent-hill-f": {
+    "history": [
+      [
+        "2026-11-24",
+        25.29
+      ]
+    ],
+    "low": 25.29,
+    "oosDays": 0
+  },
+  "elden-ring-nightreign": {
+    "history": [
+      [
+        "2026-11-24",
+        29.9
+      ]
+    ],
+    "low": 29.9,
+    "oosDays": 0
+  },
+  "call-of-duty-black-ops-6": {
+    "history": [
+      [
+        "2026-11-24",
+        68.99
+      ]
+    ],
+    "low": 68.99,
+    "oosDays": 0
+  },
+  "tom-clancy-s-rainbow-six-siege": {
+    "history": [
+      [
+        "2026-11-24",
+        33.05
+      ]
+    ],
+    "low": 33.05,
+    "oosDays": 1
+  },
+  "snowrunner": {
+    "history": [
+      [
+        "2026-11-24",
+        10.89
+      ]
+    ],
+    "low": 10.89,
+    "oosDays": 0
+  },
+  "little-nightmares-iii": {
+    "history": [
+      [
+        "2026-11-24",
+        18.99
+      ]
+    ],
+    "low": 18.99,
+    "oosDays": 1
+  },
+  "microsoft-flight-simulator-2024": {
+    "history": [
+      [
+        "2026-11-24",
+        59.99
+      ]
+    ],
+    "low": 59.99,
+    "oosDays": 0
+  },
+  "forza-motorsport": {
+    "history": [
+      [
+        "2026-11-24",
+        32.19
+      ]
+    ],
+    "low": 32.19,
+    "oosDays": 0
+  },
+  "assetto-corsa-competizione": {
+    "history": [
+      [
+        "2026-11-24",
+        3.89
+      ]
+    ],
+    "low": 3.89,
+    "oosDays": 0
+  },
+  "battlefield-6": {
+    "history": [
+      [
+        "2026-11-24",
+        37.99
+      ]
+    ],
+    "low": 37.99,
+    "oosDays": 0
+  },
+  "cities-skylines-ii": {
+    "history": [
+      [
+        "2026-11-24",
+        30.29
+      ]
+    ],
+    "low": 30.29,
+    "oosDays": 0
+  },
+  "subnautica": {
+    "history": [
+      [
+        "2026-11-24",
+        5.89
+      ]
+    ],
+    "low": 5.89,
+    "oosDays": 0
+  },
+  "rust": {
+    "history": [
+      [
+        "2026-11-24",
+        26.69
+      ]
+    ],
+    "low": 26.69,
+    "oosDays": 1
+  },
+  "garry-s-mod": {
+    "history": [
+      [
+        "2026-11-24",
+        6.39
+      ]
+    ],
+    "low": 6.39,
+    "oosDays": 1
+  },
+  "need-for-speed-unbound": {
+    "history": [
+      [
+        "2026-11-24",
+        24.38
+      ]
+    ],
+    "low": 24.38,
+    "oosDays": 1
+  },
+  "nba-2k26": {
+    "history": [
+      [
+        "2026-11-24",
+        13.29
+      ]
+    ],
+    "low": 13.29,
+    "oosDays": 1
+  },
+  "final-fantasy-vii-rebirth": {
+    "history": [
+      [
+        "2026-11-24",
+        19.99
+      ]
+    ],
+    "low": 19.99,
+    "oosDays": 0
+  },
+  "dragon-ball-sparking-zero": {
+    "history": [
+      [
+        "2026-11-24",
+        26.39
+      ]
+    ],
+    "low": 26.39,
+    "oosDays": 0
+  },
+  "monster-hunter-rise": {
+    "history": [
+      [
+        "2026-11-24",
+        3.69
+      ]
+    ],
+    "low": 3.69,
+    "oosDays": 0
+  },
+  "batman-arkham-knight-premium-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        2.29
+      ]
+    ],
+    "low": 2.29,
+    "oosDays": 0
+  },
+  "middle-earth-shadow-of-war-definitive-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        3.19
+      ]
+    ],
+    "low": 3.19,
+    "oosDays": 0
+  },
+  "mad-max": {
+    "history": [
+      [
+        "2026-11-24",
+        1.89
+      ]
+    ],
+    "low": 1.89,
+    "oosDays": 0
+  },
+  "brotato": {
+    "history": [
+      [
+        "2026-11-24",
+        2.59
+      ]
+    ],
+    "low": 2.59,
+    "oosDays": 0
+  },
+  "rise-of-the-tomb-raider-20-year-celebration": {
+    "history": [
+      [
+        "2026-11-24",
+        3.69
+      ]
+    ],
+    "low": 3.69,
+    "oosDays": 0
+  },
+  "assetto-corsa": {
+    "history": [
+      [
+        "2026-11-24",
+        3.49
+      ]
+    ],
+    "low": 3.49,
+    "oosDays": 0
+  },
+  "frostpunk-2": {
+    "history": [
+      [
+        "2026-11-24",
+        6.09
+      ]
+    ],
+    "low": 6.09,
+    "oosDays": 0
+  },
+  "sleeping-dogs-definitive-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        4.49
+      ]
+    ],
+    "low": 4.49,
+    "oosDays": 0
+  },
+  "detroit-become-human": {
+    "history": [
+      [
+        "2026-11-24",
+        6.49
+      ]
+    ],
+    "low": 6.49,
+    "oosDays": 0
+  },
+  "slay-the-spire": {
+    "history": [
+      [
+        "2026-11-24",
+        7.29
+      ]
+    ],
+    "low": 7.29,
+    "oosDays": 0
+  },
+  "dead-by-daylight": {
+    "history": [
+      [
+        "2026-11-24",
+        8.29
+      ]
+    ],
+    "low": 8.29,
+    "oosDays": 0
+  },
+  "days-gone": {
+    "history": [
+      [
+        "2026-11-24",
+        10.49
+      ]
+    ],
+    "low": 10.49,
+    "oosDays": 0
+  },
+  "mortal-kombat-1-definitive-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        14.59
+      ]
+    ],
+    "low": 14.59,
+    "oosDays": 0
+  },
+  "age-of-empires-iv-anniversary-edition": {
+    "history": [
+      [
+        "2026-11-24",
+        12.49
+      ]
+    ],
+    "low": 12.49,
+    "oosDays": 0
+  },
+  "7-days-to-die": {
+    "history": [
+      [
+        "2026-11-24",
+        16.69
+      ]
+    ],
+    "low": 16.69,
+    "oosDays": 0
+  },
+  "manor-lords": {
+    "history": [
+      [
+        "2026-11-24",
+        18.69
+      ]
+    ],
+    "low": 18.69,
+    "oosDays": 0
+  },
+  "dayz": {
+    "history": [
+      [
+        "2026-11-24",
+        25.99
+      ]
+    ],
+    "low": 25.99,
+    "oosDays": 0
+  },
+  "phantom-blade-zero": {
+    "history": [
+      [
+        "2026-11-24",
+        45.49
+      ]
+    ],
+    "low": 45.49,
+    "oosDays": 0
+  },
+  "warhammer-40-000-dawn-of-war-iv": {
+    "history": [
+      [
+        "2026-11-24",
+        38.99
+      ]
+    ],
+    "low": 38.99,
+    "oosDays": 0
+  },
+  "metro-2039": {
+    "history": [
+      [
+        "2026-11-24",
+        49.99
+      ]
+    ],
+    "low": 49.99,
+    "oosDays": 0
+  },
+  "fable": {
+    "history": [
+      [
+        "2026-11-24",
+        48.99
+      ]
+    ],
+    "low": 48.99,
+    "oosDays": 0
+  }
+}
