@@ -1,22 +1,22 @@
 {
-  "date": "2026-11-24",
-  "sourcesCount": 18,
+  "date": "2026-11-25",
+  "sourcesCount": 17,
   "matchedTrending": [
     {
-      "name": "Red Dead Redemption 2",
-      "rank": 4,
-      "sources": [
-        "steam:top_sellers"
-      ],
-      "steam": 1174180
-    },
-    {
-      "name": "Baldur's Gate 3",
+      "name": "Call of Duty: Modern Warfare 4",
       "rank": 5,
       "sources": [
         "steam:top_sellers"
       ],
-      "steam": 1086940
+      "steam": null
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "rank": 6,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1174180
     },
     {
       "name": "GTA V Enhanced",
@@ -29,109 +29,95 @@
   ],
   "missingCandidates": [
     {
-      "name": "Dead by Daylight: Terrifier",
+      "name": "Steam Frame",
       "source": "steam:top_sellers",
       "rank": 1,
-      "price": 7.99,
-      "steam": 5510420
+      "price": 1049.0,
+      "steam": 4165890
     },
     {
       "name": "Steam Machine",
       "source": "steam:top_sellers",
-      "rank": 2,
+      "rank": 3,
       "price": 1039.0,
       "steam": 4165910
     },
     {
-      "name": "007 First Light",
+      "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
       "source": "steam:top_sellers",
-      "rank": 6,
-      "price": 34.99,
-      "steam": 3768760
+      "rank": 7,
+      "price": 80.99,
+      "steam": 1624417
     },
     {
       "name": "No Asteroids",
       "source": "steam:top_sellers",
-      "rank": 7,
+      "rank": 10,
       "price": 6.23,
       "steam": 5527800
     },
     {
-      "name": "Steam Deck",
-      "source": "steam:top_sellers",
-      "rank": 10,
-      "price": 419.0,
-      "steam": 1675200
-    },
-    {
-      "name": "BitLoaf",
+      "name": "Limited-time Game Bundle Challenge",
       "source": "steam:coming_soon",
       "rank": 21,
-      "price": null,
-      "steam": 5436360
+      "price": 1.13,
+      "steam": 5159310
     },
     {
-      "name": "The Shadow Cosmos",
-      "source": "steam:coming_soon",
-      "rank": 22,
-      "price": null,
-      "steam": 3576560
-    },
-    {
-      "name": "Rec Room: A New Semester",
+      "name": "Sexception: The Dark Seeds",
       "source": "steam:coming_soon",
       "rank": 23,
-      "price": null,
-      "steam": 4877420
+      "price": 5.77,
+      "steam": 5053040
     },
     {
-      "name": "The drawing of the Exodus",
+      "name": "Fleshborn",
       "source": "steam:coming_soon",
       "rank": 24,
-      "price": null,
-      "steam": 5457370
+      "price": 6.11,
+      "steam": 4193300
     },
     {
-      "name": "FC Tycoon 2027",
+      "name": "Strato Alto",
       "source": "steam:coming_soon",
       "rank": 25,
-      "price": null,
-      "steam": 3992000
+      "price": 7.75,
+      "steam": 4823770
     },
     {
-      "name": "Starwinder",
+      "name": "Take This Thing Out Of Me",
       "source": "steam:coming_soon",
       "rank": 26,
-      "price": null,
-      "steam": 5470000
+      "price": 1.41,
+      "steam": 4959350
     },
     {
-      "name": "Jester's Dungeon",
+      "name": "Runecast",
       "source": "steam:coming_soon",
       "rank": 27,
       "price": null,
-      "steam": 5039070
+      "steam": 5126340
     },
     {
-      "name": "Hypothesis Sudoku",
+      "name": "Fleshborn - Supporter Pack",
       "source": "steam:coming_soon",
       "rank": 28,
-      "price": null,
-      "steam": 5424390
+      "price": 2.99,
+      "steam": 5524970
     },
     {
-      "name": "TCG Town",
+      "name": "Panic Pub",
       "source": "steam:coming_soon",
       "rank": 29,
       "price": null,
-      "steam": 5123930
+      "steam": 4917940
     },
     {
-      "name": "Chess Lords",
+      "name": "The Odyssey: Threads of Fate",
       "source": "steam:coming_soon",
       "rank": 30,
-      "price": null,
-      "steam": 5507950
+      "price": 4.24,
+      "steam": 5140980
     }
   ],
   "chronicOos": []
