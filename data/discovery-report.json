@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-25",
-  "sourcesCount": 17,
+  "date": "2026-11-26",
+  "sourcesCount": 18,
   "matchedTrending": [
     {
       "name": "Call of Duty: Modern Warfare 4",
@@ -11,8 +11,16 @@
       "steam": null
     },
     {
+      "name": "Baldur's Gate 3",
+      "rank": 7,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1086940
+    },
+    {
       "name": "Red Dead Redemption 2",
-      "rank": 6,
+      "rank": 8,
       "sources": [
         "steam:top_sellers"
       ],
@@ -20,7 +28,7 @@
     },
     {
       "name": "GTA V Enhanced",
-      "rank": 8,
+      "rank": 9,
       "sources": [
         "steam:top_sellers"
       ],
@@ -29,95 +37,102 @@
   ],
   "missingCandidates": [
     {
-      "name": "Steam Frame",
+      "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
       "source": "steam:top_sellers",
       "rank": 1,
+      "price": 80.99,
+      "steam": 1624417
+    },
+    {
+      "name": "Steam Frame",
+      "source": "steam:top_sellers",
+      "rank": 2,
       "price": 1049.0,
       "steam": 4165890
     },
     {
       "name": "Steam Machine",
       "source": "steam:top_sellers",
-      "rank": 3,
+      "rank": 4,
       "price": 1039.0,
       "steam": 4165910
     },
     {
-      "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
+      "name": "Reshine",
       "source": "steam:top_sellers",
-      "rank": 7,
-      "price": 80.99,
-      "steam": 1624417
+      "rank": 6,
+      "price": 7.19,
+      "steam": 4253570
     },
     {
-      "name": "No Asteroids",
-      "source": "steam:top_sellers",
-      "rank": 10,
-      "price": 6.23,
-      "steam": 5527800
-    },
-    {
-      "name": "Limited-time Game Bundle Challenge",
+      "name": "The Pogo Witch",
       "source": "steam:coming_soon",
       "rank": 21,
-      "price": 1.13,
-      "steam": 5159310
+      "price": null,
+      "steam": 3479310
     },
     {
-      "name": "Sexception: The Dark Seeds",
+      "name": "Ship Miner",
+      "source": "steam:coming_soon",
+      "rank": 22,
+      "price": null,
+      "steam": 3113690
+    },
+    {
+      "name": "Watch My Step!",
       "source": "steam:coming_soon",
       "rank": 23,
-      "price": 5.77,
-      "steam": 5053040
+      "price": null,
+      "steam": 5087540
     },
     {
-      "name": "Fleshborn",
+      "name": "Sweet Chocolate",
       "source": "steam:coming_soon",
       "rank": 24,
-      "price": 6.11,
-      "steam": 4193300
+      "price": null,
+      "steam": 5087760
     },
     {
-      "name": "Strato Alto",
+      "name": "TaskBound Saga",
       "source": "steam:coming_soon",
       "rank": 25,
-      "price": 7.75,
-      "steam": 4823770
+      "price": null,
+      "steam": 4903220
     },
     {
-      "name": "Take This Thing Out Of Me",
+      "name": "No Mercy",
       "source": "steam:coming_soon",
       "rank": 26,
-      "price": 1.41,
-      "steam": 4959350
+      "price": null,
+      "steam": 4255780
     },
     {
-      "name": "Runecast",
+      "name": "RPG in a Box - Quagling Supporter Pack",
       "source": "steam:coming_soon",
       "rank": 27,
       "price": null,
-      "steam": 5126340
+      "steam": 5507130
     },
     {
-      "name": "Fleshborn - Supporter Pack",
+      "name": "Charmosaic - Cozy Corners",
       "source": "steam:coming_soon",
       "rank": 28,
-      "price": 2.99,
-      "steam": 5524970
+      "price": null,
+      "steam": 5509010
     },
     {
-      "name": "Panic Pub",
+      "name": "Charmosaic - Paws & Whiskers",
       "source": "steam:coming_soon",
       "rank": 29,
       "price": null,
-      "steam": 4917940
+      "steam": 5509020
     },
     {
-      "name": "The Odyssey: Threads of Fate",
+      "name": "Charmosaic - Blooming Days",
       "source": "steam:coming_soon",
       "rank": 30,
-      "price": 4.24,
-      "steam": 5140980
+      "price": null,
+      "steam": 5509030
     }
   ],
   "chronicOos": []
