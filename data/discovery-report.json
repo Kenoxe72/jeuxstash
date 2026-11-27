@@ -1,138 +1,136 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "sourcesCount": 18,
   "matchedTrending": [
     {
+      "name": "Cyberpunk 2077",
+      "rank": 1,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1091500
+    },
+    {
       "name": "Call of Duty: Modern Warfare 4",
-      "rank": 5,
-      "sources": [
-        "steam:top_sellers"
-      ],
-      "steam": null
-    },
-    {
-      "name": "Baldur's Gate 3",
-      "rank": 7,
-      "sources": [
-        "steam:top_sellers"
-      ],
-      "steam": 1086940
-    },
-    {
-      "name": "Red Dead Redemption 2",
-      "rank": 8,
-      "sources": [
-        "steam:top_sellers"
-      ],
-      "steam": 1174180
-    },
-    {
-      "name": "GTA V Enhanced",
       "rank": 9,
       "sources": [
         "steam:top_sellers"
       ],
-      "steam": 3240220
+      "steam": null
     }
   ],
   "missingCandidates": [
     {
+      "name": "Cyberpunk 2077 : Édition Ultime",
+      "source": "steam:top_sellers",
+      "rank": 2,
+      "price": 33.1,
+      "steam": 32470
+    },
+    {
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "source": "steam:top_sellers",
+      "rank": 3,
+      "price": 17.99,
+      "steam": 2138330
+    },
+    {
+      "name": "Steam Deck",
+      "source": "steam:top_sellers",
+      "rank": 4,
+      "price": 419.0,
+      "steam": 1675200
+    },
+    {
       "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
       "source": "steam:top_sellers",
-      "rank": 1,
+      "rank": 6,
       "price": 80.99,
       "steam": 1624417
     },
     {
-      "name": "Steam Frame",
-      "source": "steam:top_sellers",
-      "rank": 2,
-      "price": 1049.0,
-      "steam": 4165890
-    },
-    {
       "name": "Steam Machine",
       "source": "steam:top_sellers",
-      "rank": 4,
+      "rank": 7,
       "price": 1039.0,
       "steam": 4165910
     },
     {
-      "name": "Reshine",
+      "name": "007 First Light",
       "source": "steam:top_sellers",
-      "rank": 6,
-      "price": 7.19,
-      "steam": 4253570
+      "rank": 10,
+      "price": 34.99,
+      "steam": 3768760
     },
     {
-      "name": "The Pogo Witch",
+      "name": "Bride of Koshchei",
       "source": "steam:coming_soon",
       "rank": 21,
       "price": null,
-      "steam": 3479310
+      "steam": 5544590
     },
     {
-      "name": "Ship Miner",
+      "name": "Restore The Internet",
       "source": "steam:coming_soon",
       "rank": 22,
       "price": null,
-      "steam": 3113690
+      "steam": 5233520
     },
     {
-      "name": "Watch My Step!",
+      "name": "Escape From Streamer House",
       "source": "steam:coming_soon",
       "rank": 23,
       "price": null,
-      "steam": 5087540
+      "steam": 3140580
     },
     {
-      "name": "Sweet Chocolate",
+      "name": "Sorcerous 2 City of Cults",
       "source": "steam:coming_soon",
       "rank": 24,
       "price": null,
-      "steam": 5087760
+      "steam": 5105490
     },
     {
-      "name": "TaskBound Saga",
+      "name": "ORYFT",
       "source": "steam:coming_soon",
       "rank": 25,
       "price": null,
-      "steam": 4903220
+      "steam": 5451660
     },
     {
-      "name": "No Mercy",
+      "name": "BABKA-TERROR",
       "source": "steam:coming_soon",
       "rank": 26,
-      "price": null,
-      "steam": 4255780
+      "price": 6.23,
+      "steam": 4515920
     },
     {
-      "name": "RPG in a Box - Quagling Supporter Pack",
+      "name": "Winky!: Find the Golden Ticket",
       "source": "steam:coming_soon",
       "rank": 27,
       "price": null,
-      "steam": 5507130
+      "steam": 5364230
     },
     {
-      "name": "Charmosaic - Cozy Corners",
+      "name": "Discharge Pending",
       "source": "steam:coming_soon",
       "rank": 28,
       "price": null,
-      "steam": 5509010
+      "steam": 2104080
     },
     {
-      "name": "Charmosaic - Paws & Whiskers",
+      "name": "Am I Nima",
       "source": "steam:coming_soon",
       "rank": 29,
       "price": null,
-      "steam": 5509020
+      "steam": 3224600
     },
     {
-      "name": "Charmosaic - Blooming Days",
+      "name": "Cyrurgia DEMO",
       "source": "steam:coming_soon",
       "rank": 30,
       "price": null,
-      "steam": 5509030
+      "steam": 5587580
     }
   ],
   "chronicOos": []
