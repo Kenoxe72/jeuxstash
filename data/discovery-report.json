@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-27",
-  "sourcesCount": 18,
+  "date": "2026-11-28",
+  "sourcesCount": 19,
   "matchedTrending": [
     {
       "name": "Cyberpunk 2077",
@@ -11,12 +11,28 @@
       "steam": 1091500
     },
     {
-      "name": "Call of Duty: Modern Warfare 4",
+      "name": "Baldur's Gate 3",
+      "rank": 7,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 1086940
+    },
+    {
+      "name": "Red Dead Redemption 2",
       "rank": 9,
       "sources": [
         "steam:top_sellers"
       ],
-      "steam": null
+      "steam": 1174180
+    },
+    {
+      "name": "GTA V Enhanced",
+      "rank": 10,
+      "sources": [
+        "steam:top_sellers"
+      ],
+      "steam": 3240220
     }
   ],
   "missingCandidates": [
@@ -28,109 +44,88 @@
       "steam": 32470
     },
     {
-      "name": "Cyberpunk 2077: Phantom Liberty",
+      "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
       "source": "steam:top_sellers",
       "rank": 3,
+      "price": 80.99,
+      "steam": 1624417
+    },
+    {
+      "name": "Cyberpunk 2077: Phantom Liberty",
+      "source": "steam:top_sellers",
+      "rank": 4,
       "price": 17.99,
       "steam": 2138330
     },
     {
       "name": "Steam Deck",
       "source": "steam:top_sellers",
-      "rank": 4,
+      "rank": 5,
       "price": 419.0,
       "steam": 1675200
     },
     {
-      "name": "Warhammer 40,000: Dawn of War IV Commander Edition",
-      "source": "steam:top_sellers",
-      "rank": 6,
-      "price": 80.99,
-      "steam": 1624417
-    },
-    {
-      "name": "Steam Machine",
-      "source": "steam:top_sellers",
-      "rank": 7,
-      "price": 1039.0,
-      "steam": 4165910
-    },
-    {
       "name": "007 First Light",
       "source": "steam:top_sellers",
-      "rank": 10,
+      "rank": 8,
       "price": 34.99,
       "steam": 3768760
     },
     {
-      "name": "Bride of Koshchei",
+      "name": "I'd Choose the Bear",
       "source": "steam:coming_soon",
       "rank": 21,
       "price": null,
-      "steam": 5544590
+      "steam": 5599530
     },
     {
-      "name": "Restore The Internet",
+      "name": "ANU: Tablets of Thoth",
       "source": "steam:coming_soon",
       "rank": 22,
       "price": null,
-      "steam": 5233520
+      "steam": 4259950
     },
     {
-      "name": "Escape From Streamer House",
+      "name": "D.U.B.B.I.O",
       "source": "steam:coming_soon",
       "rank": 23,
       "price": null,
-      "steam": 3140580
+      "steam": 5555790
     },
     {
-      "name": "Sorcerous 2 City of Cults",
+      "name": "Arcane Abyss",
       "source": "steam:coming_soon",
       "rank": 24,
       "price": null,
-      "steam": 5105490
+      "steam": 4966990
     },
     {
-      "name": "ORYFT",
-      "source": "steam:coming_soon",
-      "rank": 25,
-      "price": null,
-      "steam": 5451660
-    },
-    {
-      "name": "BABKA-TERROR",
+      "name": "Sakura Arms ~Radiant Duels~ Characters \"Another\" Form",
       "source": "steam:coming_soon",
       "rank": 26,
-      "price": 6.23,
-      "steam": 4515920
-    },
-    {
-      "name": "Winky!: Find the Golden Ticket",
-      "source": "steam:coming_soon",
-      "rank": 27,
       "price": null,
-      "steam": 5364230
+      "steam": 3543160
     },
     {
-      "name": "Discharge Pending",
+      "name": "EMP_Forward! Ed's Massage Parlor!",
       "source": "steam:coming_soon",
       "rank": 28,
       "price": null,
-      "steam": 2104080
+      "steam": 5563870
     },
     {
-      "name": "Am I Nima",
+      "name": "WHATEVERIA: GIRL STEEL",
       "source": "steam:coming_soon",
       "rank": 29,
       "price": null,
-      "steam": 3224600
+      "steam": 5366140
     },
     {
-      "name": "Cyrurgia DEMO",
+      "name": "Fullower",
       "source": "steam:coming_soon",
       "rank": 30,
       "price": null,
-      "steam": 5587580
+      "steam": 5599600
     }
   ],
   "chronicOos": []
